@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>YL Labs</title>
+  <meta name="description" content="YL Labs – Innovative tools and automation for your digital community." />
+  <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
+  <script src="https://cdn.tailwindcss.com" type="b5bcc255d65b677ee39858af-text/javascript"></script>
+
+  <style>
+    /* ✨ Base Animations */
+    @keyframes fadeInUp {
+      0% { opacity: 0; transform: translateY(30px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+    @keyframes slideInLeft {
+      0% { transform: translateX(-40px); opacity: 0; }
+      100% { transform: translateX(0); opacity: 1; }
+    }
+    @keyframes pulseGlow {
+      0%, 100% { box-shadow: 0 0 20px rgba(59,130,246,0.4); }
+      50% { box-shadow: 0 0 40px rgba(59,130,246,0.8); }
+    }
+
+    .fade-up { opacity: 0; transform: translateY(20px); transition: all 0.8s ease; }
+    .fade-up.visible { opacity: 1; transform: translateY(0); animation: fadeInUp 1s ease forwards; }
+
+    .fade-in { opacity: 0; transition: opacity 1s ease; }
+    .fade-in.visible { opacity: 1; animation: fadeIn 1.2s ease forwards; }
+
+    .slide-left { opacity: 0; transform: translateX(-30px); transition: all 0.8s ease; }
+    .slide-left.visible { opacity: 1; transform: translateX(0); animation: slideInLeft 1s ease forwards; }
+
+    /* 🌌 Glowing Hover */
+    .glow-hover:hover {
+      box-shadow: 0 0 20px rgba(96,165,250,0.7), 0 0 40px rgba(59,130,246,0.5);
+      transform: scale(1.05);
+    }
+
+    /* ✨ Floating gradient background circles */
+    .glow-circle {
+      position: absolute;
+      border-radius: 9999px;
+      opacity: 0.15;
+      filter: blur(50px);
+      animation: float 10s ease-in-out infinite;
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-30px); }
+    }
+
+    /* 💫 Button Pulse */
+    .pulse {
+      animation: pulseGlow 2s infinite;
+    }
+  </style>
+</head>
+
+<body class="bg-gray-950 text-gray-100 font-sans overflow-x-hidden relative">
+
+  <!-- Floating Lights -->
+  <div class="glow-circle w-72 h-72 bg-blue-600 top-20 left-10"></div>
+  <div class="glow-circle w-64 h-64 bg-indigo-600 bottom-20 right-10"></div>
+
+  <!-- Header -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-gray-900/60 backdrop-blur-md border-b border-gray-800 shadow-lg">
+    <div class="max-w-6xl mx-auto flex justify-between items-center px-6 py-4">
+      <div class="flex items-center space-x-3 fade-in">
+        <script src="/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="b5bcc255d65b677ee39858af-|49" type="f1c8a8d0eb9d310f142e1d5f-text/javascript"></script><script src="/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="f1c8a8d0eb9d310f142e1d5f-|49"></script><img src="{{ url_for('static', filename='images/Screenshot_2025-08-21_221712.webp') }}" alt="YL Labs Logo" class="h-10 w-10 rounded-full"
+          onerror="this.style.display='none'; this.insertAdjacentHTML('afterend','<h1 class=\'text-xl font-bold text-blue-400\'>YL Labs</h1>');">
+        <h1 class="text-xl font-semibold text-blue-400">YL Labs</h1>
+      </div>
+      <nav class="hidden md:flex space-x-6 text-gray-300 text-sm font-medium">
+        <a href="#hero" class="hover:text-blue-400 transition">Home</a>
+        <a href="#features" class="hover:text-blue-400 transition">Features</a>
+        <a href="#community" class="hover:text-blue-400 transition">Community</a>
+        <a href="#contact" class="hover:text-blue-400 transition">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="hero" class="h-screen flex flex-col justify-center items-center text-center bg-gradient-to-b from-gray-950 to-gray-900 relative overflow-hidden">
+    <div class="max-w-3xl mx-auto px-6 fade-up">
+      <h1 class="text-6xl font-extrabold mb-6 text-blue-400 drop-shadow-md">Welcome to YL Labs</h1>
+      <p class="text-lg mb-10 text-gray-300 leading-relaxed">
+        Building next-generation tools that empower your community with automation, speed, and innovation.
+      </p>
+      <a href="https://discord.gg/CJMM5tw9qs" 
+         class="bg-blue-600 text-white px-10 py-4 rounded-full font-semibold shadow-lg transition transform hover:scale-105 glow-hover pulse">
+         🚀 Get Started
+      </a>
+    </div>
+    <!-- Floating shapes -->
+    <div class="absolute w-96 h-96 bg-blue-600/20 blur-3xl rounded-full top-20 left-1/4 animate-pulse"></div>
+    <div class="absolute w-96 h-96 bg-indigo-500/20 blur-3xl rounded-full bottom-20 right-1/4 animate-ping"></div>
+  </section>
+
+  <!-- Features -->
+  <section id="features" class="py-32 bg-gray-900 text-center">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-5xl font-bold mb-16 text-blue-400 fade-in">What We Offer</h2>
+      <div class="grid md:grid-cols-3 gap-10">
+        <div class="p-8 bg-gray-800 rounded-2xl border border-gray-700 hover:border-blue-500 transition fade-up">
+          <h3 class="text-2xl font-semibold mb-3 text-blue-400">⚙️ Smart Automation</h3>
+          <p class="text-gray-400">Simplify your workflow with automated moderation, roles, and commands.</p>
+        </div>
+        <div class="p-8 bg-gray-800 rounded-2xl border border-gray-700 hover:border-blue-500 transition fade-up">
+          <h3 class="text-2xl font-semibold mb-3 text-blue-400">💬 Custom Commands</h3>
+          <p class="text-gray-400">Design responses that match your community’s tone and creativity.</p>
+        </div>
+        <div class="p-8 bg-gray-800 rounded-2xl border border-gray-700 hover:border-blue-500 transition fade-up">
+          <h3 class="text-2xl font-semibold mb-3 text-blue-400">🚀 Lightning Performance</h3>
+          <p class="text-gray-400">Engineered for speed, stability, and zero downtime in large servers.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Community -->
+  <section id="community" class="py-32 bg-gradient-to-b from-blue-900 to-indigo-800 text-center">
+    <div class="max-w-4xl mx-auto px-6 fade-in">
+      <h2 class="text-4xl font-bold mb-6 text-blue-100">Join the YL Labs Community</h2>
+      <p class="text-blue-200 mb-10 text-lg">
+        Collaborate, connect, and grow with other creators — all powered by innovation and teamwork.
+      </p>
+      <a href="https://discord.gg/YBs9cE2cas" class="bg-white text-blue-700 px-10 py-4 rounded-full font-semibold shadow-lg transition transform hover:scale-105">
+        💠 Join the Server
+      </a>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-28 bg-gray-900 text-center">
+    <div class="max-w-3xl mx-auto px-6 fade-up">
+      <h2 class="text-4xl font-bold mb-4 text-blue-400">Get in Touch</h2>
+      <p class="text-gray-400 mb-8">We’d love to collaborate or answer your questions. Drop us a message anytime!</p>
+      <a href="/cdn-cgi/l/email-protection#90f3fffee4f1f3e4d0e9fcfcf1f2e3bef3fffd" class="bg-blue-600 text-white px-8 py-3 rounded-full font-semibold shadow-lg hover:bg-blue-500 hover:scale-105 transition transform">
+        ✉️ <span class="__cf_email__" data-cfemail="6811031c01101028110404090a1b46101112">[email&#160;protected]</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-950 py-6 text-center text-gray-400 text-sm border-t border-gray-800">
+    <p>© 2025 YL Labs – All Rights Reserved</p>
+  </footer>
+
+  <!-- Scroll Animation Script -->
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="b5bcc255d65b677ee39858af-text/javascript">
+    const animatedEls = document.querySelectorAll('.fade-up, .fade-in, .slide-left');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.2 });
+    animatedEls.forEach(el => observer.observe(el));
+  </script>
+
+<script src="/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="b5bcc255d65b677ee39858af-|49" defer type="f1c8a8d0eb9d310f142e1d5f-text/javascript"></script><script type="f1c8a8d0eb9d310f142e1d5f-text/javascript">(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'99ca20845a4bdbeb',t:'MTc2MjgyNTcwMw=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><script src="/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="f1c8a8d0eb9d310f142e1d5f-|49" defer></script><script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'99cad4033aa53678',t:'MTc2MjgzMzA1NQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
