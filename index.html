@@ -1,122 +1,2351 @@
+
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>YL Labs</title>
-  <meta name="description" content="YL Labs – Innovative tools and automation for your digital community.">
-  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-  <script src="https://cdn.tailwindcss.com"></script>
+<html>
+    <head>
+        <title>RRHosting</title>
 
+        
+                    <meta charset="utf-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+            <meta name="csrf-token" content="fFQ63pQvHvs3tRrWVJvoQE4QbFFokrYxALHGjc0b">
+            <meta name="robots" content="noindex">
+            <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+            <link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32">
+            <link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16">
+            <link rel="manifest" href="/favicons/manifest.json">
+            <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#bc6e3c">
+            <link rel="shortcut icon" href="/favicons/favicon.ico">
+            <meta name="msapplication-config" content="/favicons/browserconfig.xml">
+            <meta name="theme-color" content="#0e4688">
+        
+                                    <script>
+                    window.PterodactylUser = {"uuid":"73facb26-49f8-4916-81da-80a2310b45f2","username":"yktixx","email":"zanman61010@gmail.com","name_first":"yktixx","name_last":".","language":"en","root_admin":false,"use_totp":false,"gravatar":true,"created_at":"2025-10-20T04:05:17.000000Z","updated_at":"2025-11-07T14:15:07.000000Z"};
+                </script>
+                                        <script>
+                    window.SiteConfiguration = {"name":"RRHosting","locale":"en","recaptcha":{"enabled":false,"siteKey":"6LcJcjwUAAAAAO_Xqjrtj9wWufUpYRnK6BW8lnfn"},"blueprint":{"disable_attribution":false}};
+                </script>
+                            <style>
+            @import url('//fonts.googleapis.com/css?family=Rubik:300,400,500&display=swap');
+            @import url('//fonts.googleapis.com/css?family=IBM+Plex+Mono|IBM+Plex+Sans:500&display=swap');
+        </style>
+
+        
+            </head>
+    <body class="bg-neutral-800">
+                                    <div id="modal-portal"></div>
+    <div id="app"></div>
+                        
+                                <!-- Import scripts. -->
+  <script src="/extensions/nebula/libraries/fetchStyle.js?1750284206"></script>
+  <script src="/extensions/nebula/libraries/currentPage.js?1750284206"></script>
+  <script src="/extensions/nebula/libraries/fetchServerId.js?1750284206"></script>
+  <script src="/extensions/nebula/libraries/statusOrb.js?1750284206"></script>
+  <script src="/extensions/nebula/libraries/customContextMenu.js?1750284206"></script>
+  <script src="/extensions/nebula/libraries/copyapi.js?1750284206"></script>
+  <script src="/extensions/nebula/libraries/assignElementIds.js?1750284206"></script>
+  <script src="/extensions/nebula/libraries/fileMode.js?1750284206"></script>
+  <script src="/extensions/nebula/libraries/insertAboveApp.js?1750284206"></script>
+  <script src="/extensions/nebula/libraries/sidebarMiddleClick.js?1750284206"></script>
+  <script src="/extensions/nebula/libraries/viewportVisibility.js?1750284206"></script>
+  <script src="/extensions/nebula/libraries/floatingWindows.js?1750284206"></script>
+  <script src="/extensions/nebula/libraries/keybinds.js?1750284206"></script>  <script src="/extensions/nebula/libraries/keybindsModal.js?1750284206"></script>  <script src="https://cdn.nebula.style/modules/marked/marked.min.js?1750284206" crossorigin="anonymous"></script>  <script src="/extensions/nebula/libraries/assets/popper.min.js"></script>
+  <script src="/extensions/nebula/libraries/assets/tippy-bundle.umd.min.js"></script>
+<script src="/extensions/nebula/libraries/errorHandler.js?1750284206"></script>
+<script src="/extensions/nebula/libraries/locationchange.js?1750284206"></script>
+<script src="https://cdn.nebula.style/modules/dart.js?11610"></script>
+
+<!-- Import stylesheets. -->
+<style>
+  @import url("/extensions/nebula/libraries/statusOrb.css?1750284206");
+  @import url("/extensions/nebula/libraries/fixUserInterfaceBugs.css?1750284206");
+  @import url("/extensions/nebula/libraries/customContextMenu.css?1750284206");
+  @import url("/extensions/nebula/libraries/fileMode.css?1750284206");
+  @import url("/extensions/nebula/libraries/borderRadius.css?1750284206");
+  @import url("/extensions/nebula/libraries/extendedStyles.css?1750284206");
+  @import url("/extensions/nebula/libraries/tagStyling.css?1750284206");
+  @import url("/extensions/nebula/libraries/floatingWindows.css?1750284206");
+  @import url("/extensions/nebula/libraries/patterns.css?1750284206");
+  @import url("/extensions/nebula/libraries/animations.css?1750284206");
+
+      @import url("/extensions/nebula/libraries/serversCards.css?1750284206");
+  
+      @import url("/extensions/nebula/libraries/keybindsModal.css?1750284206");
+  
+  
+  
+  
+      @import url("/extensions/nebula/libraries/weblinks.css?1750284206");
+  
+      @import url("/extensions/nebula/libraries/alert.css?1750284206");
+  
+  
+  
+  
+    @import url("https://cdn.nebula.style/icons/bootstrap/bootstrap-icons.css");
+                       @import url("https://cdn.nebula.style/icons/fontawesome/fontawesome.css");                   </style>  
+  
+<!-- Weblinks -->
+  <div class="nebula-weblinks">
+    <div class="weblink-container">
+      <!-- Websites -->
+                  <a href="https://status.rrhosting.eu" target="_blank"><button class="weblink" to="status"><i class="bi bi-bar-chart-fill"></i> Status</button></a>      <!-- Social -->
+              <a href="https://discord.com/invite/fhRp7cSkmm" target="_blank"><button class="weblink-social" to="discord"><i class="bi bi-discord"></i> Discord</button></a>          </div>
+  </div>
   <style>
-    /* Animations */
-    @keyframes fadeInUp {
-      0% { opacity: 0; transform: translateY(30px); }
-      100% { opacity: 1; transform: translateY(0); }
-    }
-    .fade-up { opacity: 0; transform: translateY(20px); transition: all 0.8s ease; }
-    .fade-up.visible { opacity: 1; transform: translateY(0); animation: fadeInUp 1s ease forwards; }
-
-    /* Glowing hover effect */
-    .glow-hover:hover {
-      box-shadow: 0 0 20px rgba(96,165,250,0.7), 0 0 40px rgba(59,130,246,0.5);
-      transform: scale(1.05);
-    }
+    .weblink-social, .weblink {
+       --weblink_float: left; --weblink_mleft: 0px; --weblink_mright: 10px; --weblinkalt_float: right; --weblinkalt_mleft: 10px; --weblinkalt_mright: 0px;
+          }
   </style>
-</head>
-<body class="bg-gray-950 text-gray-100 font-sans overflow-x-hidden relative">
-
-  <!-- Header -->
-  <header class="fixed top-0 left-0 right-0 z-50 bg-gray-900/60 backdrop-blur-md border-b border-gray-800 shadow-lg">
-    <div class="max-w-6xl mx-auto flex justify-between items-center px-6 py-4">
-      <div class="flex items-center space-x-3 fade-up">
-        <img src="images/S/logo.webp" alt="YL Labs Logo" class="h-10 w-10 rounded-full">
-        <h1 class="text-xl font-semibold text-blue-400">YL Labs</h1>
+<!-- Alert -->
+  <div class="nebula-alert" style="--position: static">
+    <div class="alert-container">
+      <div class="alert-icon">
+        <i class="bi bi-exclamation-triangle-fill"></i>
       </div>
-      <nav class="hidden md:flex space-x-6 text-gray-300 text-sm font-medium">
-        <a href="#hero" class="hover:text-blue-400 transition">Home</a>
-        <a href="#features" class="hover:text-blue-400 transition">Features</a>
-        <a href="#community" class="hover:text-blue-400 transition">Community</a>
-        <a href="#contact" class="hover:text-blue-400 transition">Contact</a>
-      </nav>
-    </div>
-  </header>
-
-  <!-- Hero -->
-  <section id="hero" class="h-screen flex flex-col justify-center items-center text-center bg-gradient-to-b from-gray-950 to-gray-900 relative overflow-hidden">
-    <div class="max-w-3xl mx-auto px-6 fade-up">
-      <h1 class="text-6xl font-extrabold mb-6 text-blue-400 drop-shadow-md">Welcome to YL Labs</h1>
-      <p class="text-lg mb-10 text-gray-300 leading-relaxed">
-        Building next-generation tools that empower your community with automation, speed, and innovation.
-      </p>
-      <a href="https://discord.gg/CJMM5tw9qs" 
-         class="bg-blue-600 text-white px-10 py-4 rounded-full font-semibold shadow-lg transition transform hover:scale-105 glow-hover">
-         🚀 Get Started
-      </a>
-    </div>
-  </section>
-
-  <!-- Features -->
-  <section id="features" class="py-32 bg-gray-900 text-center">
-    <div class="max-w-6xl mx-auto px-6">
-      <h2 class="text-5xl font-bold mb-16 text-blue-400 fade-up">What We Offer</h2>
-      <div class="grid md:grid-cols-3 gap-10">
-        <div class="p-8 bg-gray-800 rounded-2xl border border-gray-700 hover:border-blue-500 transition fade-up">
-          <h3 class="text-2xl font-semibold mb-3 text-blue-400">⚙️ Smart Automation</h3>
-          <p class="text-gray-400">Simplify your workflow with automated moderation, roles, and commands.</p>
-        </div>
-        <div class="p-8 bg-gray-800 rounded-2xl border border-gray-700 hover:border-blue-500 transition fade-up">
-          <h3 class="text-2xl font-semibold mb-3 text-blue-400">💬 Custom Commands</h3>
-          <p class="text-gray-400">Design responses that match your community’s tone and creativity.</p>
-        </div>
-        <div class="p-8 bg-gray-800 rounded-2xl border border-gray-700 hover:border-blue-500 transition fade-up">
-          <h3 class="text-2xl font-semibold mb-3 text-blue-400">🚀 Lightning Performance</h3>
-          <p class="text-gray-400">Engineered for speed, stability, and zero downtime in large servers.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Community -->
-  <section id="community" class="py-32 bg-gradient-to-b from-blue-900 to-indigo-800 text-center">
-    <div class="max-w-4xl mx-auto px-6 fade-up">
-      <h2 class="text-4xl font-bold mb-6 text-blue-100">Join the YL Labs Community</h2>
-      <p class="text-blue-200 mb-10 text-lg">
-        Collaborate, connect, and grow with other creators — all powered by innovation and teamwork.
-      </p>
-      <a href="https://discord.gg/YBs9cE2cas" class="bg-white text-blue-700 px-10 py-4 rounded-full font-semibold shadow-lg transition transform hover:scale-105">
-        💠 Join the Server
-      </a>
-    </div>
-  </section>
-
-  <!-- Contact -->
-  <section id="contact" class="py-28 bg-gray-900 text-center">
-    <div class="max-w-3xl mx-auto px-6 fade-up">
-      <h2 class="text-4xl font-bold mb-4 text-blue-400">Get in Touch</h2>
-      <p class="text-gray-400 mb-8">We’d love to collaborate or answer your questions. Drop us a message anytime!</p>
-      <a href="mailto:info@yllabs.com" class="bg-blue-600 text-white px-8 py-3 rounded-full font-semibold shadow-lg hover:bg-blue-500 hover:scale-105 transition transform">
-        ✉️ info@yllabs.com
-      </a>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="bg-gray-950 py-6 text-center text-gray-400 text-sm border-t border-gray-800">
-    <p>© 2025 YL Labs – All Rights Reserved</p>
-  </footer>
-
-  <!-- Scroll animation script -->
+      <div class="alert-text"></div>
+      <div class="alert-text-value" style="display:none">**Zero tolerance for abuse — offenders will face immediate and strict consequences. Read our [Terms of Service](https://rrhosting.eu/tos).** </div>
+          </div>
+  </div>
   <script>
-    const animatedEls = document.querySelectorAll('.fade-up');
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if(entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    }, { threshold: 0.2 });
-    animatedEls.forEach(el => observer.observe(el));
+    document.querySelector('div.alert-text').innerHTML = marked.parse(document.querySelector('div.alert-text-value').innerText+" ");
   </script>
+
+<style>
+  /* network */
+  .pl-4.pr-6.text-neutral-400 > .svg-inline--fa.fa-network-wired {display: none;}
+  .pl-4.pr-6.text-neutral-400:has(.svg-inline--fa.fa-network-wired)::after {
+    font-family: bootstrap-icons;
+    content: "\F2EB";
+    font-size: 24px;
+    display: block;
+    color: var(--pagePrimary);
+  }
+
+  /* schedules */
+  .ScheduleRow___StyledDiv-sc-iuk2mh-0.bhGVxk > .svg-inline--fa.fa-calendar-alt {display: none;}
+  .ScheduleRow___StyledDiv-sc-iuk2mh-0.bhGVxk:has(.svg-inline--fa.fa-calendar-alt)::after {
+    font-family: bootstrap-icons;
+    content: "\F208";
+    font-size: 20px;
+    display: block;
+    color: var(--pagePrimary);
+    margin-left: 12px;
+    margin-right: 12px;
+  }
+
+  /* lock */
+  .BackupRow___StyledDiv2-sc-1lzi0pw-2 > .svg-inline--fa.fa-lock {display: none;}
+  .BackupRow___StyledDiv2-sc-1lzi0pw-2:has(.svg-inline--fa.fa-lock)::after {
+    font-family: bootstrap-icons;
+    content: "\F47A";
+    font-size: 20px;
+    display: block;
+    color: var(--pagePrimary);
+    margin-left: 12px;
+    margin-right: 12px;
+  }
+
+  /* databases */
+  .DatabaseRow___StyledDiv7-sc-1t67zwr-14.ixyFMx > .svg-inline--fa.fa-database {display: none;}
+  .DatabaseRow___StyledDiv7-sc-1t67zwr-14.ixyFMx:has(.svg-inline--fa.fa-database)::after {
+    font-family: bootstrap-icons;
+    content: "\F8BE";
+    font-size: 20px;
+    display: block;
+    color: var(--pagePrimary);
+    margin-left: 12px;
+    margin-right: 12px;
+  }
+
+  /* backups */
+  .BackupRow___StyledDiv2-sc-1lzi0pw-2.dQhbBy > .svg-inline--fa.fa-archive {display: none;}
+  .BackupRow___StyledDiv2-sc-1lzi0pw-2.dQhbBy:has(.svg-inline--fa.fa-archive)::after {
+    font-family: bootstrap-icons;
+    content: "\F10C";
+    font-size: 20px;
+    display: block;
+    color: var(--pagePrimary);
+    margin-left: 12px;
+    margin-right: 12px;
+  }
+
+  /* subusers */
+  .UserRow___StyledImg-sc-hg2wjz-2 {display: none;}
+  .UserRow___StyledDiv-sc-hg2wjz-1.bnIPCP {
+    background-color: var(--pageSecondaryActive);
+    border-color: var(--pageSecondaryActive);
+  }
+  .UserRow___StyledDiv-sc-hg2wjz-1.bnIPCP::after {
+    content: '\F4DA';
+    display: block;
+    font-size: 24px;
+    font-family: bootstrap-icons;
+    margin-left: 6px;
+    color: var(--pagePrimary);
+  }
+</style>
+<div
+  class="fixed-background"></div>
+<div id="sidebar" class="sidebar">
+    <div class="sidebarContentContainer">
+  <div class="sidebarContent">
+
+    
+    <!-- Item: Home -->
+    <div class="tooltip-toggle">
+      <span class="tooltip">Home</span>
+      <button data-tippy-content="Home" oncontextmenu="showContextMenu(event, `/`)" onclick="sidebarRefresh();sidebarButtonEvent('home')" id="sidebarMainHome" class="sidebarButton">
+                <i class="sidebarIcon fa-solid fa-house"></i>
+                      </button>
+    </div>
+
+    <!-- Item: Spacer -->
+    <div class="sidebarSpacer"></div>
+    
+    <!-- Category: Server Management -->
+    <div id="sidebarCategoryServer" class="sidebarCategory">
+
+      <div id="sidebarServerLoader" style="display: none">
+        <button class="sidebar-placeholder-animated sidebarButton"> </button>
+        <button class="sidebar-placeholder-animated sidebarButton"> </button>
+        <button class="sidebar-placeholder-animated sidebarButton"> </button>
+        <button class="sidebar-placeholder-animated sidebarButton"> </button>
+        <button class="sidebar-placeholder-animated sidebarButton"> </button>
+        <button class="sidebar-placeholder-animated sidebarButton"> </button>
+        <button class="sidebar-placeholder-animated sidebarButton"> </button>
+        <button class="sidebar-placeholder-animated sidebarButton"> </button>
+        <button class="sidebar-placeholder-animated sidebarButton"> </button>
+        <button class="sidebar-placeholder-animated sidebarButton"> </button>
+      </div>
+
+      <!-- Item: Terminal -->
+      <div class="tooltip-toggle">
+        <span class="tooltip">Terminal</span>
+        <button data-tippy-content="Terminal" oncontextmenu="showContextMenu(event, `/server/${fetchServerId()}`)" onclick="sidebarRefresh();sidebarButtonEvent('serverTerminal')" id="sidebarServerTerminal" class="sidebarButton">
+                    <i class="sidebarIcon fa-solid fa-bars-progress"></i>
+                            </button>
+      </div>
+      
+      <!-- Item: File Manager -->
+      <div class="tooltip-toggle">
+        <span class="tooltip">Files</span>
+        <button data-tippy-content="Files" oncontextmenu="showContextMenu(event, `/server/${fetchServerId()}/files`)" onclick="sidebarRefresh();sidebarButtonEvent('serverFiles')" id="sidebarServerFilemanager" class="sidebarButton">
+                    <i class="sidebarIcon fa-solid fa-folder"></i>
+                            </button>
+      </div>
+      
+      <!-- Item: Databases -->
+      <div class="tooltip-toggle">
+        <span class="tooltip">Databases</span>
+        <button data-tippy-content="Databases" oncontextmenu="showContextMenu(event, `/server/${fetchServerId()}/databases`)" onclick="sidebarRefresh();sidebarButtonEvent('serverDatabases')" id="sidebarServerDatabases" class="sidebarButton">
+                    <i class="sidebarIcon fa-solid fa-database"></i>
+                            </button>
+      </div>
+      
+      <!-- Item: Schedules -->
+      <div class="tooltip-toggle">
+        <span class="tooltip">Schedules</span>
+        <button data-tippy-content="Schedules" oncontextmenu="showContextMenu(event, `/server/${fetchServerId()}/schedules`)" onclick="sidebarRefresh();sidebarButtonEvent('serverSchedules')" id="sidebarServerSchedules" class="sidebarButton">
+                    <i class="sidebarIcon fa-solid fa-calendar"></i>
+                            </button>
+      </div>
+      
+      <!-- Item: Users -->
+      <div class="tooltip-toggle">
+        <span class="tooltip">Users</span>
+        <button data-tippy-content="Users" oncontextmenu="showContextMenu(event, `/server/${fetchServerId()}/users`)" onclick="sidebarRefresh();sidebarButtonEvent('serverUsers')" id="sidebarServerUsers" class="sidebarButton">
+                    <i class="sidebarIcon fa-solid fa-user-group"></i>
+                            </button>
+      </div>
+      
+      <!-- Item: Backups -->
+      <div class="tooltip-toggle">
+        <span class="tooltip">Backups</span>
+        <button data-tippy-content="Backups" oncontextmenu="showContextMenu(event, `/server/${fetchServerId()}/backups`)" onclick="sidebarRefresh();sidebarButtonEvent('serverBackups')" id="sidebarServerBackups" class="sidebarButton">
+                    <i class="sidebarIcon fa-solid fa-box-archive"></i>
+                            </button>
+      </div>
+      
+      <!-- Item: Network -->
+      <div class="tooltip-toggle">
+        <span class="tooltip">Network</span>
+        <button data-tippy-content="Network" oncontextmenu="showContextMenu(event, `/server/${fetchServerId()}/network`)" onclick="sidebarRefresh();sidebarButtonEvent('serverNetwork')" id="sidebarServerNetwork" class="sidebarButton">
+                    <i class="sidebarIcon fa-solid fa-network-wired"></i>
+                            </button>
+      </div>
+      
+      <!-- Item: Startup -->
+      <div class="tooltip-toggle">
+        <span class="tooltip">Startup</span>
+        <button data-tippy-content="Startup" oncontextmenu="showContextMenu(event, `/server/${fetchServerId()}/startup`)" onclick="sidebarRefresh();sidebarButtonEvent('serverStartup')" id="sidebarServerStartup" class="sidebarButton">
+                    <i class="sidebarIcon fa-solid fa-wrench"></i>
+                            </button>
+      </div>
+      
+      <!-- Item: Settings -->
+      <div class="tooltip-toggle">
+        <span class="tooltip">Settings</span>
+        <button data-tippy-content="Settings" oncontextmenu="showContextMenu(event, `/server/${fetchServerId()}/settings`)" onclick="sidebarRefresh();sidebarButtonEvent('serverSettings')" id="sidebarServerSettings" class="sidebarButton">
+                    <i class="sidebarIcon fa-solid fa-gear"></i>
+                            </button>
+      </div>
+      
+      <!-- Item: Activity -->
+      <div class="tooltip-toggle">
+        <span class="tooltip">Activity</span>
+        <button data-tippy-content="Activity" oncontextmenu="showContextMenu(event, `/server/${fetchServerId()}/activity`)" onclick="sidebarRefresh();sidebarButtonEvent('serverActivity')" id="sidebarServerActivity" class="sidebarButton">
+                    <i class="sidebarIcon fa-solid fa-scroll"></i>
+                            </button>
+      </div>
+
+            <!-- Item: More -->
+      <div class="tooltip-toggle">
+        <span class="tooltip">More</span>
+        <button data-tippy-content="More" style="display:none" id="sidebarServerMore" class="sidebarButton">
+                    <i class="sidebarIcon fa-solid fa-ellipsis-vertical"></i>
+                            </button>
+      </div>
+            
+            <!-- Item: Spacer -->
+      <div class="sidebarSpacer"></div>
+            
+    </div>
+    
+    <!-- Category: Account -->
+    <div id="sidebarCategoryAccount" class="sidebarCategory">
+      
+      <!-- Item: Account -->
+      <div class="tooltip-toggle">
+        <span class="tooltip">Account</span>
+        <button data-tippy-content="Account" oncontextmenu="showContextMenu(event, `/account`)" onclick="sidebarRefresh();sidebarButtonEvent('accountAccount')" id="sidebarAccountAccount" class="sidebarButton">
+                    <i class="sidebarIcon fa-solid fa-circle-user"></i>
+                            </button>
+      </div>
+      
+      <!-- Item: API Credentials -->
+      <div class="tooltip-toggle">
+        <span class="tooltip">API</span>
+        <button data-tippy-content="API" oncontextmenu="showContextMenu(event, `/account/api`)" onclick="sidebarRefresh();sidebarButtonEvent('accountApi')" id="sidebarAccountApi" class="sidebarButton">
+                    <i class="sidebarIcon fa-solid fa-globe"></i>
+                            </button>
+      </div>
+      
+      <!-- Item: SSH Keys -->
+      <div class="tooltip-toggle">
+        <span class="tooltip">SSH</span>
+        <button data-tippy-content="SSH" oncontextmenu="showContextMenu(event, `/account/ssh`)" onclick="sidebarRefresh();sidebarButtonEvent('accountSsh')" id="sidebarAccountSsh" class="sidebarButton">
+                    <i class="sidebarIcon fa-solid fa-key"></i>
+                            </button>
+      </div>
+      
+      <!-- Item: Activity -->
+      <div class="tooltip-toggle">
+        <span class="tooltip">Activity</span>
+        <button data-tippy-content="Activity" oncontextmenu="showContextMenu(event, `/account/activity`)" onclick="sidebarRefresh();sidebarButtonEvent('accountActivity')" id="sidebarAccountActivity" class="sidebarButton">
+                    <i class="sidebarIcon fa-solid fa-scroll"></i>
+                            </button>
+      </div>
+
+            <!-- Item: More -->
+      <div class="tooltip-toggle">
+        <span class="tooltip">More</span>
+        <button data-tippy-content="More" style="display:none" id="sidebarAccountMore" class="sidebarButton">
+                    <i class="sidebarIcon fa-solid fa-ellipsis-vertical"></i>
+                            </button>
+      </div>
+            
+            <!-- Item: Spacer -->
+      <div class="sidebarSpacer"></div>
+            
+    </div>
+
+    <!-- Category: General -->
+    <div id="sidebarCategoryGeneral">
+
+            
+      <!-- Item: Account -->
+      <div class="tooltip-toggle">
+        <span class="tooltip">Account</span>
+        <button data-tippy-content="Account" oncontextmenu="showContextMenu(event, `/account`)" onclick="sidebarRefresh();sidebarButtonEvent('accountAccount')" id="sidebarMainAccount" class="sidebarButton">
+                    <i class="sidebarIcon fa-solid fa-user-gear"></i>
+                            </button>
+      </div>
+      
+      <!-- Item: Log out -->
+      <div class="tooltip-toggle">
+        <span class="tooltip">Logout</span>
+        <button data-tippy-content="Logout" oncontextmenu="return false;" onclick="sidebarRefresh();sidebarButtonEvent('logout')" id="sidebarMainLogout" class="sidebarButton">
+                    <i class="sidebarIcon fa-solid fa-right-from-bracket"></i>
+                            </button>
+      </div>
+    
+    </div> 
+    
+  </div>
+</div>
+
+  <style>.tippy-box[data-animation=shift-away][data-state=hidden]{opacity:0}.tippy-box[data-animation=shift-away][data-state=hidden][data-placement^=top]{transform:translateY(10px)}.tippy-box[data-animation=shift-away][data-state=hidden][data-placement^=bottom]{transform:translateY(-10px)}.tippy-box[data-animation=shift-away][data-state=hidden][data-placement^=left]{transform:translateX(10px)}.tippy-box[data-animation=shift-away][data-state=hidden][data-placement^=right]{transform:translateX(-10px)}</style>
+  <script>tippy('.sidebarButton', {placement: 'right', animation: 'shift-away', arrow: false});</script>
+  <style>
+    .tippy-box {
+      background-color: var(--sidebarSecondaryActive);
+      color: var(--sidebarPrimary);
+      border-radius: var(--borderRadiusSidebar);
+              margin-left: 7px;
+          }
+  </style>
+</div>
+
+<!-- Files Context Menu -->
+<div id="filesContextMenu" class="context-container" style="width:unset;display:none">
+  <div class="context-wrapper">
+    <!-- Rename -->
+    <button id="filesContextButton" class="context-button">
+      <svg xmlns="http://www.w3.org/2000/svg" class="context-icon" width="16" height="16" fill="currentColor" class="bi bi-cursor-text" viewBox="0 0 16 16"><path d="M5 2a.5.5 0 0 1 .5-.5c.862 0 1.573.287 2.06.566.174.099.321.198.44.286.119-.088.266-.187.44-.286A4.17 4.17 0 0 1 10.5 1.5a.5.5 0 0 1 0 1c-.638 0-1.177.213-1.564.434a3.5 3.5 0 0 0-.436.294V7.5H9a.5.5 0 0 1 0 1h-.5v4.272c.1.08.248.187.436.294.387.221.926.434 1.564.434a.5.5 0 0 1 0 1 4.17 4.17 0 0 1-2.06-.566A5 5 0 0 1 8 13.65a5 5 0 0 1-.44.285 4.17 4.17 0 0 1-2.06.566.5.5 0 0 1 0-1c.638 0 1.177-.213 1.564-.434.188-.107.335-.214.436-.294V8.5H7a.5.5 0 0 1 0-1h.5V3.228a3.5 3.5 0 0 0-.436-.294A3.17 3.17 0 0 0 5.5 2.5.5.5 0 0 1 5 2m2.648 10.645"/></svg>
+      Rename
+    </button><br>
+    <!-- Move -->
+    <button id="filesContextButton2" class="context-button">
+      <svg xmlns="http://www.w3.org/2000/svg" class="context-icon" width="16" height="16" fill="currentColor" class="bi bi-arrows-move" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M7.646.146a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1-.708.708L8.5 1.707V5.5a.5.5 0 0 1-1 0V1.707L6.354 2.854a.5.5 0 1 1-.708-.708zM8 10a.5.5 0 0 1 .5.5v3.793l1.146-1.147a.5.5 0 0 1 .708.708l-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 0 1 .708-.708L7.5 14.293V10.5A.5.5 0 0 1 8 10M.146 8.354a.5.5 0 0 1 0-.708l2-2a.5.5 0 1 1 .708.708L1.707 7.5H5.5a.5.5 0 0 1 0 1H1.707l1.147 1.146a.5.5 0 0 1-.708.708zM10 8a.5.5 0 0 1 .5-.5h3.793l-1.147-1.146a.5.5 0 0 1 .708-.708l2 2a.5.5 0 0 1 0 .708l-2 2a.5.5 0 0 1-.708-.708L14.293 8.5H10.5A.5.5 0 0 1 10 8"/></svg>
+      Move
+    </button><br>
+    <!-- Permissions -->
+    <button id="filesContextButton3" class="context-button">
+      <svg xmlns="http://www.w3.org/2000/svg" class="context-icon" width="16" height="16" fill="currentColor" class="bi bi-key" viewBox="0 0 16 16"><path d="M0 8a4 4 0 0 1 7.465-2H14a.5.5 0 0 1 .354.146l1.5 1.5a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0L13 9.207l-.646.647a.5.5 0 0 1-.708 0L11 9.207l-.646.647a.5.5 0 0 1-.708 0L9 9.207l-.646.647A.5.5 0 0 1 8 10h-.535A4 4 0 0 1 0 8m4-3a3 3 0 1 0 2.712 4.285A.5.5 0 0 1 7.163 9h.63l.853-.854a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .708 0l.646.647.793-.793-1-1h-6.63a.5.5 0 0 1-.451-.285A3 3 0 0 0 4 5"/><path d="M4 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/></svg>
+      Permissions
+    </button><br>
+    <!-- Duplicate (copy) -->
+    <button id="filesContextButton4" class="context-button">
+      <svg xmlns="http://www.w3.org/2000/svg" class="context-icon" width="16" height="16" fill="currentColor" class="bi bi-copy" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M4 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 5a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-1h1v1a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h1v1z"/></svg>
+      Duplicate
+    </button><br>
+    <!-- Archive -->
+    <button id="filesContextButton5" class="context-button">
+      <svg xmlns="http://www.w3.org/2000/svg" class="context-icon" width="16" height="16" fill="currentColor" class="bi bi-archive" viewBox="0 0 16 16"><path d="M0 2a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1v7.5a2.5 2.5 0 0 1-2.5 2.5h-9A2.5 2.5 0 0 1 1 12.5V5a1 1 0 0 1-1-1zm2 3v7.5A1.5 1.5 0 0 0 3.5 14h9a1.5 1.5 0 0 0 1.5-1.5V5zm13-3H1v2h14zM5 7.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5"/></svg>
+      Archive
+    </button><br>
+    <!-- Unarchive -->
+    <button id="filesContextButton6" class="context-button">
+      <svg xmlns="http://www.w3.org/2000/svg" class="context-icon" width="16" height="16" fill="currentColor" class="bi bi-archive" viewBox="0 0 16 16"><path d="M0 2a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1v7.5a2.5 2.5 0 0 1-2.5 2.5h-9A2.5 2.5 0 0 1 1 12.5V5a1 1 0 0 1-1-1zm2 3v7.5A1.5 1.5 0 0 0 3.5 14h9a1.5 1.5 0 0 0 1.5-1.5V5zm13-3H1v2h14zM5 7.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5"/></svg>
+      Unarchive
+    </button><br>
+    <!-- Download -->
+    <button id="filesContextButton7" class="context-button">
+      <svg xmlns="http://www.w3.org/2000/svg" class="context-icon" width="16" height="16" fill="currentColor" class="bi bi-cloud-download" viewBox="0 0 16 16"><path d="M4.406 1.342A5.53 5.53 0 0 1 8 0c2.69 0 4.923 2 5.166 4.579C14.758 4.804 16 6.137 16 7.773 16 9.569 14.502 11 12.687 11H10a.5.5 0 0 1 0-1h2.688C13.979 10 15 8.988 15 7.773c0-1.216-1.02-2.228-2.313-2.228h-.5v-.5C12.188 2.825 10.328 1 8 1a4.53 4.53 0 0 0-2.941 1.1c-.757.652-1.153 1.438-1.153 2.055v.448l-.445.049C2.064 4.805 1 5.952 1 7.318 1 8.785 2.23 10 3.781 10H6a.5.5 0 0 1 0 1H3.781C1.708 11 0 9.366 0 7.318c0-1.763 1.266-3.223 2.942-3.593.143-.863.698-1.723 1.464-2.383"/><path d="M7.646 15.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 14.293V5.5a.5.5 0 0 0-1 0v8.793l-2.146-2.147a.5.5 0 0 0-.708.708z"/></svg>
+      Download
+    </button><br>
+    <!-- Restore -->
+    <button id="filesContextButton9" class="context-button">
+      <svg xmlns="http://www.w3.org/2000/svg" class="context-icon" width="16" height="16" fill="currentColor" class="bi bi-arrow-counterclockwise" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8 3a5 5 0 1 1-4.546 2.914.5.5 0 0 0-.908-.417A6 6 0 1 0 8 2z"/><path d="M8 4.466V.534a.25.25 0 0 0-.41-.192L5.23 2.308a.25.25 0 0 0 0 .384l2.36 1.966A.25.25 0 0 0 8 4.466"/></svg>
+      Restore
+    </button><br>
+    <!-- Lock -->
+    <button id="filesContextButton10" class="context-button">
+      <svg xmlns="http://www.w3.org/2000/svg" class="context-icon" width="16" height="16" fill="currentColor" class="bi bi-lock" viewBox="0 0 16 16"><path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2m3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2M5 8h6a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1"/></svg>
+      Lock
+    </button><br>
+    <!-- Unlock -->
+    <button id="filesContextButton11" class="context-button">
+      <svg xmlns="http://www.w3.org/2000/svg" class="context-icon" width="16" height="16" fill="currentColor" class="bi bi-unlock" viewBox="0 0 16 16"><path d="M11 1a2 2 0 0 0-2 2v4a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h5V3a3 3 0 0 1 6 0v4a.5.5 0 0 1-1 0V3a2 2 0 0 0-2-2M3 8a1 1 0 0 0-1 1v5a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V9a1 1 0 0 0-1-1z"/></svg>
+      Unlock
+    </button><br>
+    <!-- Delete -->
+    <button id="filesContextButton8" class="context-button context-button-danger">
+      <svg xmlns="http://www.w3.org/2000/svg" class="context-icon" width="16" height="16" fill="currentColor" class="bi bi-trash3" viewBox="0 0 16 16"><path d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5M11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47M8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5"/></svg>
+      Delete
+    </button><br>
+
+
+    <div class="item-loader">
+      <button class="context-button context-preloader anim-delay-0">loading..</button><br>
+      <button class="context-button context-preloader anim-delay-1">loading..</button><br>
+      <button class="context-button context-preloader anim-delay-2">loading..</button><br>
+      <button class="context-button context-preloader anim-delay-3">loading..</button><br>
+      <button class="context-button context-preloader anim-delay-4">loading..</button><br>
+    </div>
+  </div>
+</div><!-- More Context Menu -->
+<div id="moreContextMenu" class="context-container" style="width:unset;height:0px;display:none">
+  <div class="context-wrapper">
+  </div>
+</div><!-- Sidebar Context Menu -->
+<div id="nebulaContextMenu" class="context-container" style="width:unset;display:none">
+  <div class="context-wrapper">
+    <button id="nebulaContextButton" class="context-button">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-up-right context-icon" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5"/><path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0z"/></svg>
+      Open in new tab
+    </button><br>
+    <button id="nebulaContextButton3" class="context-button">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-window-plus context-icon" viewBox="0 0 16 16"><path d="M2.5 5a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1M4 5a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1m2-.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0"></path><path d="M0 4a2 2 0 0 1 2-2h11a2 2 0 0 1 2 2v4a.5.5 0 0 1-1 0V7H1v5a1 1 0 0 0 1 1h5.5a.5.5 0 0 1 0 1H2a2 2 0 0 1-2-2zm1 2h13V4a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1z"></path><path d="M16 12.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0m-3.5-2a.5.5 0 0 0-.5.5v1h-1a.5.5 0 0 0 0 1h1v1a.5.5 0 0 0 1 0v-1h1a.5.5 0 0 0 0-1h-1v-1a.5.5 0 0 0-.5-.5"></path></svg>
+      Open in floating window
+    </button>
+    <button id="nebulaContextButton2" class="context-button">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-copy context-icon" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M4 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 5a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-1h1v1a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h1v1z"/></svg>
+      Copy link
+    </button><br>
+  </div>
+</div>
+<style id="nebula-components">
+
+  #nebulaContextMenu,
+  #filesContextMenu,
+  #moreContextMenu {
+    display: none
+  }
+
+  .nebulaFooter {
+    text-align: center;
+    font-size: 12px;
+    font-weight: 300;
+    color: #9aa5b1;
+    text-decoration: none;
+    padding-bottom: 10px;
+  }
+
+      div.sidebarContent > div.tooltip-toggle > span.tooltip,
+    div.sidebarContent > #sidebarCategoryServer > div.tooltip-toggle > span.tooltip,
+    div.sidebarContent > #sidebarCategoryAccount > div.tooltip-toggle > span.tooltip,
+    div.sidebarContent > #sidebarCategoryGeneral > div.tooltip-toggle > span.tooltip,
+    div.sidebarContent > #sidebarCategoryGeneral > a > div.tooltip-toggle > span.tooltip {
+      display: none
+    }
+  
+  /* Sidebar */
+    .sidebar {
+    transition: 
+      left 0.5s,
+      width 1s !important;
+    position: fixed;
+    left: 0; top: 0px;
+    width: 75px; height: 100%;
+    background-color: unset !important;
+    background: linear-gradient(to bottom, color-mix(in hsl, var(--sidebarBackground) 30%, transparent), color-mix(in hsl, var(--sidebarBackground) 5%, transparent) 100%);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    will-change: transform;
+    z-index: 5;
+    border-radius: 0px;
+  }
+  
+  .sidebarContentContainer {
+    margin: 0px 0px 10px 10px;
+    overflow: visible;
+  }
+
+  .sidebarContent {
+    height: 100vh;
+    padding-top: 10px;
+    overflow-y: scroll;
+    overflow-x: visible;
+
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  /* Sidebar preloader */
+  @keyframes sidebar-preloader {
+    0%   { background-color: var(--sidebarSecondary) }
+    20%  { background-color: color-mix(in hsl, var(--sidebarSecondary) 87%, white) }
+    40%  { background-color: var(--sidebarSecondary) }
+    100% { background-color: var(--sidebarSecondary) }
+  }
+  .sidebar-placeholder-animated {
+    animation: sidebar-preloader 1s linear infinite;
+    color: transparent;
+    background-color: var(--sidebarSecondary);
+  }
+
+  .sidebar-placeholder-animated:nth-child(0) { animation-delay: 0s }
+  .sidebar-placeholder-animated:nth-child(1) { animation-delay: .05s }
+  .sidebar-placeholder-animated:nth-child(2) { animation-delay: .1s }
+  .sidebar-placeholder-animated:nth-child(3) { animation-delay: .15s }
+  .sidebar-placeholder-animated:nth-child(4) { animation-delay: .2s }
+  .sidebar-placeholder-animated:nth-child(5) { animation-delay: .25s }
+  .sidebar-placeholder-animated:nth-child(6) { animation-delay: .3s }
+  .sidebar-placeholder-animated:nth-child(7) { animation-delay: .35s }
+  .sidebar-placeholder-animated:nth-child(8) { animation-delay: .4s }
+  .sidebar-placeholder-animated:nth-child(9) { animation-delay: .45s }
+  .sidebar-placeholder-animated:nth-child(10) { animation-delay: .5s }
+
+  /* Sidebar items */
+  .sidebarButton {
+    border: none;
+          background-color: transparent;
+        width: calc(75px - 10px - 10px);
+    height: calc(75px - 10px - 10px);
+    border-radius: var(--borderRadiusSidebar);
+    margin-bottom: 10px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    position: relative;
+    left: 0px;
+    transition: 
+      background-color 0.3s,
+      border .2s,
+      border-left .2s,
+      margin-left .3s,
+      left .3s,
+      padding-top .3s,
+      padding-bottom .3s,
+      height .3s !important;
+  }
+  .sidebarButton:hover {
+          background-color: #ffffff20;
+      }
+  .sidebarButton:active {
+          background-color: #ffffff15;
+      }
+
+  .sidebarButtonSelected {
+          background-color: color-mix(in hsl, var(--sidebarButtonActive) 50%, transparent);
+      --border: 1px solid rgba(255, 255, 255, 0.2) !important;
+      }
+
+  .sidebarIcon {
+    color: var(--sidebarPrimary);
+    transition:
+      color 0.3s,
+      opacity 0.3s !important;
+    
+          font-size: calc(28px * 0.9);
+      }
+  .sidebarIcon:hover {
+    color: var(--sidebarPrimaryHover);
+  }
+
+  .customicon {
+    width: 100%;
+    height: 100%;
+    scale: calc(0.9);
+      }
+
+      .sidebarSpacer {
+      padding-bottom: 12px;
+      margin-left: 12.5%;
+      margin-right: 12.5%;
+      width: calc(75% - 10px);
+      border-top: 1px solid var(--sidebarSecondary);
+    }
+  
+  .sidebarCategory {
+    display: none;
+  }
+
+                    body, body.bg-neutral-800 {
+          padding-left: 75px;
+          color: #fff;
+          background-color: var(--pageBackground);
+        }
+            
+  html:not([multitasking]) {
+    background-color: var(--pageBackground) !important;
+    background: var(--pageBackground) !important;
+    z-index: -2 !important;
+  }
+
+  
+  
+  @media screen and (min-width: 760px) {
+    /* Sidebar hover animations */
+          .sidebarButton:hover {
+        position: relative;
+        left: 7px;
+      }
+      }
+</style>
+<style id="nebula-mobile-navigation">
+  .nebula-mobile-nav { display: none }
+
+  @media screen and (max-width: 760px) {
+    body, body.bg-neutral-800 {
+      padding-left: unset !important;
+    }
+
+    .sidebar {
+      display: none;
+      z-index: 101;
+    }
+    div.ProgressBar___StyledDiv-sc-14ayc3f-1.jleFWY {
+      left: 0 !important;
+      width: 100% !important;
+    }
+    .nebula-mobile-nav {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 80px;
+      z-index: 99;
+      /*background-color: var(--sidebarBackground);
+      border-top: 1px solid var(--sidebarSecondaryHover);*/
+      display: flex;
+      justify-content: center;
+      flex-direction: row;
+      background: transparent;
+      background: linear-gradient(180deg, transparent 0%, var(--pageBackground) 100%); 
+    }
+    .mobile-nav-container {
+      margin-left: 15px;
+      margin-right: 15px;
+    }
+
+    .mobile-nav-icon {
+      font-size: 20px;
+      color: var(--sidebarPrimary);
+    }
+    .mobile-nav-button {
+      background-color: var(--sidebarSecondary);
+      border-radius: 100px;
+      padding-left: 25px;
+      padding-right: 25px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+
+    .nebula-mobile-overlay {
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      display: none;
+      position: fixed;
+      left: -200px;
+      top: 0;
+      transition: opacity .4s, left .4s;
+      z-index: 100;
+      background: var(--pageBackground);
+      background: linear-gradient(90deg, var(--pageBackground) 75%, transparent 100%);
+    }
+
+    .pointer-events-none.fixed.bottom-0.mb-6.flex.justify-center.w-full.z-50:has(.ipOPTy) {
+      margin-bottom: 0px !important;
+      margin-top: 20px !important;
+      bottom: unset !important;
+      top: 0px !important;
+    }
+    #fileMode {
+      bottom: unset !important;
+      top: 20px !important;
+    }
+
+     /* loading bar styling */
+    .CbttB {
+      top: 0;
+      bottom: unset !important;
+    }
+
+    .Pagination___StyledDiv-sc-7j9cqz-1 {
+      bottom: 105px !important;
+      width: 100vw !important;
+      left: 0px !important;
+      right: unset !important;
+    }
+  }
+</style>
+
+  <div class="nebula-mobile-overlay" onclick="closeMobileNav()"></div>
+  <div class="nebula-mobile-nav">
+    <div class="mobile-nav-container">
+      <!-- Home -->
+      <button class="mobile-nav-button" onclick="sidebarRefresh();sidebarButtonEvent('home')"><i class="mobile-nav-icon bi bi-house-fill"></i></button>
+    </div>
+    <div class="mobile-nav-container">
+      <!-- Account -->
+      <button class="mobile-nav-button" onclick="sidebarRefresh();sidebarButtonEvent('accountAccount')"><i class="mobile-nav-icon bi bi-person-fill"></i></button>
+    </div>
+    <div class="mobile-nav-container">
+      <!-- Navigation -->
+      <button class="mobile-nav-button" onclick="sidebarRefresh();openMobileNav()"><i class="mobile-nav-icon bi bi-list"></i></button>
+    </div>
+  </div>
+  <script>
+    mobileNavigationVisible=false
+    navPossible=true
+    function toggleMobileNav() {
+      if(mobileNavigationVisible) {
+        closeMobileNav()
+      } else {
+        openMobileNav()
+      }
+    }
+    function closeMobileNav() {
+      if(navPossible == false) {return;}
+      navPossible = false
+      let sidebar = document.querySelector(".sidebar")
+      let overlay = document.querySelector(".nebula-mobile-overlay")
+      sidebar.style.left = "-200px"
+      overlay.style.left = null
+      overlay.style.opacity = null
+      setTimeout(() => {
+        sidebar.style.display = null
+        overlay.style.display = null
+        navPossible = true
+      },300)
+      mobileNavigationVisible=false
+    }
+    function openMobileNav() {
+      if(navPossible == false) {return;}
+      navPossible = false
+      let sidebar = document.querySelector(".sidebar")
+      let overlay = document.querySelector(".nebula-mobile-overlay")
+      sidebar.style.left = "-200px"
+      overlay.style.left = "-200px"
+      overlay.style.opacity = "0"
+      sidebar.style.display = "block"
+      overlay.style.display = "block"
+      setTimeout(() => {
+        overlay.style.opacity = ".7"
+        sidebar.style.left = "0px"
+        overlay.style.left = "0px"
+        navPossible = true
+      },50)
+      mobileNavigationVisible=true
+    }
+  </script>
+<style id="nebula-variables">
+  
+  /* Variables */
+  :root {
+    --sidebarPrimary: #c8d2dd;
+    --sidebarPrimaryHover: #dbe4ec;
+    --sidebarSecondary: #211c1e;
+    --sidebarSecondaryHover: #262626;
+    --sidebarSecondaryActive: #3a3a3a;
+    --sidebarSecondarySelected: #383535;
+    --sidebarButtonActive: #343538;
+
+    --pagePrimary: #c8d2dd;
+    --pagePrimaryHover: #788189;
+    --pageSecondary: #1b1b1b;
+    --pageSecondaryHover: #262626;
+    --pageSecondaryActive: #3a3a3a;
+    --pageSecondarySelected: #474747;
+    --pageButtonDefault: #474849;
+    --pageButtonHover: #525354;
+
+    --statusOffline: #525354;
+    --statusError: #ca231d;
+    --statusStarting: #e5a309;
+    --statusOnline: #00dd0f;
+
+    --authA: #080808;
+    --authB: #0f0f0f;
+    --authC: #1f1f1f;
+    --authD: #2c2c2c;
+    --authE: #ff5151;
+    --authF: #3b82f6;
+    --authG: #505050;
+    --authH: #e4e8ec;
+    
+    --sidebarBackground: #0C090A;
+    --pageBackground: #0c090a;
+
+    --borderRadius: 10px;
+    --borderRadiusSidebar: 10px;
+    --borderRadiusAuth: 10px;
+
+    --patternSizeAuth: 215px;
+    --patternSizeDashboard: 215px;
+  }
+
+</style>  <script>
+  console.log("nebula#~ wrapper.blade.php")
+
+  setTimeout(() => {
+    console.debug("%c"+
+    "\nIdentifier:   %cnebula"+
+    "\n%cVersion:      %c2.0-1"+
+    "\n%cBlueprint:    %cbeta-2024-12"+
+    "\n%cAuthor:       %cprplwtf"+
+    "\n%cPath:         %c/var/www/pterodactyl"+
+    "\n%cData:         %c/var/www/pterodactyl/.blueprint/extensions/nebula/private"+
+    "\n%cPublic:       %c/var/www/pterodactyl/.blueprint/extensions/nebula/public"+
+    "\n%cType:         %clocal"+
+    "\n%cTimestamp:    %c1750284206"+
+      "\n ",
+
+      'color: #3bb4f9; font-weight: 900',
+      'color: #168cf4; font-weight: 500',
+      'color: #3bb4f9; font-weight: 900',
+      'color: #168cf4; font-weight: 500',
+      'color: #3bb4f9; font-weight: 900',
+      'color: #168cf4; font-weight: 500',
+      'color: #3bb4f9; font-weight: 900',
+      'color: #168cf4; font-weight: 500',
+      'color: #3bb4f9; font-weight: 900',
+      'color: #168cf4; font-weight: 500',
+      'color: #3bb4f9; font-weight: 900',
+      'color: #168cf4; font-weight: 500',
+      'color: #3bb4f9; font-weight: 900',
+      'color: #168cf4; font-weight: 500',
+      'color: #3bb4f9; font-weight: 900',
+      'color: #168cf4; font-weight: 500',
+      'color: #3bb4f9; font-weight: 900',
+      'color: #168cf4; font-weight: 500',
+    );
+  }, 5000);
+
+  document.addEventListener("DOMContentLoaded", function () {
+    console.log(
+      "\n%cPowered by Nebula - © 2023-2024 Emma (prpl.wtf)\n%c\nLearn more at https://nebula.style \nBuyer agreements available at https://cdn.nebula.style/etc/policies/\n\n",
+      
+      'font-weight: 900; font-size: 24px; color: #7a98ff;',
+      'font-weight: 900; color: #ffffff;'
+    )
+          insertAboveApp(".nebula-weblinks");            insertAboveApp(".nebula-alert");      });
+</script>
+<script>
+  window.MultitaskingEnabled = false
+  const params = new URL(window.location).searchParams;
+  if(params.get('multitasking') == "true") {
+    window.MultitaskingEnabled = true
+    document.querySelector("html").setAttribute("multitasking", "")
+    fetchStyle("/extensions/nebula/libraries/floatingWindowStyles.css", "Multitasking")
+  }
+
+      const rootAdmin = false
+  
+  window.onload = function() {
+    setInterval(() => { sidebarRefresh() }, 1000)
+    filesRefresh()
+  }
+
+  window.addEventListener('locationchange', function () {
+    setTimeout(() => {sidebarRefresh()}, 200)
+  });
+
+  function sidebarButtonEvent(btn) {
+    serverId = fetchServerId()
+    if(btn === "home") { document.querySelector("a:not([blueprint])[href='/']").click() };
+     if(btn === "logout") { document.querySelector(".NavigationBar__RightNavigation-sc-tupl2x-0 > button:nth-child(4)").click() };     // servers
+    if(btn === "serverTerminal") { document.querySelector("a:not([blueprint])[href='/server/"+serverId+"']").click() };
+    if(btn === "serverFiles") { document.querySelector("a:not([blueprint])[href='/server/"+serverId+"/files']").click() };
+    if(btn === "serverDatabases") { document.querySelector("a:not([blueprint])[href='/server/"+serverId+"/databases']").click() };
+    if(btn === "serverSchedules") { document.querySelector("a:not([blueprint])[href='/server/"+serverId+"/schedules']").click() };
+    if(btn === "serverUsers") { document.querySelector("a:not([blueprint])[href='/server/"+serverId+"/users']").click() };
+    if(btn === "serverBackups") { document.querySelector("a:not([blueprint])[href='/server/"+serverId+"/backups']").click() };
+    if(btn === "serverNetwork") { document.querySelector("a:not([blueprint])[href='/server/"+serverId+"/network']").click() };
+    if(btn === "serverStartup") { document.querySelector("a:not([blueprint])[href='/server/"+serverId+"/startup']").click() };
+    if(btn === "serverSettings") { document.querySelector("a:not([blueprint])[href='/server/"+serverId+"/settings']").click() };
+    if(btn === "serverActivity") { document.querySelector("a:not([blueprint])[href='/server/"+serverId+"/activity']").click() };
+    // users
+    if(btn === "accountAccount") { document.querySelector("a:not([blueprint])[href='/account']").click() };
+    if(btn === "accountApi") { document.querySelector("a:not([blueprint])[href='/account/api']").click() };
+    if(btn === "accountSsh") { document.querySelector("a:not([blueprint])[href='/account/ssh']").click() };
+    if(btn === "accountActivity") { document.querySelector("a:not([blueprint])[href='/account/activity']").click() };
+
+    if(mobileNavigationVisible == true) { closeMobileNav() }
+
+    sidebarRefresh()
+  }
+  async function sidebarRefresh() {
+    // Get current window path and assign it to a variable.
+    currentPage = nebulaCurrentPage()
+    fileModeHide()
+    assignElements(currentPage)
+    // Show selected button.
+    if(currentPage === "home") {document.getElementById('sidebarMainHome').className = 'sidebarButton sidebarButtonSelected';} else {document.getElementById('sidebarMainHome').className = 'sidebarButton';}
+    if(currentPage.startsWith("account")) {
+      document.getElementById('sidebarCategoryAccount').style.display = "inline";
+      if(currentPage === "accountAccount") {document.getElementById('sidebarAccountAccount').className = 'sidebarButton sidebarButtonSelected';} else {document.getElementById('sidebarAccountAccount').className = 'sidebarButton';}
+      if(currentPage === "accountApi") {document.getElementById('sidebarAccountApi').className = 'sidebarButton sidebarButtonSelected';} else {document.getElementById('sidebarAccountApi').className = 'sidebarButton';}
+      if(currentPage === "accountSsh") {document.getElementById('sidebarAccountSsh').className = 'sidebarButton sidebarButtonSelected';} else {document.getElementById('sidebarAccountSsh').className = 'sidebarButton';}
+      if(currentPage === "accountActivity") {document.getElementById('sidebarAccountActivity').className = 'sidebarButton sidebarButtonSelected';} else {document.getElementById('sidebarAccountActivity').className = 'sidebarButton';}
+      if(currentPage === "accountMore") {document.getElementById('sidebarAccountMore').className = 'sidebarButton sidebarButtonSelected';} else {document.getElementById('sidebarAccountMore').className = 'sidebarButton';}
+      setTimeout(() => {
+        sidebarMoreRefresh()
+      }, 300);
+    } else {document.getElementById('sidebarCategoryAccount').style.display = "none";}
+    if(currentPage.startsWith("server")) {
+      document.getElementById('sidebarCategoryServer').style.display = "inline";
+      if(currentPage === "serverTerminal") {document.getElementById('sidebarServerTerminal').className = 'sidebarButton sidebarButtonSelected';refreshStatusOrb() } else {document.getElementById('sidebarServerTerminal').className = 'sidebarButton';}
+      if(currentPage === "serverFiles") {document.getElementById('sidebarServerFilemanager').className = 'sidebarButton sidebarButtonSelected';fileModeShow() }
+      if(currentPage === "serverFilesEdit") {document.getElementById('sidebarServerFilemanager').className = 'sidebarButton sidebarButtonSelected'; }
+      if((currentPage != "serverFiles") && (currentPage != "serverFilesEdit")) { document.getElementById('sidebarServerFilemanager').className = 'sidebarButton'; }
+      if(currentPage === "serverDatabases") {document.getElementById('sidebarServerDatabases').className = 'sidebarButton sidebarButtonSelected';} else {document.getElementById('sidebarServerDatabases').className = 'sidebarButton';}
+      if(currentPage === "serverSchedules") {document.getElementById('sidebarServerSchedules').className = 'sidebarButton sidebarButtonSelected';} else {document.getElementById('sidebarServerSchedules').className = 'sidebarButton';}
+      if(currentPage === "serverUsers") {document.getElementById('sidebarServerUsers').className = 'sidebarButton sidebarButtonSelected';} else {document.getElementById('sidebarServerUsers').className = 'sidebarButton';}
+      if(currentPage === "serverBackups") {document.getElementById('sidebarServerBackups').className = 'sidebarButton sidebarButtonSelected';} else {document.getElementById('sidebarServerBackups').className = 'sidebarButton';}
+      if(currentPage === "serverNetwork") {document.getElementById('sidebarServerNetwork').className = 'sidebarButton sidebarButtonSelected';} else {document.getElementById('sidebarServerNetwork').className = 'sidebarButton';}
+      if(currentPage === "serverStartup") {document.getElementById('sidebarServerStartup').className = 'sidebarButton sidebarButtonSelected';} else {document.getElementById('sidebarServerStartup').className = 'sidebarButton';}
+      if(currentPage === "serverSettings") {document.getElementById('sidebarServerSettings').className = 'sidebarButton sidebarButtonSelected';} else {document.getElementById('sidebarServerSettings').className = 'sidebarButton';}
+      if(currentPage === "serverActivity") {document.getElementById('sidebarServerActivity').className = 'sidebarButton sidebarButtonSelected';} else {document.getElementById('sidebarServerActivity').className = 'sidebarButton';}
+      if(currentPage === "serverMore") {document.getElementById('sidebarServerMore').className = 'sidebarButton sidebarButtonSelected';} else {document.getElementById('sidebarServerMore').className = 'sidebarButton';}
+      setTimeout(() => {
+        serverId = fetchServerId()
+        sidebarServerButtonRefresh(serverId);
+        sidebarMoreRefresh()      }, 300)
+    } else {document.getElementById('sidebarCategoryServer').style.display = "none";}
+
+      }
+  function sidebarServerButtonRefresh(serverId) {
+    nopage=true
+    if(document.querySelector("a:not([blueprint])[href='/server/"+serverId+"']") === null) {
+      document.getElementById('sidebarServerTerminal').style.display = "none";
+    } else {
+      document.getElementById('sidebarServerTerminal').style.display = "inline";
+      nopage=false
+    }
+    if(document.querySelector("a:not([blueprint])[href='/server/"+serverId+"/files']") === null) {
+      document.getElementById('sidebarServerFilemanager').style.display = "none";
+    } else {
+      document.getElementById('sidebarServerFilemanager').style.display = "inline";
+      nopage=false
+    }
+    if(document.querySelector("a:not([blueprint])[href='/server/"+serverId+"/databases']") === null) {
+      document.getElementById('sidebarServerDatabases').style.display = "none";
+    } else {
+      document.getElementById('sidebarServerDatabases').style.display = "inline";
+      nopage=false
+    }
+    if(document.querySelector("a:not([blueprint])[href='/server/"+serverId+"/schedules']") === null) {
+      document.getElementById('sidebarServerSchedules').style.display = "none";
+    } else {
+      document.getElementById('sidebarServerSchedules').style.display = "inline";
+      nopage=false
+    }
+    if(document.querySelector("a:not([blueprint])[href='/server/"+serverId+"/users']") === null) {
+      document.getElementById('sidebarServerUsers').style.display = "none";
+    } else {
+      document.getElementById('sidebarServerUsers').style.display = "inline";
+      nopage=false
+    }
+    if(document.querySelector("a:not([blueprint])[href='/server/"+serverId+"/backups']") === null) {
+      document.getElementById('sidebarServerBackups').style.display = "none";
+    } else {
+      document.getElementById('sidebarServerBackups').style.display = "inline";
+      nopage=false
+    }
+    if(document.querySelector("a:not([blueprint])[href='/server/"+serverId+"/network']") === null) {
+      document.getElementById('sidebarServerNetwork').style.display = "none";
+    } else {
+      document.getElementById('sidebarServerNetwork').style.display = "inline";
+      nopage=false
+    }
+    if(document.querySelector("a:not([blueprint])[href='/server/"+serverId+"/startup']") === null) {
+      document.getElementById('sidebarServerStartup').style.display = "none";
+    } else {
+      document.getElementById('sidebarServerStartup').style.display = "inline";
+      nopage=false
+    }
+    if(document.querySelector("a:not([blueprint])[href='/server/"+serverId+"/settings']") === null) {
+      document.getElementById('sidebarServerSettings').style.display = "none";
+    } else {
+      document.getElementById('sidebarServerSettings').style.display = "inline";
+      nopage=false
+    }
+    if(document.querySelector("a:not([blueprint])[href='/server/"+serverId+"/activity']") === null) {
+      document.getElementById('sidebarServerActivity').style.display = "none";
+    } else {
+      document.getElementById('sidebarServerActivity').style.display = "inline";
+      nopage=false
+    }
+    // if nopage = true then no page buttons are appearing.
+    if(nopage == true) { document.getElementById('sidebarServerLoader').style.display = 'block'; }
+    else { document.getElementById('sidebarServerLoader').style.display = 'none'; }
+    }
+  function sidebarMoreRefresh() {
+    // show/hide 'more' button
+    showMore=false
+    document.querySelectorAll('.SubNavigation-sc-lfuaoi-0 div a').forEach((el) => {
+      if([
+        '',
+        'Account',
+        'API Credentials',
+        'SSH Keys',
+        'Console',
+        'Files',
+        'Databases',
+        'Schedules',
+        'Users',
+        'Backups',
+        'Network',
+        'Startup',
+        'Settings',
+        'Activity',
+      ].includes(el.textContent)) { return; }
+      showMore=true;
+    });
+    if(showMore == true) { 
+      document.getElementById('sidebarAccountMore').style.display = "inline";
+      document.getElementById('sidebarServerMore').style.display = "inline";
+    } else {
+      document.getElementById('sidebarAccountMore').style.display = "none";
+      document.getElementById('sidebarServerMore').style.display = "none";
+    }
+  }
+</script>  <style>
+  /* Master fade keyframes */
+  @keyframes nebula-fade-animation {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+
+  /* Animations */
+      @keyframes nebula-animation {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+  
+
+  /* Prefers reduced motion */
+  @media (prefers-reduced-motion) {
+    @keyframes nebula-animation {
+      0% {opacity: 1}
+      100 {opacity: 1}
+    }
+
+    .Fade__Container-sc-1p0gm8n-0.hcgQjy:has(section),
+    div.PageContentBlock___StyledContentContainer-sc-kbxq2g-0 > div.bg-gray-700 > div.grid.border-gray-800,
+    div.BackupRow___StyledGreyRowBox-sc-1lzi0pw-0,
+    .GreyRowBox-sc-1xo9c6v-0,
+    .nebula-animation,
+    .style-module_1WqkLT9X,
+    .ScheduleTaskRow___StyledDiv-sc-17r38ls-0 {
+      animation: unset !important;
+      opacity: 1 !important;
+    }
+  }
+</style><script>
+  document.querySelector("head > meta[name='theme-color'][content='#0e4688']").setAttribute("content", "#0c090a")
+</script>
+<!-- PTERODACTYL PANEL THEMING -->
+<style id="nebula-theme">
+  ::-webkit-scrollbar {
+    width: 3px !important;
+  }
+  ::-webkit-scrollbar-thumb {
+    box-shadow: unset !important;
+    border-radius: 4px !important;
+    background-color: color-mix(in hsl, white 15%, transparent) !important;
+  }
+
+  /* Pterodactyl */
+  div.w-full.bg-neutral-900.shadow-md.overflow-x-auto { display: none; background-color: var(--pageBackground); opacity: 0; transition: none; }
+  div.SubNavigation-sc-lfuaoi-0.jZPsWO { display: none; background-color: var(--pageBackground); opacity: 0; transition: none; }
+   div.App___StyledDiv-sc-2l91w7-0.fnfeQw { background-color: var(--pageBackground) }
+    div.SubNavigation-sc-lfuaoi-0.jZPsWO { display: none; background-color: var(--pageBackground); opacity: 0; transition: none; }
+  div.ProgressBar___StyledDiv-sc-14ayc3f-1.jleFWY { position: fixed; z-index: 6; top: 0; left: 70px; width: calc(100% - 70px); }
+  .bg-neutral-900, .bg-gray-900, .bg-neutral-700 { background-color: var(--pageSecondaryActive) }
+  .ZkNLd:not([type="checkbox"]):not([type="radio"]) { background: none; background-color: var(--pageSecondaryActive); border: none; }
+  .jqTCDz:not([type="checkbox"]):not([type="radio"]) { background: none; background-color: var(--pageSecondaryActive); border: none; }
+  input.form-input.styles-module_S9h-xMSg.styles-module_AWe-iPIe.mt-3,
+  input.form-input.styles-module_S9h-xMSg.styles-module_AWe-iPIe.mt-1 { background: none; background-color: var(--pageSecondaryActive); border: none; }
+  select.Select-sc-17exaqp-0 { background-color: var(--pageSecondaryActive); border: none; }
+  div.ContentBox___StyledDiv-sc-mjlt6f-2.iGOcRf { background-color: var(--pageSecondary) }
+  .DropdownMenu___StyledDiv-sc-1ojgpy2-1 { display: none }
+  .FileDropdownMenu___StyledDiv-sc-17ln8oh-3 > .Fade__Container-sc-1p0gm8n-0 {display: none}
+  .FileEditContainer___StyledDiv5-sc-48rzpu-9.arKOj { background-color: transparent !important; }
+  [id*="floating-ui-"] {
+    z-index: 9999 !important;
+  }
+
+  /* status bars on server cards */
+  .fwbDSe .status-bar { --ActiveColor: var(--statusOffline) }
+  .kVijQB .status-bar { --ActiveColor: var(--statusStarting) }
+  .fRwFrz .status-bar { --ActiveColor: var(--statusOnline) }
+  
+  /*error! and alerts/messagebox*/
+  .icGkbh {
+    border: none !important;
+    border-color: transparent !important;
+    padding: 1rem !important;
+  }
+  .ErrorBoundary___StyledDiv2-sc-gjlwx5-1.fqqyUj {
+    padding: 20px !important;
+    border-radius: var(--borderRadius) !important;
+    background-color: var(--pageBackground) !important;
+    color: var(--pageButtonDefault) !important
+  }
+  .MessageBox__Container-sc-1yg9bob-0 {
+    background: var(--pageSecondaryHover);
+    border: unset;
+    border-radius: var(--borderRadius);
+    padding: 15px;
+  }
+  .MessageBox___StyledSpan-sc-1yg9bob-2.kNkGJR.title { background: var(--pageSecondarySelected) !important }
+
+  /*texts*/
+  .hojpzx, .jeOYKC, .Button___StyledSpan-sc-1qu1gou-2 {
+    font-weight: 800 !important;
+    text-transform: capitalize !important;
+  }
+
+  /* switches */
+  .cDmYBr > label {
+    background-color: color-mix(in hsl, var(--pageSecondaryActive) 90%, white);
+    transition: background-color .3s;
+  }
+  .cDmYBr > input[type="checkbox"]:checked + label {
+    background-color: var(--pagePrimaryHover);
+  }
+
+  /*screenblock*/
+  .ScreenBlock___StyledDiv2-sc-1f87kcm-2 { background-color: transparent; width: 100%; box-shadow: none; }
+  .ScreenBlock___StyledH-sc-1f87kcm-5,
+  .ScreenBlock___StyledP-sc-1f87kcm-6 { color: white; }
+  .ScreenBlock___StyledImg-sc-1f87kcm-4 { max-width: 420px; }
+  .Button__ButtonStyle-sc-1qu1gou-0.cDkCmT.ScreenBlock__ActionButton-sc-1f87kcm-0 {
+    animation: unset !important;
+    width: auto;
+    padding-left: 13px;
+    padding-right: 13px;
+  }
+  .Button__ButtonStyle-sc-1qu1gou-0.cDkCmT.ScreenBlock__ActionButton-sc-1f87kcm-0 > .Button___StyledSpan-sc-1qu1gou-2::after {
+    content: 'Refresh';
+    margin-left: 6px;
+  }
+  .erSjDQ {
+    position: absolute;
+    left: 0px;
+    top: 15px;
+    margin-left: unset !important;
+    margin-top: unset !important;
+    display: ruby;
+    width: 100%;
+  }
+  .ScreenBlock___StyledImg-sc-1f87kcm-4.fYzLIn {
+    margin-top: 72px !important
+  }
+  .ScreenBlock___StyledDiv2-sc-1f87kcm-2.iEOwcT {
+    margin: unset !important;
+    padding: unset !important;
+  }
+  
+  .WebsocketHandler___StyledDiv-sc-s2kfyl-0 {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 41;
+    border-radius: var(--borderRadius);
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .style-module_3kBDV_wo, .cDkCmT {
+    --thisButtonColor: var(--pageButtonDefault); /*#474849*/
+    --tw-ring-opacity: 0 !important;
+    --tw-ring-color: #00000000 !important;
+    --tw-ring-offset-width: 0px !important;
+    background: none !important;
+        background-color: var(--thisButtonColor) !important;
+    border: none !important;
+        transition: background-color .4s !important;
+   }
+    .style-module_3kBDV_wo:hover, .cDkCmT:hover { --thisButtonColor: var(--pageButtonHover) } /*#525354*/
+  .style-module_Yp7-2Fw- { --thisButtonColor: var(--pageSecondaryHover) }
+  .style-module_Yp7-2Fw-:hover { background-color: var(--pageSecondaryActive) !important; }
+  
+  /* Modal 1 */
+  div.Modal___StyledDiv2-sc-9vzni8-3 { background-color: var(--pageSecondary) }
+  .bOwzFe { z-index: 101 !important }
+  /* Modal 2 */
+  div.style-module_1RnhIT0w div.flex.p-6.pb-0.overflow-y-auto { background-color: var(--pageSecondary) }
+  div.style-module_1RnhIT0w { background-color: var(--pageSecondary) }
+  div.px-6.py-3.bg-gray-700.flex.items-center.justify-end.space-x-3.rounded-b {
+    background-color: var(--pageSecondary);
+    padding-bottom: 1rem !important;
+    padding-left: 1rem !important;
+    padding-right: 1.25rem !important;
+  }
+  div.style-module_1RnhIT0w { border: var(--pageSecondary) 5px solid; --tw-ring-shadow: none; }
+  div.fixed:nth-child(1) { background-color: #00000075 }
+  button.style-module_4LBM1DKx.style-module_3kBDV_wo.style-module_3xOG8K0n.style-module_2UCZLAAp.style-module_Yp7-2Fw-.group {
+    background-color: var(--pageSecondaryHover);
+  }
+  div#headlessui-portal-root div div div div.z-40 { z-index: 101 !important; }
+  div#headlessui-portal-root div div div > div.z-50 { z-index: 102 !important; }
+  .kztmyO { border-width: 0px !important; background-color: transparent !important; }
+  /* search modal */
+  a.fKxTnL[href*="/server/"] {
+    background-color: var(--pageSecondary);
+    transition: background-color .3s;
+    box-shadow: unset !important;
+    border: unset !important;
+    border-color: transparent !important;
+    border-width: 0px !important;
+    border-radius: var(--borderRadius);
+  }
+  a.fKxTnL[href*="/server/"]:hover {
+    background-color: var(--pageSecondaryHover);
+  }
+  .SearchModal___StyledSpan-sc-e8elnt-6.epzEyg {
+    background-color: var(--pageSecondaryHover) !important;
+  }
+
+  /* loading bar styling */
+  .CbttB {
+    box-shadow: unset !important;
+    background-color: var(--pagePrimaryHover);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 2px !important;
+    opacity: 1;
+    transition: 
+      opacity .4s,
+      width .5s !important;
+    z-index: 6 !important;
+  }
+  .CbttB.fade-exit {
+    opacity: 0 !important;
+  }
+  .fade-enter {
+    opacity: 0 !important;
+  }
+
+  /* spinners */
+  /* modal spinner */
+  .Modal___StyledDiv-sc-9vzni8-2:has(.Spinner__SpinnerComponent-sc-p63ahb-0) {
+    background: color-mix(in hsl, var(--pageSecondary) 80%, transparent) !important;
+    border-radius: var(--borderRadius) !important;
+  }
+  /* console/codemirror spinner */
+  .style-module_RcP2_Fvj.relative > .Fade__Container-sc-1p0gm8n-0.hcgQjy > .SpinnerOverlay___StyledDiv-sc-ee99c1-0:has(.Spinner__SpinnerComponent-sc-p63ahb-0),
+  .FileEditContainer___StyledDiv3-sc-48rzpu-7 > .Fade__Container-sc-1p0gm8n-0 > .SpinnerOverlay___StyledDiv-sc-ee99c1-0 {
+    background: color-mix(in hsl, var(--pageBackground) 40%, transparent) !important;
+    border-radius: var(--borderRadius) !important;
+  }
+
+  /* server list */
+  .dyLna-D:hover {
+    --tw-border-opacity: 0 !important;
+    border-color: var(--pageSecondaryHover);
+  }
+  .Pagination___StyledDiv-sc-7j9cqz-1 {
+    position: fixed;
+    z-index: 21 !important;
+    bottom: 20px;
+    right: 20px;
+  }
+  .Pagination__Block-sc-7j9cqz-0 {
+    border: none !important;
+    background-color: var(--pageSecondary);
+    box-shadow: var(--pageBackground) 0px 0px 61px 13px;
+  }
+  .Pagination__Block-sc-7j9cqz-0.cDkCmT {
+    background-color: var(--pagePrimaryHover) !important;
+  }
+  .Pagination__Block-sc-7j9cqz-0:hover {
+    background-color: var(--pageSecondaryHover) !important;
+  }
+
+  /* shadows begone */
+  .oLbNP, .ekHIsr { --tw-shadow: unset !important; }
+  /* pterodactyl home */
+  div.ServerRow___StyledDiv-sc-1ibsw91-3.ecJXa-d div.icon.mr-4 {
+    background-color: var(--pageSecondaryHover)
+  }
+  p { color: var(--pagePrimary) }
+  /* account 2fa codes */
+  #disable-totp-form .form-input.styles-module_S9h-xMSg.styles-module_AWe-iPIe,
+  .bg-gray-800.rounded.p-2.mt-6.cursor-pointer
+  { background: none; background-color: var(--pageSecondaryHover) !important }
+  /* account api key */
+  .ApiKeyModal___StyledPre-sc-s6pcab-2.irvYxA,
+  .AccountApiContainer___StyledCode-sc-1c4s3nm-10.lnIosn { background-color: var(--pageSecondaryHover) !important }
+  /* file manager */
+  div.style-module_35MPv1CD.active { margin-bottom: 0px; background-color: var(--pageSecondary); transition: background-color .5s; }
+  div.style-module_1WqkLT9X { margin-bottom: 7px; border-radius: var(--borderRadius); background-color: var(--pageSecondary); transition: background-color .5s; }
+  div.style-module_35MPv1CD.active:hover { background-color: var(--pageSecondaryHover) }
+  div.style-module_1WqkLT9X:hover { background-color: var(--pageSecondaryHover) }
+  
+  div.FileObjectRow___StyledDiv-sc-wrdnyp-0.cOiSgE,
+  div.FileObjectRow___StyledDiv2-sc-wrdnyp-1.fsKyNz,
+  div.FileObjectRow___StyledDiv4-sc-wrdnyp-3,
+  div.FileObjectRow___StyledDiv3-sc-wrdnyp-2
+  { 
+    color: var(--pagePrimary);
+    opacity: .85;
+  }
+
+  .style-module_1WqkLT9X .SelectFileCheckbox___StyledLabel-sc-1cv6gsl-1.diqvdw {
+    padding-bottom: 12px;
+  }
+
+  .CodeMirror.cm-s-ayu-mirage.CodeMirror-wrap.CodeMirror-overlayscroll,
+  .CodeMirror-gutter.CodeMirror-foldgutter,
+  .CodeMirror-gutter.CodeMirror-linenumbers,
+  .FileEditContainer___StyledDiv4-sc-48rzpu-8.eDlcZT .Select-sc-17exaqp-0.dupyoa { background-color: var(--pageSecondary); border: none; }
+
+  .Input-sc-19rce1w-0.SelectFileCheckbox__FileActionCheckbox-sc-1cv6gsl-0.FileManagerContainer___StyledFileActionCheckbox-sc-1ehiwhq-0.jqTCDz.uOUEk.fKOwuG {
+    appearance: none;
+    border-radius: 4px;
+    cursor: pointer;
+    position: relative;
+  }
+
+  .Input-sc-19rce1w-0.SelectFileCheckbox__FileActionCheckbox-sc-1cv6gsl-0.FileManagerContainer___StyledFileActionCheckbox-sc-1ehiwhq-0.jqTCDz.uOUEk.fKOwuG:checked {
+    appearance: none;
+    border: 2px solid #ccc;
+    cursor: pointer;
+    position: relative;
+  }
+
+  .Input-sc-19rce1w-0.SelectFileCheckbox__FileActionCheckbox-sc-1cv6gsl-0.FileManagerContainer___StyledFileActionCheckbox-sc-1ehiwhq-0.jqTCDz.uOUEk.fKOwuG:checked::before {
+    font-size: 14px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .Input-sc-19rce1w-0.SelectFileCheckbox__FileActionCheckbox-sc-1cv6gsl-0.FileManagerContainer___StyledFileActionCheckbox-sc-1ehiwhq-0.jqTCDz.uOUEk.fKOwuG:checked::after {
+    font-family: bootstrap-icons !important;
+    content: "\F26E";
+    color: #000000;
+    font-size: 14px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .Input-sc-19rce1w-0.SelectFileCheckbox__FileActionCheckbox-sc-1cv6gsl-0.jqTCDz.uOUEk {
+    appearance: none;
+    border-radius: 4px;
+    cursor: pointer;
+    position: relative;
+  }
+
+  .Input-sc-19rce1w-0.SelectFileCheckbox__FileActionCheckbox-sc-1cv6gsl-0.jqTCDz.uOUEk:checked {
+    appearance: none;
+    border: 2px solid #ccc;
+    cursor: pointer;
+    position: relative;
+  }
+
+  .Input-sc-19rce1w-0.SelectFileCheckbox__FileActionCheckbox-sc-1cv6gsl-0.jqTCDz.uOUEk:checked::after {
+    font-family: bootstrap-icons !important;
+    content: "\F26E";
+    color: #000000;
+    font-size: 14px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  /* .pteroignore & New Directory Button, new file path -> woo */
+  .FileEditContainer___StyledDiv2-sc-48rzpu-2.eyfINz {
+    border-radius: var(--borderRadius);
+    background-color: var(--pageSecondary);
+    border-left: 0px;
+  }
+
+  .NewDirectoryButton___StyledSpan2-sc-e7hrah-3.eFSjGD {
+    transition: background-color .3s;
+    color: var(--pagePrimary);
+  }
+
+  /* mass action bar */
+  .MassActionsBar___StyledDiv2-sc-1x2nl3g-1.haunnZ.fade-enter-done,
+  .MassActionsBar___StyledDiv2-sc-1x2nl3g-1.haunnZ {
+    background-color: var(--pageSecondaryHover);
+    height: 50px;
+    border-radius: var(--borderRadius);
+    padding: 10px 10px !important;
+  }
+  /* mass action bar container */
+  div.fixed.bottom-0.mb-6.flex.justify-center.w-full.z-50 {
+    width: auto;
+    right: 150px;
+  }
+  /* mass action bar buttons */
+  .MassActionsBar___StyledDiv2-sc-1x2nl3g-1 > button:nth-child(1),
+  .MassActionsBar___StyledDiv2-sc-1x2nl3g-1 > button:nth-child(2),
+  .MassActionsBar___StyledDiv2-sc-1x2nl3g-1 > button:nth-child(3) {
+    font-size: 0px;
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    scale: 0.75 !important;
+    border-radius: var(--borderRadius) !important;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+    background-color: #00000000 !important;
+  }
+
+  .MassActionsBar___StyledDiv2-sc-1x2nl3g-1 > button:nth-child(1)::before {
+    font-size: 22px;
+    color: #c7c9cc;
+    font-family: bootstrap-icons !important;
+    content: "\F2E2";
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+  }
+  .MassActionsBar___StyledDiv2-sc-1x2nl3g-1 > button:nth-child(2)::before {
+    font-size: 22px;
+    color: #c7c9cc;
+    font-family: bootstrap-icons !important;
+    content: "\F10C";
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+  }
+  .MassActionsBar___StyledDiv2-sc-1x2nl3g-1 > button:nth-child(3)::before {
+    font-size: 22px;
+    color: #ff524c;
+    font-family: bootstrap-icons !important;
+    content: "\F78A";
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+  }
+  
+  /* checkbox */
+  .jqTCDz[type="checkbox"]:checked, .jqTCDz[type="radio"]:checked {
+    background: hex(#3a3a3a00) !important;
+    background-color: #dddddd !important;
+    background-image: none;
+    border: none;
+    border-color: #00000000;
+  }
+  .jqTCDz[type="checkbox"], .jqTCDz[type="radio"] { background-color: transparent !important;border-color: #ffffff30; transition: border-color .3s, background-color .3s; border-radius: 5px; }
+  .jqTCDz[type="checkbox"]:hover, .jqTCDz[type="radio"]:hover { border-color: #ffffffaa; transition: border-color .3s, background-color .3s }
+
+  /* terminal */
+  div.style-module_2Vp6MaXq > div.style-module_1DtraXMW:has(.Icon___StyledSvg-sc-omsq29-0) {
+    backdrop-filter: unset !important;
+    background-color: transparent !important;
+    box-shadow: unset !important;
+    border: unset !important;
+    border-bottom: unset !important;
+  }
+  div.style-module_2Vp6MaXq {
+    background-color: var(--pageSecondary);
+    overflow: hidden;
+    color: #fff !important;
+  }
+  div.style-module_2XbmHEcn {
+    background-color: var(--pageSecondary);
+  }
+  .style-module_RcP2_Fvj .style-module_3TDo--Tn:focus {
+    border-color: var(--pagePrimaryHover) !important;
+  }
+
+  /* graphs */
+  div.style-module_2XbmHEcn:has(div > canvas) {
+    border-bottom-color: var(--pageSecondary) !important;
+    box-shadow: unset !important;
+  }
+
+
+  .xterm-screen + div:has(.svg-inline--fa.fa-bell) {
+    position: absolute !important;
+    right: 0.5rem !important;
+    bottom: 0.5rem !important;
+    padding: 0.5rem !important;
+    font-size: 1.25em !important; 
+    box-shadow: var(--pageBackground) 0px 0px 27px 0px !important;
+    background-color: var(--pageSecondaryHover) !important;
+    z-index: 999 !important;
+    cursor: pointer !important;
+    visibility: visible !important;
+    border-radius: 50px !important;
+    width: 39px !important;
+    padding-left: 12px !important;
+    padding-top: 11px !important;
+  }
+
+  .xterm-search-bar__addon {
+    position: absolute;
+    max-width: 1467px;
+    top: 0.5rem;
+    right: 0.5rem;
+    color: #000;
+    box-shadow: var(--pageBackground) 0px 0px 27px 0px;
+    background-color: var(--pageSecondaryHover);
+    z-index: 999;
+    display: flex;
+    border-radius: 100px;
+    padding: 8px;
+  }
+  .xterm-search-bar__addon .search-bar__input {
+    background-color: color-mix(in hsl, var(--pageSecondaryActive) 96%, white);
+    color: #ccc;
+    border: 0;
+    padding: 2px;
+    height: 20px;
+    width: 227px;
+    border-radius: 100px;
+  }
+  .xterm-search-bar__addon .search-bar__input:focus-visible { outline: unset !important }
+  .xterm-search-bar__addon .search-bar__btn {
+    background-color: color-mix(in hsl, var(--pageSecondaryActive) 96%, white);
+    border-radius: 100px;
+    transition: background-color .2s;
+  }
+  .xterm-search-bar__addon .search-bar__btn.prev {
+    margin-left: 6px !important;
+    border-radius: 20px 0px 0px 20px !important;
+  }
+  .xterm-search-bar__addon .search-bar__btn.next {
+    margin-left: 0px !important;
+    border-radius: 0px 20px 20px 0px !important;
+  }
+  .xterm-search-bar__addon .search-bar__btn.close {
+    margin-left: 6px !important;
+  }
+  .xterm-search-bar__addon .search-bar__btn:hover {
+    background-color: color-mix(in hsl, var(--pageSecondaryActive) 86%, white);
+  }
+  
+  /* copy notification */
+  div.rounded-md.py-3.px-4.text-gray-200.bg-neutral-600\/95.shadow {
+    background-color: var(--pageSecondary) !important;
+  }
+
+
+  /* ICONS INSTEAD OF TEXT ON START/STOP/RESTART BUTTONS */
+      .PageContentBlock___StyledContentContainer-sc-kbxq2g-0 div.grid.grid-cols-4.gap-4.mb-4 div.col-span-4.sm\:col-span-2.lg\:col-span-1.self-end div.flex.sm\:justify-end.space-x-2 button.style-module_4LBM1DKx {
+      font-size: 0px !important;
+      background-color: transparent !important;
+      transition: background-color .3s !important;
+      border: none !important;
+      box-shadow: none !important;
+      width: 33.3% !important;
+      flex: unset !important;
+      border-radius: 100px !important;
+    }
+
+    #power-start, 
+    #power-restart,
+    #power-stop { 
+      background-color: var(--pageSecondary) !important;
+    }
+
+    #power-start:hover, 
+    #power-restart:hover,
+    #power-stop:hover
+      background-color: var(--pageSecondaryHover) !important;
+    }
+    {}
+  #power-start::before {
+    font-family: bootstrap-icons !important;
+    font-size: 25px !important;
+    content: "\F4F4" !important;
+  }
+  #power-restart::before {
+    font-family: bootstrap-icons !important;
+    font-size: 21px !important;
+    content: "\F130" !important;
+  }
+  #power-stop::before {
+    font-family: bootstrap-icons !important;
+    font-size: 25px !important;
+    content: "\F592" !important;
+  }
+  
+
+  /* default status */
+  .Icon___StyledSvg-sc-omsq29-0.ejRaBu.text-gray-100,
+  /* warning status */
+  .style-module_1DtraXMW.bg-yellow-500 .Icon___StyledSvg-sc-omsq29-0.ejRaBu.text-gray-50,
+  /* danger status */
+  .style-module_1DtraXMW.bg-red-500 .Icon___StyledSvg-sc-omsq29-0.ejRaBu.text-gray-50 {
+    /* styles */
+    z-index: 4;
+    margin-right:25px;
+    scale: 4;
+    color: #ffffff12 !important;
+    transition: color .3s, scale .3s, background-color .3s;
+  }
+
+  .Icon___StyledSvg-sc-omsq29-0.ejRaBu.text-gray-100:hover {
+    z-index: 4;
+    color: #ffffff18 !important;
+  }
+
+  /* address */ div.style-module_2Vp6MaXq:nth-child(1) > div:nth-child(2) > svg:nth-child(1) {scale: 5 !important;rotate: -20deg !important;}
+  /* address hover */ div.style-module_2Vp6MaXq:nth-child(1):hover > div:nth-child(2) > svg:nth-child(1) {scale: 5.3 !important; color: #ffffff18 !important;}
+  
+  /* uptime */ div.style-module_2Vp6MaXq:nth-child(2) > div:nth-child(2) > svg:nth-child(1) {scale: 4.5 !important;rotate: -20deg !important; color: #ffffff12 !important; transition: color .3s, scale .3s, background-color .3s;}
+  /* uptime hover */ div.style-module_2Vp6MaXq:nth-child(2):hover > div:nth-child(2) > svg:nth-child(1) {scale: 4.8 !important; color: #ffffff18 !important;}
+
+  /* cpu */ div.style-module_2Vp6MaXq:nth-child(3) > div:nth-child(2) > svg:nth-child(1) {scale: 3.8 !important;rotate: -20deg !important;}
+  /* cpu hover */ div.style-module_2Vp6MaXq:nth-child(3):hover > div:nth-child(2) > svg:nth-child(1) {scale: 4.1 !important; color: #ffffff18 !important;}
+  
+  /* ram */ div.style-module_2Vp6MaXq:nth-child(4) > div:nth-child(2) > svg:nth-child(1) {scale: 4 !important;rotate: -20deg !important;}
+  /* ram hover */ div.style-module_2Vp6MaXq:nth-child(4):hover > div:nth-child(2) > svg:nth-child(1) {scale: 4.3 !important; color: #ffffff18 !important;}
+  
+  /* disk */ div.style-module_2Vp6MaXq:nth-child(5) > div:nth-child(2) > svg:nth-child(1) {scale: 4.5 !important;rotate: -20deg !important;}
+  /* disk hover */ div.style-module_2Vp6MaXq:nth-child(5):hover > div:nth-child(2) > svg:nth-child(1) {scale: 4.8 !important; color: #ffffff18 !important;}
+  
+  /* network in */ div.style-module_2Vp6MaXq:nth-child(6) > div:nth-child(2) > svg:nth-child(1) {scale: 4.5 !important;rotate: -20deg !important;}
+  /* network in hover */ div.style-module_2Vp6MaXq:nth-child(6):hover > div:nth-child(2) > svg:nth-child(1) {scale: 4.8 !important; color: #ffffff18 !important;}
+  
+  /* network out */ div.style-module_2Vp6MaXq:nth-child(7) > div:nth-child(2) > svg:nth-child(1) {scale: 4.5 !important;rotate: -20deg !important;}
+  /* network out hover */ div.style-module_2Vp6MaXq:nth-child(7):hover > div:nth-child(2) > svg:nth-child(1) {scale: 4.8 !important; color: #ffffff18 !important;}
+
+  /* xterm */
+  .relative.style-module_1AMtO9lt input { background: none; background-color: var(--pageSecondaryHover); }
+  .style-module_1n_DiqmT.style-module_1AMtO9lt, .xterm-screen, .xterm-viewport, .terminal.xterm { background: none !important; background-color: var(--pageSecondary) !important; }
+
+  /* schedules */
+  .GreyRowBox-sc-1xo9c6v-0,
+  .flex.ScheduleEditContainer___StyledScheduleCronRow-sc-1fhsmlc-5.gLoyLu { background-color: var(--pageSecondary) }
+  div.ScheduleEditContainer___StyledDiv3-sc-1fhsmlc-7 { background-color: var(--pageSecondary); border-bottom: unset !important; margin-bottom: 1rem; }
+  div.ScheduleEditContainer___StyledDiv-sc-1fhsmlc-0.bWXUsX { background-color: var(--pageSecondary) }
+  div.ScheduleTaskRow___StyledDiv-sc-17r38ls-0.ipThkt { background: none !important; background-color: var(--pageSecondary) !important; border: none; margin-bottom: 5px; border-radius: 2.5px }
+  .ScheduleTaskRow___StyledDiv4-sc-17r38ls-6.cPagWz { background-color: var(--pageSecondaryHover); }
+  .ScheduleEditContainer___StyledDiv7-sc-1fhsmlc-18 { background: none !important; }
+
+  div.EditScheduleModal___StyledDiv2-sc-wh9db9-4,
+  div.EditScheduleModal___StyledDiv4-sc-wh9db9-6,
+  div.EditScheduleModal___StyledDiv5-sc-wh9db9-7,
+  div.TaskDetailsModal___StyledDiv5-sc-1b5dnyw-7 { background-color: var(--pageSecondaryHover); border: none; } /*create/edit schedule*/
+
+  div.EditScheduleModal___StyledDiv3-sc-wh9db9-5.hsBdEm,
+  div.EditScheduleModal___StyledDiv3-sc-wh9db9-5.hsBdEm * {
+    background-color: var(--pageSecondaryActive) !important;
+    border-radius: var(--borderRadius) !important;
+  }
+  div.EditScheduleModal___StyledDiv3-sc-wh9db9-5.hsBdEm {
+    margin-top: 15px;
+  }
+  .jpYRCT { box-shadow: none !important; }
+
+  /* settings */
+  .jRrWLs { border-bottom-width: 0 !important; }
+  .SettingsContainer___StyledTitledGreyBox-sc-1e5ycmz-3 > div:nth-child(2) > div:nth-child(1) > input:nth-child(2) { background-color: var(--pageSecondaryActive); border: none; }
+  .SettingsContainer___StyledDiv3-sc-1e5ycmz-4.keyYci .Input-sc-19rce1w-0.jqTCDz.cursor-pointer { background-color: var(--pageSecondaryActive); border: none; }
+  #name { background-color: var(--pageSecondaryActive); border: none; }
+  .Input__Textarea-sc-19rce1w-1 { background-color: var(--pageSecondaryActive); border: none; }
+  
+  div.RenameServerBox___StyledTitledGreyBox-sc-1bh2mfg-0 > div:nth-child(1),
+  div.SettingsContainer___StyledTitledGreyBox2-sc-1e5ycmz-10 > div:nth-child(1),
+  div.ReinstallServerBox___StyledTitledGreyBox-sc-1prmksw-0 > div:nth-child(1),
+  div.SettingsContainer___StyledTitledGreyBox-sc-1e5ycmz-3 > div:nth-child(1)
+  { background-color: var(--pageSecondary); border-bottom-width: 0 !important; }
+
+  .SettingsContainer___StyledCode-sc-1e5ycmz-12.EwfIk,
+  .SettingsContainer___StyledCode2-sc-1e5ycmz-14.izAmwE,
+  div.RenameServerBox___StyledTitledGreyBox-sc-1bh2mfg-0 > div:nth-child(2),
+  div.SettingsContainer___StyledTitledGreyBox2-sc-1e5ycmz-10 > div:nth-child(2),
+  div.ReinstallServerBox___StyledTitledGreyBox-sc-1prmksw-0 > div:nth-child(2),
+  div.SettingsContainer___StyledTitledGreyBox-sc-1e5ycmz-3 > div:nth-child(2),
+  .oLbNP,
+  .StartupContainer___StyledDiv-sc-163imy2-0.dUOPLC .TitledGreyBox___StyledDiv3-sc-gvsoy-4.fKIIIQ,
+  .StartupContainer___StyledDiv-sc-163imy2-0.dUOPLC .TitledGreyBox___StyledDiv2-sc-gvsoy-1.jRrWLs,
+  .StartupContainer___StyledDiv-sc-163imy2-0.dUOPLC .TitledGreyBox___StyledDiv-sc-gvsoy-0.oLbNP.StartupContainer___StyledTitledGreyBox-sc-163imy2-1.kRunTE,
+  .StartupContainer___StyledDiv-sc-163imy2-0.dUOPLC .TitledGreyBox___StyledDiv-sc-gvsoy-0.oLbNP.StartupContainer___StyledTitledGreyBox2-sc-163imy2-4.aRhRz,
+  .StartupContainer___StyledDiv3-sc-163imy2-8.gMWjQt .TitledGreyBox___StyledDiv2-sc-gvsoy-1.jRrWLs,
+  .StartupContainer___StyledDiv3-sc-163imy2-8.gMWjQt .TitledGreyBox___StyledDiv3-sc-gvsoy-4.fKIIIQ,
+  .StartupContainer___StyledDiv3-sc-163imy2-8.gMWjQt .TitledGreyBox___StyledDiv-sc-gvsoy-0.oLbNP
+  { background-color: var(--pageSecondary) }
+
+  .SettingsContainer___StyledDiv6-sc-1e5ycmz-7.bzLcIU {
+    border-radius: var(--borderRadius);
+    border-left: 0px;
+  }
+
+  .EditSubuserModal___StyledPermissionTitleBox-sc-1hon03w-8,
+  .EditSubuserModal___StyledPermissionTitleBox-sc-1hon03w-8 > .TitledGreyBox___StyledDiv2-sc-gvsoy-1 {
+    background-color: var(--pageSecondaryHover)
+  }
+  
+  /* activity  ACCOUNT + SERVER */
+  .ContentContainer-sc-x3r2dw-0.PageContentBlock___StyledContentContainer-sc-kbxq2g-0.jyeSuy.HeRWk > div.bg-gray-700 > div.grid {
+    background-color: var(--pageSecondary);
+    border-radius: var(--borderRadius);
+    border: none;
+    margin-bottom: 10px;
+  }
+  div.bg-gray-700:has(div.grid.grid-cols-10.py-4.border-b-2.border-gray-800.last\:rounded-b.last\:border-0.group),
+  div.ContentContainer-sc-x3r2dw-0:nth-child(2) {
+    background: none;
+    background-color: none;
+    transition: none;
+    animation: none;
+    border: none;
+    border-color: #00000000;
+  }
+  /* startup */
+  .StartupContainer___StyledDiv-sc-163imy2-0.dUOPLC .TitledGreyBox___StyledDiv-sc-gvsoy-0.oLbNP.StartupContainer___StyledTitledGreyBox2-sc-163imy2-4.aRhRz .TitledGreyBox___StyledDiv3-sc-gvsoy-4.fKIIIQ .Select-sc-17exaqp-0.dupyoa,
+  .StartupContainer___StyledDiv2-sc-163imy2-2.gMdcgi p { background-color: var(--pageSecondaryActive); border: none; }
+
+  .Label-sc-g780ms-0.eDArzA,
+  .StartupContainer___StyledDiv3-sc-163imy2-8.gMWjQt .Input-sc-19rce1w-0.jqTCDz { border: none; }
+  /* subusers */
+  .TitledGreyBox___StyledDiv3-sc-gvsoy-4.fKIIIQ .PermissionRow__Container-sc-1h899cn-0.icxFlO:hover { border-color: #00000000; border: none; background-color: var(--pageSecondaryActive) }
+  .TitledGreyBox___StyledDiv3-sc-gvsoy-4.fKIIIQ .PermissionRow__Container-sc-1h899cn-0.icxFlO { border-color: #00000000; border: none; }
+  /* backups */
+  .CreateBackupButton___StyledDiv2-sc-da8bqw-3.eDncUf { background-color: var(--pageSecondaryHover); border: none; }
+  
+  /* databases */
+  .Button__ButtonStyle-sc-1qu1gou-0[color="red"],
+  .Button__ButtonStyle-sc-1qu1gou-0.kztmyO,
+  .Button__ButtonStyle-sc-1qu1gou-0.jUQpfY {
+    border: unset;
+    background-color: var(--pageSecondaryHover) !important;
+  }
+  .Button__ButtonStyle-sc-1qu1gou-0[color="red"]:hover,
+  .Button__ButtonStyle-sc-1qu1gou-0.kztmyO:hover,
+  .Button__ButtonStyle-sc-1qu1gou-0.jUQpfY:hover { background-color: var(--pageSecondaryActive) !important; }
+
+  .DatabaseRow___StyledP3-sc-1t67zwr-18.jJXgtG.cursor-pointer,
+  .DatabaseRow___StyledP5-sc-1t67zwr-21.iGUSeG,
+  .DatabaseRow___StyledP7-sc-1t67zwr-24.bvwnyN.cursor-pointer {
+    background-color: var(--pageSecondaryActive);
+    padding: 4px 10px;
+    padding-top: 5px !important;
+    border-radius: var(--borderRadius);
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !important;
+    font-size: 0.875rem !important;
+    line-height: 1.25rem !important;
+  }
+</style>
+  <div id="fileMode" class="file-manager-switch">
+  <div class="file-manager-switch-container">
+    <button id="filesGrid" class="file-manager-switch-grid" onclick="switchFilesLayout()">
+      <svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" viewBox="0 0 24 24" style="transform: ;msFilter:;"><path d="M10 7h4v4h-4zm6 0h4v4h-4zM4 7h4v4H4zm6 6h4v4h-4zm6 0h4v4h-4zM4 13h4v4H4z"></path></svg>
+    </button>
+    <button id="filesList" class="file-manager-switch-list" onclick="switchFilesLayout()">
+      <svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" viewBox="0 0 24 24" style="transform: ;msFilter:;"><path d="M4 6h2v2H4zm0 5h2v2H4zm0 5h2v2H4zm16-8V6H8.023v2H18.8zM8 11h12v2H8zm0 5h12v2H8z"></path></svg>
+    </button>
+  </div>
+</div> 
+  <!-- KEYBINDS MODAL -->
+
+  <a onclick="hideKeybinds()">
+    <div id="keybindsSiteOverlay" class="keybinds-site-overlay"></div>
+  </a>
+  <div id="keybindsContainer" class="keybinds-container">
+    <div class="keybinds-content-box">
+      <div class="keybinds-content">
+        <h2 class="keybinds-content-title">Keybinds</h2>
+        <p class="keybinds-content-text">Quickly navigate through the panel using keybinds.</p><br>
+        
+        <!--Global-->
+<p class="keybinds-content-text-bold">Global</p>
+<div class="keybinds-content-text-box">
+
+  <!-- View Keybinds -->
+  <div class="row">
+    <div class="keybinds-column"><p class="keybinds-content-text-dim keybinds-name">View Keybinds</p></div>
+    <div class="keybinds-column"><p class="keybinds-content-text-dim">
+      <code class="keybinds-shortcut">
+        <i class="bi bi-option"></i> <i class="bi bi-slash-lg"></i>
+      </code><code class="keybinds-shortcut">
+        <i class="bi bi-alt"></i> <i class="bi bi-slash-lg"></i>
+      </code>
+    </p></div>
+  </div>
+
+  <!-- Home -->
+  <div class="row">
+    <div class="keybinds-column"><p class="keybinds-content-text-dim keybinds-name">Home</p></div>
+    <div class="keybinds-column"><p class="keybinds-content-text-dim">
+      <code class="keybinds-shortcut">
+        <i class="bi bi-option"></i> <i class="bi bi-escape"></i>
+      </code>
+    </p></div>
+  </div>
+
+  <!-- Account -->
+  <div class="row">
+    <div class="keybinds-column"><p class="keybinds-content-text-dim keybinds-name">Account</p></div>
+    <div class="keybinds-column"><p class="keybinds-content-text-dim">
+      <code class="keybinds-shortcut">
+        <i class="bi bi-option"></i> .
+      </code>
+    </p></div>
+  </div>
+
+  <!-- Search -->
+  <div class="row">
+    <div class="keybinds-column"><p class="keybinds-content-text-dim keybinds-name">Search</p></div>
+    <div class="keybinds-column"><p class="keybinds-content-text-dim">
+      <code class="keybinds-shortcut">
+        <i class="bi bi-option"></i> K
+      </code><code class="keybinds-shortcut">
+        <i class="bi bi-alt"></i> F
+      </code>
+    </p></div>
+  </div>
+  
+  
+  <p style="opacity: 0; font-size: 0px;">.</p>
+</div><br>
+
+<!--Server management-->
+<p class="keybinds-content-text-bold">Server management</p>
+<div class="keybinds-content-text-box">
+
+  <!-- Terminal -->
+  <div class="row">
+    <div class="keybinds-column"><p class="keybinds-content-text-dim keybinds-name">Terminal</p></div>
+    <div class="keybinds-column"><p class="keybinds-content-text-dim">
+      <code class="keybinds-shortcut">
+        <i class="bi bi-option"></i> <i class="bi bi-1-square"></i>
+      </code><code class="keybinds-shortcut">
+        <i class="bi bi-alt"></i> .
+      </code>
+    </p></div>
+
+    <div class="keybinds-column"><p class="keybinds-content-text-dim keybinds-subcategory-name">Start</p></div>
+    <div class="keybinds-column"><p class="keybinds-content-text-dim">
+      <code class="keybinds-subcategory-shortcut">
+        <i class="bi bi-alt"></i> Z
+      </code>
+    </p></div>
+
+    <div class="keybinds-column"><p class="keybinds-content-text-dim keybinds-subcategory-name">Stop</p></div>
+    <div class="keybinds-column"><p class="keybinds-content-text-dim">
+      <code class="keybinds-subcategory-shortcut">
+        <i class="bi bi-alt"></i> X
+      </code>
+    </p></div>
+
+    <div class="keybinds-column"><p class="keybinds-content-text-dim keybinds-subcategory-name">Restart</p></div>
+    <div class="keybinds-column"><p class="keybinds-content-text-dim">
+      <code class="keybinds-subcategory-shortcut">
+        <i class="bi bi-alt"></i> C
+      </code>
+    </p></div>
+
+    <div class="keybinds-column"><p class="keybinds-content-text-dim keybinds-subcategory-name">Copy IP Address</p></div>
+    <div class="keybinds-column"><p class="keybinds-content-text-dim">
+      <code class="keybinds-subcategory-shortcut">
+        <i class="bi bi-alt"></i> A
+      </code>
+    </p></div>
+  </div>
+
+  <!-- Files -->
+  <div class="row">
+    <div class="keybinds-column"><p class="keybinds-content-text-dim keybinds-name">Files</p></div>
+    <div class="keybinds-column"><p class="keybinds-content-text-dim">
+      <code class="keybinds-shortcut">
+        <i class="bi bi-option"></i> <i class="bi bi-2-square"></i>
+      </code><code class="keybinds-shortcut">
+        <i class="bi bi-alt"></i> ,
+      </code>
+    </p></div>
+
+    <div class="keybinds-column"><p class="keybinds-content-text-dim keybinds-subcategory-name">Switch layout</p></div>
+    <div class="keybinds-column"><p class="keybinds-content-text-dim">
+      <code class="keybinds-subcategory-shortcut">
+        <i class="bi bi-alt"></i> Z
+      </code>
+    </p></div>
+
+    <div class="keybinds-column"><p class="keybinds-content-text-dim keybinds-subcategory-name">New File</p></div>
+    <div class="keybinds-column"><p class="keybinds-content-text-dim">
+      <code class="keybinds-subcategory-shortcut">
+        <i class="bi bi-alt"></i> [
+      </code>
+    </p></div>
+
+    <div class="keybinds-column"><p class="keybinds-content-text-dim keybinds-subcategory-name">New Directory</p></div>
+    <div class="keybinds-column"><p class="keybinds-content-text-dim">
+      <code class="keybinds-subcategory-shortcut">
+        <i class="bi bi-alt"></i> ]
+      </code>
+    </p></div>
+  </div>
+
+  <!-- Databases -->
+  <div class="row">
+    <div class="keybinds-column"><p class="keybinds-content-text-dim keybinds-name">Databases</p></div>
+    <div class="keybinds-column"><p class="keybinds-content-text-dim">
+      <code class="keybinds-shortcut">
+        <i class="bi bi-option"></i> <i class="bi bi-3-square"></i>
+      </code>
+    </p></div>
+
+    <div class="keybinds-column"><p class="keybinds-content-text-dim keybinds-subcategory-name">New Database</p></div>
+    <div class="keybinds-column"><p class="keybinds-content-text-dim">
+      <code class="keybinds-subcategory-shortcut">
+        <i class="bi bi-alt"></i> [
+      </code>
+    </p></div>
+  </div>
+
+  <!-- Schedules -->
+  <div class="row">
+    <div class="keybinds-column"><p class="keybinds-content-text-dim keybinds-name">Schedules</p></div>
+    <div class="keybinds-column"><p class="keybinds-content-text-dim">
+      <code class="keybinds-shortcut">
+        <i class="bi bi-option"></i> <i class="bi bi-4-square"></i>
+      </code>
+    </p></div>
+
+    <div class="keybinds-column"><p class="keybinds-content-text-dim keybinds-subcategory-name">New Schedule</p></div>
+    <div class="keybinds-column"><p class="keybinds-content-text-dim">
+      <code class="keybinds-subcategory-shortcut">
+        <i class="bi bi-alt"></i> [
+      </code>
+    </p></div>
+  </div>
+
+  <!-- Users -->
+  <div class="row">
+    <div class="keybinds-column"><p class="keybinds-content-text-dim keybinds-name">Users</p></div>
+    <div class="keybinds-column"><p class="keybinds-content-text-dim">
+      <code class="keybinds-shortcut">
+        <i class="bi bi-option"></i> <i class="bi bi-5-square"></i>
+      </code>
+    </p></div>
+
+    <div class="keybinds-column"><p class="keybinds-content-text-dim keybinds-subcategory-name">New User</p></div>
+    <div class="keybinds-column"><p class="keybinds-content-text-dim">
+      <code class="keybinds-subcategory-shortcut">
+        <i class="bi bi-alt"></i> [
+      </code>
+    </p></div>
+  </div>
+
+  <!-- Backups -->
+  <div class="row">
+    <div class="keybinds-column"><p class="keybinds-content-text-dim keybinds-name">Backups</p></div>
+    <div class="keybinds-column"><p class="keybinds-content-text-dim">
+      <code class="keybinds-shortcut">
+        <i class="bi bi-option"></i> <i class="bi bi-6-square"></i>
+      </code>
+    </p></div>
+
+    <div class="keybinds-column"><p class="keybinds-content-text-dim keybinds-subcategory-name">New Backup</p></div>
+    <div class="keybinds-column"><p class="keybinds-content-text-dim">
+      <code class="keybinds-subcategory-shortcut">
+        <i class="bi bi-alt"></i> [
+      </code>
+    </p></div>
+  </div>
+
+  <!-- Network -->
+  <div class="row">
+    <div class="keybinds-column"><p class="keybinds-content-text-dim keybinds-name">Network</p></div>
+    <div class="keybinds-column"><p class="keybinds-content-text-dim">
+      <code class="keybinds-shortcut">
+        <i class="bi bi-option"></i> <i class="bi bi-7-square"></i>
+      </code>
+    </p></div>
+
+    <div class="keybinds-column"><p class="keybinds-content-text-dim keybinds-subcategory-name">New Allocation</p></div>
+    <div class="keybinds-column"><p class="keybinds-content-text-dim">
+      <code class="keybinds-subcategory-shortcut">
+        <i class="bi bi-alt"></i> [
+      </code>
+    </p></div>
+  </div>
+
+  <!-- Startup -->
+  <div class="row">
+    <div class="keybinds-column"><p class="keybinds-content-text-dim keybinds-name">Startup</p></div>
+    <div class="keybinds-column"><p class="keybinds-content-text-dim">
+      <code class="keybinds-shortcut">
+        <i class="bi bi-option"></i> <i class="bi bi-8-square"></i>
+      </code><code class="keybinds-shortcut">
+        <i class="bi bi-alt"></i> M
+      </code>
+    </p></div>
+  </div>
+
+  <!-- Settings -->
+  <div class="row">
+    <div class="keybinds-column"><p class="keybinds-content-text-dim keybinds-name">Settings</p></div>
+    <div class="keybinds-column"><p class="keybinds-content-text-dim">
+      <code class="keybinds-shortcut">
+        <i class="bi bi-option"></i> <i class="bi bi-9-square"></i>
+      </code><code class="keybinds-shortcut">
+        <i class="bi bi-alt"></i> L
+      </code>
+    </p></div>
+
+    <div class="keybinds-column"><p class="keybinds-content-text-dim keybinds-subcategory-name">Launch SFTP</p></div>
+    <div class="keybinds-column"><p class="keybinds-content-text-dim">
+      <code class="keybinds-subcategory-shortcut">
+        <i class="bi bi-alt"></i> A
+      </code>
+    </p></div>
+  </div>
+
+  <!-- Activity -->
+  <div class="row">
+    <div class="keybinds-column"><p class="keybinds-content-text-dim keybinds-name">Activity</p></div>
+    <div class="keybinds-column"><p class="keybinds-content-text-dim">
+      <code class="keybinds-shortcut">
+        <i class="bi bi-option"></i> <i class="bi bi-0-square"></i>
+      </code><code class="keybinds-shortcut">
+        <i class="bi bi-alt"></i> -
+      </code>
+    </p></div>
+  </div>
+
+  <p style="opacity: 0; font-size: 0px;">.</p>
+</div><br>
+
+<!--Account management-->
+<p class="keybinds-content-text-bold">Account management</p>
+<div class="keybinds-content-text-box">
+
+  <!-- Account -->
+  <div class="row">
+    <div class="keybinds-column"><p class="keybinds-content-text-dim keybinds-name">Account</p></div>
+    <div class="keybinds-column"><p class="keybinds-content-text-dim">
+      <code class="keybinds-shortcut">
+        <i class="bi bi-option"></i> <i class="bi bi-1-square"></i>
+      </code><code class="keybinds-shortcut">
+        <i class="bi bi-alt"></i> .
+      </code>
+    </p></div>
+  </div>
+
+  <!-- API -->
+  <div class="row">
+    <div class="keybinds-column"><p class="keybinds-content-text-dim keybinds-name">API</p></div>
+    <div class="keybinds-column"><p class="keybinds-content-text-dim">
+      <code class="keybinds-shortcut">
+        <i class="bi bi-option"></i> <i class="bi bi-2-square"></i>
+      </code><code class="keybinds-shortcut">
+        <i class="bi bi-alt"></i> ,
+      </code>
+    </p></div>
+  </div>
+
+  <!-- SSH -->
+  <div class="row">
+    <div class="keybinds-column"><p class="keybinds-content-text-dim keybinds-name">SSH</p></div>
+    <div class="keybinds-column"><p class="keybinds-content-text-dim">
+      <code class="keybinds-shortcut">
+        <i class="bi bi-option"></i> <i class="bi bi-3-square"></i>
+      </code>
+    </p></div>
+  </div>
+
+  <!-- Activity -->
+  <div class="row">
+    <div class="keybinds-column"><p class="keybinds-content-text-dim keybinds-name">Activity</p></div>
+    <div class="keybinds-column"><p class="keybinds-content-text-dim">
+      <code class="keybinds-shortcut">
+        <i class="bi bi-option"></i> <i class="bi bi-4-square"></i>
+      </code><code class="keybinds-shortcut">
+        <i class="bi bi-alt"></i> -
+      </code>
+    </p></div>
+  </div>
+
+  <p style="opacity: 0; font-size: 0px;">.</p>
+</div>        <p class="keybinds-content-text-dim" style="margin-top: 30px; font-size: 12px;">
+  <code class="keybinds-modifier-info" style="min-width:0px;"><i class="bi bi-option"></i></code> Control/Option
+</p><p class="keybinds-content-text-dim" style="margin-top: 6.5px; font-size: 12px;">
+  <code class="keybinds-modifier-info" style="min-width:0px;"><i class="bi bi-alt"></i></code> Alt
+</p><p class="keybinds-content-text-dim" style="margin-top: 6.5px; font-size: 12px;">
+  <code class="keybinds-modifier-info" style="min-width:0px;"><i class="bi bi-command"></i></code> Command/Meta
+</p><p class="keybinds-content-text-dim" style="margin-top: 6.5px; font-size: 12px;">
+  <code class="keybinds-modifier-info" style="min-width:0px;"><i class="bi bi-microsoft"></i></code> Windows
+</p><p class="keybinds-content-text-dim" style="margin-top: 6.5px; font-size: 12px;">
+  <code class="keybinds-modifier-info" style="min-width:0px;"><i class="bi bi-shift"></i></code> Shift
+</p><p class="keybinds-content-text-dim" style="margin-top: 6.5px; font-size: 12px;">
+  <code class="keybinds-modifier-info" style="min-width:0px;"><i class="bi bi-escape"></i></code> Escape
+</p><p class="keybinds-content-text-dim" style="margin-bottom: 12px; margin-top: 6.5px; font-size: 12px;">
+  <code class="keybinds-modifier-info" style="min-width:0px;"><i class="bi bi-slash-lg"></i></code> Slash
+</p>
+      </div>
+    </div>
+    <div class="keybinds-controls">
+      <a onclick="hideKeybinds()">
+        <button class="keybinds-controls-button" role="button">Close</button>
+      </a>
+    </div>
+  </div>
+  <div id="keybindsHideAlert" class="keybinds-close-alert">
+    <p>Use <code style="background-color: var(--pageSecondaryHover); padding: 5px 10px; border-radius: 5px;"><i class="bi bi-option"></i> <i class="bi bi-slash-lg"></i></code> to show these keybinds again.</p>
+  </div>                              <!DOCTYPE html>
+<html>
+    <body>
+
+        <head>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const debounce = (func, delay) => {
+        let timeout;
+        return (...args) => {
+            clearTimeout(timeout);
+            timeout = setTimeout(() => func(...args), delay);
+        };
+    };
+
+    const updateServerBackgrounds = debounce(async () => {
+
+        const toggleSwitch = document.querySelector('input[name="show_all_servers"]');
+        const apiUrl = toggleSwitch && toggleSwitch.checked 
+            ? '/api/client?page=1&type=admin' 
+            : '/api/client?page=1';
+
+        console.log(`Fetching data from: ${apiUrl}`);
+
+        try {
+            const [serverData, configuredEggs, configuredServerBackgrounds] = await Promise.all([
+                fetch(apiUrl).then(response => response.json()),
+                fetch('/extensions/serverbackgrounds/configured-egg-backgrounds').then(response => response.json()),
+                fetch('/extensions/serverbackgrounds/configured-server-backgrounds').then(response => response.json())
+            ]);
+
+            if (!serverData.data || !configuredEggs || !configuredServerBackgrounds) {
+                console.warn("No server data, configured egg backgrounds, or configured server backgrounds found.");
+                return;
+            }
+
+            const filteredServers = serverData.data.map(server => ({
+                egg_id: server.attributes.BlueprintFramework.egg_id,
+                name: server.attributes.name,
+                uuid: server.attributes.uuid,
+                identifier: server.attributes.identifier
+            }));
+
+            document.querySelectorAll('.dyLna-D').forEach((container) => {
+                const hrefLink = container.getAttribute('href');
+                if (!hrefLink) return;
+
+                const serverId = hrefLink.split('/').pop();
+                const server = filteredServers.find(s => s.identifier === serverId);
+                if (!server) return;
+
+                const configuredServerBackground = configuredServerBackgrounds.find(bg => bg.uuid === server.uuid);
+                const configuredEgg = configuredEggs.find(egg => egg.id === server.egg_id);
+
+                let backgroundImageUrl = '';
+                let backgroundOpacity = 1;
+
+                if (configuredServerBackground) {
+                    backgroundImageUrl = configuredServerBackground.image_url;
+                    backgroundOpacity = configuredServerBackground.opacity;
+                } else if (configuredEgg) {
+                    backgroundImageUrl = configuredEgg.image_url;
+                    backgroundOpacity = configuredEgg.opacity;
+                }
+
+                if (backgroundImageUrl) {
+                    // **Check if background already exists**
+                    if (!container.querySelector('.background-image')) {
+                        const backgroundImageDiv = document.createElement('div');
+                        backgroundImageDiv.className = 'background-image';
+                        backgroundImageDiv.style.backgroundImage = `url('${backgroundImageUrl}?cache_bust=${Date.now()}')`;
+                        backgroundImageDiv.style.backgroundSize = 'cover';
+                        backgroundImageDiv.style.backgroundPosition = 'center center';
+                        backgroundImageDiv.style.filter = `opacity(${backgroundOpacity})`;
+                        backgroundImageDiv.style.position = 'absolute';
+                        backgroundImageDiv.style.top = '0';
+                        backgroundImageDiv.style.left = '0';
+                        backgroundImageDiv.style.right = '0';
+                        backgroundImageDiv.style.bottom = '0';
+                        container.appendChild(backgroundImageDiv);
+                    }
+                }
+            });
+        } catch (error) {
+            console.error('Error fetching server data or configured backgrounds:', error);
+        }
+    }, 500);
+
+    const forceBackgroundRefresh = () => {
+        console.log("Force background refresh triggered.");
+        document.querySelectorAll('.background-image').forEach(el => el.remove());
+        updateServerBackgrounds();
+    };
+
+    const reattachToggleListener = () => {
+        const toggleSwitch = document.querySelector('input[name="show_all_servers"]');
+        if (toggleSwitch) {
+            toggleSwitch.removeEventListener('change', forceBackgroundRefresh);
+            toggleSwitch.addEventListener('change', forceBackgroundRefresh);
+        }
+    };
+
+    const initializePage = () => {
+        if (window.location.pathname === '/') {
+            updateServerBackgrounds();
+            reattachToggleListener();
+        }
+    };
+
+    initializePage();
+
+    window.addEventListener('load', () => {
+        initializePage();
+    });
+
+    window.addEventListener('popstate', () => {
+        forceBackgroundRefresh();
+    });
+
+    let lastPathname = window.location.pathname;
+    setInterval(() => {
+        if (window.location.pathname !== lastPathname) {
+            lastPathname = window.location.pathname;
+            forceBackgroundRefresh();
+        }
+    }, 500);
+
+    const observer = new MutationObserver(() => {
+        console.log("DOM changed, refreshing backgrounds.");
+        updateServerBackgrounds();
+    });
+
+    const appDiv = document.querySelector("#app");
+    if (appDiv) {
+        observer.observe(appDiv, { childList: true, subtree: true });
+    }
+});
+</script>
+<style>
+#app > div.App___StyledDiv-sc-2l91w7-0.fnfeQw > div.Fade__Container-sc-1p0gm8n-0.hcgQjy > section > div.ContentContainer-sc-x3r2dw-0.PageContentBlock___StyledContentContainer-sc-kbxq2g-0.jyeSuy.HeRWk.fade-appear-done.fade-enter-done > a {
+    position: relative; /* Required for absolute positioning of the background image div */
+    overflow: hidden; /* Ensure no overflow */
+}
+
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0; /* Place it behind any content */
+}
+</style>
+</head>
+
+    <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9a0cf5fe8baa2631',t:'MTc2MzUyNjUwOC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"9a0cf5fe8baa2631","version":"2025.9.1","r":1,"token":"69177078097c4c139f189209d9102716","serverTiming":{"name":{"cfExtPri":true,"cfEdge":true,"cfOrigin":true,"cfL4":true,"cfSpeedBrain":true,"cfCacheStatus":true}}}' crossorigin="anonymous"></script>
 </body>
+</html>                                                            <p class="Footer">Thank you for using RRHosting!</p>
+<p class="PteroFooter"><a rel="noopener nofollow noreferrer" href="https://pterodactyl.io" target="_blank" class="PageContentBlock___StyledA-sc-kbxq2g-4 eOGAqX">Pterodactyl®</a>&nbsp;© 2015 - 2023</p>
+
+
+<style id="footer">
+
+.Footer{
+    text-align: center;
+    color: #fff700;
+    font-size: 5;
+    line-height: 1rem;
+    content: "before";
+  }
+
+.PteroFooter{
+    text-align: center;
+    --tw-text-opacity: 1;
+    padding-top: 10px;
+    color: hsla(211,12%,43%,var(--tw-text-opacity));
+    font-size: 0.75rem;
+    line-height: 1rem;
+}
+
+.dcHyfd{
+   display: none;
+}
+</style>                                        <script src="/assets/bundle.45caf7ed.js" crossorigin="anonymous"></script>
+            </body>
 </html>
