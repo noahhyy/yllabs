@@ -1,258 +1,168 @@
-
-<html lang="en"><head><style>body {transition: opacity ease-in 0.2s; } 
-body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relative; } 
-</style>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>sapphires</title>
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
-  * { margin:0; padding:0; box-sizing:border-box; scroll-behavior:smooth; }
-  body { background:#000; color:#fff; font-family:'Inter', sans-serif; overflow-x:hidden; }
-  header {
-    position: fixed; top:0; width:100%; background:#000;
-    display:flex; justify-content:center; gap:40px; padding:15px 0; z-index:10;
-    backdrop-filter: blur(10px);
-  }
-  header a { color:#fff; text-decoration:none; font-weight:400; opacity:0.8; transition: opacity 0.3s ease; text-transform: lowercase; }
-  header a:hover { opacity:1; }
-  section { min-height:100vh; display:flex; flex-direction:column; align-items:center; justify-content:center; padding:120px 20px; text-align:center; transition: filter 1s ease, opacity 1s ease; }
-  .hero h1 { font-size:4rem; font-weight:600; margin-bottom:20px; letter-spacing:-1px; }
-  .hero button {
-    background:#fff; color:#000; border:none; padding:14px 40px; font-size:1rem;
-    border-radius:30px; cursor:pointer; transition: transform 0.3s ease, opacity 0.3s ease; text-transform: lowercase;
-  }
-  .hero button:hover { opacity:0.9; transform:scale(1.05); }
-  .music-toggle {
-    position: fixed; top:20px; right:20px; background:none; border:1px solid #fff;
-    border-radius:50%; width:45px; height:45px; display:flex; align-items:center;
-    justify-content:center; cursor:pointer; color:#fff; font-size:18px; opacity:0.7;
-    transition: opacity 0.3s ease, transform 0.3s ease; z-index:20;
-  }
-  .music-toggle:hover { opacity:1; transform:scale(1.1); }
-  footer { padding:40px 0; text-align:center; font-size:0.9rem; opacity:0.8; }
-  footer a { color:#fff; text-decoration:none; display:inline-flex; align-items:center; gap:10px; font-size:1rem; margin-top:10px; }
-  footer a:hover { opacity:1; }
-  section h2 { font-size:2rem; margin-bottom:20px; font-weight:400; }
-  section p { max-width:700px; line-height:1.6; opacity:0.9; }
-  .blur-enter { opacity:0; filter:blur(15px); }
-  .blur-show { opacity:1; filter:blur(0); }
-
-  /* Credits section */
-  .top-donators .donator-card, .contributors .contributor-card {
-    background: rgba(255,255,255,0.05);
-    border: 1px solid rgba(255,255,255,0.1);
-    padding: 20px; width:180px; border-radius:20px; text-align:center;
-    backdrop-filter: blur(8px); position: relative; overflow:hidden;
-    transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease; cursor:default;
-  }
-  .top-donators .donator-card:hover, .contributors .contributor-card:hover {
-    transform: translateY(-10px); background: rgba(255,255,255,0.1);
-    box-shadow: 0 0 15px rgba(255,255,255,0.2);
-  }
-  .name { font-weight:600; font-size:1rem; margin-bottom:5px; text-transform: lowercase; }
-  .role { font-weight:300; font-size:0.85rem; opacity:0.7; text-transform: lowercase; }
-
-  /* Glare effect */
-  .donator-card::before, .contributor-card::before {
-    content:''; position:absolute; top:-50%; left:-75%; width:50%; height:200%;
-    background: rgba(255,255,255,0.08); transform:rotate(25deg); transition: all 0.7s ease;
-  }
-  .donator-card:hover::before, .contributor-card:hover::before { left:125%; transition: all 0.7s ease; }
-
-  /* Download button hover animation */
-  .hero button:hover { box-shadow:0 0 20px rgba(255,255,255,0.3); }
-</style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pulse Labs</title>
+  <meta name="description" content="Pulse Labs – Modern automation, server tools, and smart solutions for your community." />
+  <link rel="icon" href="images/logo.png" type="image/png" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      background: linear-gradient(to bottom right, #174fc1, #0a1f47);
+    }
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .animate-fadeUp {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 1s ease;
+    }
+    .animate-fadeUp.visible {
+      opacity: 1;
+      transform: translateY(0);
+      animation: fadeUp 1.2s ease forwards;
+    }
+  </style>
 </head>
-<!-- Sapphire Popup -->
-<style>
-    #sapphire-popup-bg {
-        position: fixed;
-        top: 0; left: 0;
-        width: 100%; height: 100%;
-        background: rgba(0,0,0,0.65);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        z-index: 999999;
-        font-family: Arial, sans-serif;
-        animation: fadeIn 0.3s ease;
-    }
 
-    #sapphire-popup {
-        background: #181818;
-        color: #fff;
-        padding: 25px;
-        width: 380px;
-        border-radius: 12px;
-        box-shadow: 0 0 25px rgba(0,0,0,0.5);
-        animation: slideUp 0.3s ease;
-    }
+<body class="text-white font-sans overflow-x-hidden relative">
 
-    #sapphire-popup h2 {
-        margin: 0 0 10px 0;
-        font-size: 22px;
-        color: #6bb7ff;
-    }
+  <!-- Sidebar -->
+  <aside id="sidebar" class="fixed top-0 left-0 h-screen w-64 bg-gradient-to-b from-[#174fc1] to-[#0a1f47] border-r border-white/20 z-40 transform transition-transform -translate-x-full md:translate-x-0">
+    <div class="flex flex-col h-full p-6 space-y-6 text-sm font-medium">
+      <div class="flex items-center space-x-3 mb-8">
+        <img src="images/logo.png" alt="Pulse Labs Logo" class="h-10 w-10 rounded-full" />
+        <h1 class="text-xl font-bold text-white">Pulse Labs</h1>
+      </div>
+      <a href="#hero" class="hover:text-white/80 transition">🏠 Home</a>
+      <a href="#features" class="hover:text-white/80 transition">⚙️ Features</a>
+      <a href="#community" class="hover:text-white/80 transition">💬 Community</a>
+      <a href="#contact" class="hover:text-white/80 transition">📄 Contact</a>
+      <a href="https://discord.com/oauth2/authorize?client_id=1440869263958216825&permissions=0&integration_type=0&scope=bot+applications.commands" class="hover:text-white/80 transition">🤖 Add Bot</a>
+      <a href="https://discord.gg/4TrA6Qf7ZA" target="_blank" class="hover:text-white/80 transition">🔗 Support Server</a>
+    </div>
+  </aside>
 
-    #sapphire-popup p {
-        font-size: 14px;
-        line-height: 1.45;
-        opacity: 0.9;
-        margin-bottom: 12px;
-    }
+  <!-- Mobile Toggle -->
+  <button id="sidebarToggle" class="fixed bottom-6 left-6 z-50 bg-white text-[#174fc1] p-3 rounded-full shadow-lg md:hidden">☰</button>
 
-    /* RED WARNING TEXT */
-    #sapphire-popup .warning {
-        color: #ff4b4b;
-        font-weight: bold;
-        font-size: 14px;
-        margin-top: 15px;
-        margin-bottom: 10px;
-    }
+  <!-- Main Content -->
+  <main id="main" class="text-white md:ml-64">
 
-    #sapphire-close {
-        margin-top: 15px;
-        width: 100%;
-        padding: 10px;
-        background: #6bb7ff;
-        border: none;
-        border-radius: 8px;
-        font-size: 14px;
-        cursor: pointer;
-        font-weight: bold;
-    }
+    <!-- Hero -->
+    <section id="hero" class="h-screen flex flex-col justify-center items-center text-center px-6 animate-fadeUp">
+      <div class="max-w-3xl">
+        <h1 class="text-6xl md:text-7xl font-extrabold mb-6 text-white drop-shadow-lg leading-tight">
+          Welcome to <span class="text-white/90">Pulse Labs</span>
+        </h1>
+        <p class="text-xl md:text-2xl text-white/80 mb-10 leading-relaxed">
+          Next-generation automation, powerful moderation, and seamless server tools for your community.
+        </p>
+        <a href="https://discord.gg/4TrA6Qf7ZA"
+           class="inline-block bg-white text-[#174fc1] px-10 py-4 rounded-full font-semibold shadow-xl hover:scale-105 hover:shadow-2xl transition duration-300">
+          🚀 Get Started
+        </a>
+      </div>
+    </section>
 
-    #sapphire-close:hover {
-        background: #5aa4eb;
-    }
-
-    @keyframes fadeIn {
-        from { opacity: 0; }
-        to { opacity: 1; }
-    }
-
-    @keyframes slideUp {
-        from { transform: translateY(20px); opacity: 0; }
-        to { transform: translateY(0); opacity: 1; }
-    }
-</style>
-
-<div id="sapphire-popup-bg">
-    <div id="sapphire-popup">
-        <h2>From Sapphire</h2>
-
-        <p>Please do not use our tools in a malicious way in any shape or form.</p>
-
-        <p>We are not responsible for any bans on Roblox or any other platform.  
-        Our tools are intended strictly for testing purposes only.</p>
-
-        <div class="warning">
-            ⚠ OUR SOFTWARE IS STILL EXPERIMENTAL.  
-            ANY DAMAGES, LOSSES, OR ACCOUNT ISSUES ARE **NOT OUR RESPONSIBILITY.**
+    <!-- Features -->
+    <section id="features" class="py-32 text-center px-6 animate-fadeUp">
+      <h2 class="text-5xl font-bold mb-16 text-white">What Pulse Labs Offers</h2>
+      <div class="grid md:grid-cols-3 gap-10">
+        <div class="p-8 bg-white/10 rounded-2xl border border-white/20 hover:border-white transition">
+          <h3 class="text-2xl font-semibold mb-3 text-white">⚙️ Smart Automation</h3>
+          <p class="text-white/80">Powerful automated systems designed to streamline server tasks.</p>
         </div>
+        <div class="p-8 bg-white/10 rounded-2xl border border-white/20 hover:border-white transition">
+          <h3 class="text-2xl font-semibold mb-3 text-white">💬 Custom Tools</h3>
+          <p class="text-white/80">Flexible systems built to match your community’s workflow and structure.</p>
+        </div>
+        <div class="p-8 bg-white/10 rounded-2xl border border-white/20 hover:border-white transition">
+          <h3 class="text-2xl font-semibold mb-3 text-white">🚀 High Performance</h3>
+          <p class="text-white/80">Optimized to deliver consistent, fast, and reliable performance.</p>
+        </div>
+      </div>
+    </section>
 
-        <button id="sapphire-close">I Understand</button>
+    <!-- Community -->
+    <section id="community" class="py-32 text-center px-6 animate-fadeUp">
+      <h2 class="text-4xl font-bold mb-6 text-white">Join the Pulse Labs Community</h2>
+      <p class="text-white/90 mb-10 text-lg">Connect, collaborate, and build smarter communities together.</p>
+      <a href="https://discord.gg/4TrA6Qf7ZA" class="bg-white text-[#174fc1] px-10 py-4 rounded-full font-semibold shadow-lg hover:scale-105 transition">💠 Join the Server</a>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-28 text-center px-6 animate-fadeUp">
+      <h2 class="text-4xl font-bold mb-4 text-white">Contact Pulse Labs</h2>
+      <p class="text-white/80 mb-8">Our team is here to help you elevate your community.</p>
+      <a href="mailto:contact@pulselabs.com" class="bg-white text-[#174fc1] px-8 py-3 rounded-full font-semibold shadow-lg hover:scale-105 transition">📧 contact@pulselabs.com</a>
+    </section>
+
+   <!-- Footer -->
+<footer class="bg-gradient-to-r from-[#174fc1] to-[#0a1f47] border-t border-white/20 text-white text-sm">
+  <div class="max-w-6xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-3 gap-10">
+
+    <!-- Logo -->
+    <div>
+      <div class="flex items-center space-x-3 mb-4">
+        <img src="images/logo.png" alt="Pulse Labs Logo" class="h-10 w-10 rounded-full" />
+        <h2 class="text-2xl font-bold">Pulse Labs</h2>
+      </div>
+      <p class="text-white/90 leading-relaxed">
+        Pulse Labs delivers powerful tools, automation, and moderation for your server.
+      </p>
+      <div class="flex flex-col mt-4 space-y-2">
+        <a href="https://discord.gg/4TrA6Qf7ZA" target="_blank" class="hover:text-white/80 transition">Discord</a>
+        <a href="#" target="_blank" class="hover:text-white/80 transition">Twitter</a>
+      </div>
     </div>
-</div>
 
-<script>
-    document.getElementById("sapphire-close").addEventListener("click", function () {
-        document.getElementById("sapphire-popup-bg").style.display = "none";
-    });
-</script>
-<!-- End Sapphire Popup -->
-
-<body>
-
-<header>
-  <a href="#home">home</a>
-  <a href="#help">help</a>
-  <a href="#donate">donate</a>
-  <a href="#credits">credits</a>
-</header>
-
-<button class="music-toggle" id="musicToggle">♫</button>
-<audio id="bgMusic" loop="">
-  <source src="music.mp3" type="audio/mpeg">
-</audio>
-
-<section id="home" class="hero blur-enter blur-show">
-  <h1>sapphire (down)</h1>
-  <button onclick="window.location.href='Revive.zip'">download</button>
-</section>
-
-<section id="help" class="blur-enter">
-  <h2>help &amp; clarification</h2>
-  <p>
-    sapphire is a free and open-source project built purely for educational use.
-    it’s a legit tool made to help people learn and understand coding inside roblox studio.
-    sapphire isn’t for hacking, cheating, or anything malicious — it’s made for learning and testing in a safe space.
-    misuse of this project (like selling or sharing harmful content) isn’t allowed and will result in a permanent ban.
-    we’re fully committed to compliance and open to cooperating to keep revive safe and positive for everyone.
-  </p>
-</section>
-
-<section id="donate" class="blur-enter">
-  <h2>support revive</h2>
-  <p>
-    if you like what we’re doing and want to help keep the project alive, you can support us by sharing it,
-    contributing to development, or just spreading the word. every bit of support means a lot 🤍
-  </p>
-</section>
-
-<section id="credits" class="blur-enter">
-  <h2 class="section-title">credits</h2>
-
-  <!-- Top Donators -->
-  <div class="top-donators" style="margin-bottom:60px; display:flex; justify-content:center; gap:30px; flex-wrap:wrap;">
-    <div class="donator-card">
-      <p class="name">John Smith</p>
-      <p class="role">Donator</p>
+    <!-- Links -->
+    <div>
+      <h3 class="text-white font-semibold mb-3">Pulse Labs</h3>
+      <ul class="space-y-2">
+        <li><a href="#contact" class="hover:text-white/80 transition">Contact Us</a></li>
+        <li><a href="#community" class="hover:text-white/80 transition">Join Our Team</a></li>
+        <li><a href="#features" class="hover:text-white/80 transition">Latest Updates</a></li>
+      </ul>
     </div>
-    <div class="donator-card">
-      <p class="name">Peter Welpa</p>
-      <p class="role">Donator</p>
+
+    <!-- Resources -->
+    <div>
+      <h3 class="text-white font-semibold mb-3">Resources</h3>
+      <ul class="space-y-2">
+        <li><a href="terms.html" class="hover:text-white/80 transition">Terms of Service</a></li>
+        <li><a href="privacy.html" class="hover:text-white/80 transition">Privacy Policy</a></li>
+      </ul>
     </div>
+
   </div>
 
-  <!-- Contributors -->
-  <div class="contributors" style="display:flex; justify-content:center; gap:30px; flex-wrap:wrap;">
-    <div class="contributor-card">
-      <p class="name">Mason</p>
-      <p class="role">Developer</p>
-    </div>
-    <div class="contributor-card">
-      <p class="name">9h9a</p>
-      <p class="role">Developer</p>
-    </div>
+  <div class="text-center py-6 border-t border-white/20 text-white/70 text-xs">
+    © 2025 Pulse Labs — All Rights Reserved
   </div>
-</section>
-
-<footer>
-  <a href="https://discord.gg/AhGsB4nV" target="_blank">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/9/98/Discord_logo.svg" alt="Discord" width="25">
-    join our discord
-  </a>
-  <p style="margin-top:20px;">© Sapphire Softworks</p>
 </footer>
+  </main>
 
-<script>
-  const sections = document.querySelectorAll('section');
-  const music = document.getElementById('bgMusic');
-  const toggle = document.getElementById('musicToggle');
+  <!-- Scripts -->
+  <script>
+    const els = document.querySelectorAll('.animate-fadeUp');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    }, { threshold: 0.2 });
+    els.forEach(el => observer.observe(el));
 
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => { if(entry.isIntersecting) { entry.target.classList.add('blur-show'); } });
-  }, { threshold:0.1 });
-  sections.forEach(sec => observer.observe(sec));
-
-  let isPlaying = false;
-  toggle.addEventListener('click', () => {
-    if(!isPlaying) { music.play(); isPlaying=true; toggle.style.opacity='1'; }
-    else { music.pause(); isPlaying=false; toggle.style.opacity='0.7'; }
-  });
-</script>
-
-
-<veepn-intro-offer><style>@font-face{font-family:FigtreeVF;src:url(chrome-extension://panammoooggmlehahpcjckcncfeffcoi/fonts/FigtreeVF.woff2) format("woff2 supports variations"),url(chrome-extension://panammoooggmlehahpcjckcncfeffcoi/fonts/FigtreeVF.woff2) format("woff2-variations");font-weight:100 1000;font-display:swap}</style></veepn-intro-offer></body></html>
+    const sidebar = document.getElementById('sidebar');
+    const toggleBtn = document.getElementById('sidebarToggle');
+    toggleBtn.addEventListener('click', () => {
+      sidebar.classList.toggle('translate-x-0');
+      sidebar.classList.toggle('-translate-x-full');
+    });
+  </script>
+</body>
+</html>
