@@ -1,11 +1,17 @@
-// Get ?code= from URL
 const params = new URLSearchParams(window.location.search);
 const code = params.get("code");
 
 if (code) {
-  document.getElementById("username").textContent = "Logged in! Code:";
-  document.getElementById("userid").textContent = code;
-  document.getElementById("email").textContent = "Use a server to exchange this code for a token.";
+  fetch(`/api/auth?code=${code}`)
+    .then(res => res.json())
+    .then(user => {
+      document.getElementById("username").textContent = `Welcome, ${user.username}`;
+      document.getElementById("userid").textContent = `ID: ${user.id}`;
+      document.getElementById("email").textContent = `Email: ${user.email}`;
+    })
+    .catch(() => {
+      document.getElementById("username").textContent = "Failed to fetch user info.";
+    });
 } else {
-  document.getElementById("username").textContent = "Error: No login code found.";
+  document.getElementById("username").textContent = "Not logged in. Please use the login page.";
 }
