@@ -74,7 +74,7 @@ body {
   text-align: center;
 }
 .hero-inner {
-  background: rgba(255,255,255,0.9);
+  background: rgba(0, 0, 0, 0.9);
   border-radius: var(--radius);
   padding: 36px 28px;
   max-width: 900px;
