@@ -5,30 +5,31 @@
     box-sizing: border-box;
 }
 
+/* BODY */
 body {
     font-family: "Inter", sans-serif;
-    background: #ffffff;
+    background-color: #ffffff;
     color: #2d006b;
     line-height: 1.6;
 }
 
-/* NAV / HEADER (TEAM PAGE) */
+/* SITE HEADER (TEAM PAGE) */
 .site-header {
-    width: 100%;
-    padding: 20px 40px;
-    background: #7b2fff;
-    border-bottom: 3px solid #5e0bd6;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 20px 40px;
+    background-color: #7b2fff;
+    border-bottom: 3px solid #5e0bd6;
     position: sticky;
     top: 0;
+    z-index: 100;
 }
 
-.logo {
+.site-header .logo {
+    color: #ffffff;
     font-size: 1.8rem;
     font-weight: 800;
-    color: #ffffff;
     text-decoration: none;
 }
 
@@ -37,7 +38,7 @@ body {
     margin-left: 25px;
     text-decoration: none;
     font-weight: 500;
-    transition: 0.2s;
+    transition: color 0.2s ease;
 }
 
 .site-nav a:hover {
@@ -46,9 +47,9 @@ body {
 
 /* HEADER (FEATURES PAGE) */
 .simple-header {
-    background: #7b2fff;
-    color: #ffffff;
     text-align: center;
+    background-color: #7b2fff;
+    color: #ffffff;
     padding: 40px 20px;
     border-bottom: 3px solid #5e0bd6;
 }
@@ -59,31 +60,31 @@ body {
 }
 
 /* MAIN CONTENT */
-main {
+main, .section {
     max-width: 1000px;
-    padding: 40px 20px;
-    margin: auto;
+    margin: 40px auto;
+    padding: 0 20px;
 }
 
-/* FEATURES BOXES */
+/* FEATURE SECTIONS */
 .feature {
-    background: #f6f0ff;
-    border-radius: 15px;
+    background-color: #f6f0ff;
     border: 2px solid #c9a4ff;
+    border-radius: 15px;
     padding: 25px;
     margin-bottom: 25px;
-    transition: 0.25s ease;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .feature:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 18px rgba(123, 47, 255, 0.25);
+    box-shadow: 0 8px 18px rgba(123, 47, 255, 0.2);
 }
 
 .feature h2 {
+    font-size: 1.6rem;
     color: #440088;
     margin-bottom: 10px;
-    font-size: 1.6rem;
 }
 
 .feature p {
@@ -91,39 +92,37 @@ main {
     line-height: 1.5;
 }
 
-/* TEAM PAGE TITLE */
+/* TEAM SECTION */
 .section h3 {
     text-align: center;
     font-size: 2rem;
-    margin: 40px 0 20px;
     color: #440088;
+    margin: 40px 0 20px;
 }
 
-/* TEAM GRID */
 .cards {
-    max-width: 1100px;
-    margin: auto;
-    padding: 20px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 30px;
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
 }
 
 /* TEAM CARD */
 .card {
-    background: #f6f0ff;
+    background-color: #f6f0ff;
     border: 2px solid #c9a4ff;
-    padding: 25px;
     border-radius: 18px;
     text-align: center;
-    transition: 0.25s ease;
+    padding: 25px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .card:hover {
     transform: translateY(-8px);
     box-shadow: 0 12px 25px rgba(123, 47, 255, 0.25);
 }
-
 
 .profile-pic {
     width: 120px;
@@ -132,7 +131,7 @@ main {
     object-fit: cover;
     border: 3px solid #7b2fff;
     margin-bottom: 15px;
-    transition: 0.25s;
+    transition: border-color 0.2s ease;
 }
 
 .card:hover .profile-pic {
@@ -140,21 +139,22 @@ main {
 }
 
 .card h4 {
-    color: #3b006e;
     font-size: 1.25rem;
+    color: #3b006e;
     margin-bottom: 8px;
 }
 
 .card p {
     color: #5b2a99;
+    font-size: 0.95rem;
 }
 
-
+/* FOOTER */
 .site-footer,
 .simple-footer {
-    text-align: center;
-    background: #7b2fff;
+    background-color: #7b2fff;
     color: #ffffff;
+    text-align: center;
     padding: 20px 0;
     border-top: 3px solid #5e0bd6;
     margin-top: 40px;
