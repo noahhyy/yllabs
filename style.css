@@ -1,7 +1,7 @@
 :root {
   --purple: #9b59b6;   
   --black: #000000;    
-  --dark: #1B1F23;
+  --dark: #111111;
   --radius: 14px;
   --shadow: 0 8px 20px rgba(0,0,0,0.4);
 }
@@ -17,7 +17,7 @@ body {
 
 
 .announcement {
-  background: #333;
+  background: #222;
   color: var(--purple);
   padding: 12px 48px;
   font-weight: 600;
@@ -41,7 +41,7 @@ body {
 
 
 .site-header {
-  background: #111;
+  background: var(--dark);
   color: var(--purple);
   padding: 18px 28px;
   display: flex;
@@ -103,7 +103,7 @@ body {
 }
 .btn-outline:hover { background: rgba(155,89,182,0.15); }
 
-
+/* Sections */
 .section {
   padding: 34px 24px;
   max-width: 1100px;
@@ -115,7 +115,7 @@ body {
   margin-bottom: 12px;
 }
 
-
+/* Cards */
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -131,40 +131,4 @@ body {
 }
 .card:hover { transform: translateY(-4px); box-shadow: 0 12px 24px rgba(0,0,0,0.5); }
 .card h4 { color: var(--purple); margin-bottom: 8px; }
-.card p { color: var(--purple); }
-.card strong { color: var(--purple); }
-.icon {
-  font-size: 2rem;
-  margin-bottom: 8px;
-  text-align: center;
-  color: var(--purple);
-}
-
-
-.cta {
-  padding: 40px 24px;
-  text-align: center;
-  background: rgba(20,20,20,0.9);
-  border-radius: var(--radius);
-  max-width: 900px;
-  margin: 40px auto;
-  box-shadow: var(--shadow);
-}
-.cta h3 { color: var(--purple); margin-bottom: 8px; }
-.cta p { color: var(--purple); margin-bottom: 14px; }
-
-
-.site-footer {
-  background: #111;
-  color: var(--purple);
-  text-align: center;
-  padding: 20px 24px;
-  font-size: 0.95rem;
-}
-
-
-@media (max-width: 640px) {
-  .site-nav a { margin-left: 14px; }
-  .hero-inner { padding: 26px 18px; }
-  .hero h2 { font-size: 2rem; }
-}
+.card p { color: var(--purple); font-size: 0.95rem; }
