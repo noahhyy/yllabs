@@ -1,26 +1,24 @@
 :root {
-  --green: #790065;
-  --red: #000000;
-  --white: #680049;
+  --purple: #9b59b6;   
+  --black: #000000;    
   --dark: #1B1F23;
   --radius: 14px;
-  --shadow: 0 8px 20px rgba(0,0,0,0.15);
+  --shadow: 0 8px 20px rgba(0,0,0,0.4);
 }
 
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
 body {
   font-family: 'Inter', sans-serif;
-  background: linear-gradient(135deg, var(--purple), var(--black), var(--black));
-  background-attachment: fixed;
-  color: #2a2a2a;
+  background: var(--black);
+  color: var(--purple);
   line-height: 1.6;
 }
 
 
 .announcement {
-  background: #000000;
-  color: #000000;
+  background: #333;
+  color: var(--purple);
   padding: 12px 48px;
   font-weight: 600;
   display: flex;
@@ -36,37 +34,35 @@ body {
   top: 8px;
   background: none;
   border: none;
-  color: #fff;
+  color: var(--purple);
   font-size: 1.25rem;
   cursor: pointer;
 }
 
 
 .site-header {
-  background: var(--dark);
-  color: #000000;
+  background: #111;
+  color: var(--purple);
   padding: 18px 28px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 .logo {
-  background: linear-gradient(90deg, var(--green), var(--white));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: var(--purple);
   text-decoration: none;
   font-weight: 800;
   font-size: 2rem;
 }
 .logo:hover { text-decoration: underline; }
 .site-nav a {
-  color: #fff;
+  color: var(--purple);
   text-decoration: none;
   margin-left: 20px;
   font-weight: 600;
   transition: opacity 0.2s ease;
 }
-.site-nav a:hover { opacity: 0.85; }
+.site-nav a:hover { opacity: 0.7; }
 
 
 .hero {
@@ -74,15 +70,15 @@ body {
   text-align: center;
 }
 .hero-inner {
-  background: rgba(0, 0, 0, 0.9);
+  background: rgba(20,20,20,0.9);
   border-radius: var(--radius);
   padding: 36px 28px;
   max-width: 900px;
   margin: 0 auto;
   box-shadow: var(--shadow);
 }
-.hero h2 { font-size: 2.4rem; color: var(--green); margin-bottom: 12px; }
-.hero p { font-size: 1.1rem; color: #444; }
+.hero h2 { font-size: 2.4rem; color: var(--purple); margin-bottom: 12px; }
+.hero p { font-size: 1.1rem; color: var(--purple); }
 .hero-actions { margin-top: 18px; display: flex; gap: 12px; justify-content: center; }
 
 
@@ -95,17 +91,17 @@ body {
   transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.2s ease, color 0.2s ease;
 }
 .btn-primary {
-  background: var(--green);
-  color: #fff;
-  box-shadow: 0 6px 16px rgba(76,175,80,0.35);
+  background: var(--purple);
+  color: var(--black);
+  box-shadow: 0 6px 16px rgba(155,89,182,0.35);
 }
-.btn-primary:hover { transform: translateY(-2px); background: #43A047; }
+.btn-primary:hover { transform: translateY(-2px); background: #8e44ad; }
 .btn-outline {
   background: transparent;
-  color: var(--dark);
-  border: 2px solid var(--green);
+  color: var(--purple);
+  border: 2px solid var(--purple);
 }
-.btn-outline:hover { background: rgba(76,175,80,0.12); }
+.btn-outline:hover { background: rgba(155,89,182,0.15); }
 
 
 .section {
@@ -115,7 +111,7 @@ body {
 }
 .section h3 {
   font-size: 1.6rem;
-  color: var(--dark);
+  color: var(--purple);
   margin-bottom: 12px;
 }
 
@@ -127,10 +123,48 @@ body {
   margin-top: 20px;
 }
 .card {
-  background: rgba(255,255,255,0.95);
+  background: rgba(20,20,20,0.95);
   border-radius: var(--radius);
   padding: 18px;
   box-shadow: var(--shadow);
   transition: transform 0.18s ease, box-shadow 0.18s ease;
 }
-.card:hover { transform: translateY(-4px); box-shadow: 0 12px 24px rgba(0,0,0,0.2); }
+.card:hover { transform: translateY(-4px); box-shadow: 0 12px 24px rgba(0,0,0,0.5); }
+.card h4 { color: var(--purple); margin-bottom: 8px; }
+.card p { color: var(--purple); }
+.card strong { color: var(--purple); }
+.icon {
+  font-size: 2rem;
+  margin-bottom: 8px;
+  text-align: center;
+  color: var(--purple);
+}
+
+
+.cta {
+  padding: 40px 24px;
+  text-align: center;
+  background: rgba(20,20,20,0.9);
+  border-radius: var(--radius);
+  max-width: 900px;
+  margin: 40px auto;
+  box-shadow: var(--shadow);
+}
+.cta h3 { color: var(--purple); margin-bottom: 8px; }
+.cta p { color: var(--purple); margin-bottom: 14px; }
+
+
+.site-footer {
+  background: #111;
+  color: var(--purple);
+  text-align: center;
+  padding: 20px 24px;
+  font-size: 0.95rem;
+}
+
+
+@media (max-width: 640px) {
+  .site-nav a { margin-left: 14px; }
+  .hero-inner { padding: 26px 18px; }
+  .hero h2 { font-size: 2rem; }
+}
