@@ -1,11 +1,11 @@
- 
+/* ================= RESET ================= */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-
+/* ================= BASE STYLES ================= */
 body {
     font-family: "Inter", sans-serif;
     background-color: #ffffff;
@@ -13,8 +13,14 @@ body {
     line-height: 1.6;
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.2s ease;
+}
 
-.site-header {
+/* ================= HEADER ================= */
+header, .site-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -26,27 +32,35 @@ body {
     z-index: 100;
 }
 
-.site-header .logo {
+header h1, .site-header h1 {
     color: #ffffff;
     font-size: 1.8rem;
     font-weight: 800;
-    text-decoration: none;
 }
 
-.site-nav a {
+header a.logo, .site-header a.logo {
+    color: #ffffff;
+    font-size: 1.8rem;
+    font-weight: 800;
+}
+
+nav, .site-nav {
+    display: flex;
+    align-items: center;
+}
+
+nav a, .site-nav a {
     color: #eedaff;
     margin-left: 25px;
-    text-decoration: none;
     font-weight: 500;
-    transition: color 0.2s ease;
 }
 
-.site-nav a:hover {
+nav a:hover, .site-nav a:hover {
     color: #ffffff;
 }
 
-/* HEADER (FEATURES PAGE) */
-.simple-header {
+/* ================= PAGE HEADERS ================= */
+.simple-header, .page-header, header h1 {
     text-align: center;
     background-color: #7b2fff;
     color: #ffffff;
@@ -54,20 +68,19 @@ body {
     border-bottom: 3px solid #5e0bd6;
 }
 
-.simple-header h1 {
+.simple-header h1, .page-header h1, header h1 {
     font-size: 2.2rem;
-    font-weight: 800;
 }
 
-/* MAIN CONTENT */
-main, .section {
+/* ================= MAIN CONTENT ================= */
+main, section, .section, .content {
     max-width: 1000px;
     margin: 40px auto;
     padding: 0 20px;
 }
 
-/* FEATURE SECTIONS */
-.feature {
+/* ================= FEATURES / INFO BOXES ================= */
+.feature, .card, .info-box, .box {
     background-color: #f6f0ff;
     border: 2px solid #c9a4ff;
     border-radius: 15px;
@@ -76,31 +89,23 @@ main, .section {
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.feature:hover {
+.feature:hover, .card:hover, .info-box:hover, .box:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 18px rgba(123, 47, 255, 0.2);
 }
 
-.feature h2 {
-    font-size: 1.6rem;
+.feature h2, .card h4, .info-box h3, .box h3 {
     color: #440088;
     margin-bottom: 10px;
 }
 
-.feature p {
+.feature p, .card p, .info-box p, .box p {
     color: #5b2a99;
     line-height: 1.5;
 }
 
-/* TEAM SECTION */
-.section h3 {
-    text-align: center;
-    font-size: 2rem;
-    color: #440088;
-    margin: 40px 0 20px;
-}
-
-.cards {
+/* ================= TEAM GRID ================= */
+.cards, .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 30px;
@@ -109,13 +114,13 @@ main, .section {
     padding: 20px;
 }
 
-/* TEAM CARD */
+/* ================= TEAM CARDS ================= */
 .card {
+    text-align: center;
+    border-radius: 18px;
+    padding: 25px;
     background-color: #f6f0ff;
     border: 2px solid #c9a4ff;
-    border-radius: 18px;
-    text-align: center;
-    padding: 25px;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
@@ -124,7 +129,7 @@ main, .section {
     box-shadow: 0 12px 25px rgba(123, 47, 255, 0.25);
 }
 
-.profile-pic {
+.profile-pic, img.avatar {
     width: 120px;
     height: 120px;
     border-radius: 50%;
@@ -134,24 +139,20 @@ main, .section {
     transition: border-color 0.2s ease;
 }
 
-.card:hover .profile-pic {
+.card:hover .profile-pic, .card:hover img.avatar {
     border-color: #4400ff;
 }
 
-.card h4 {
-    font-size: 1.25rem;
-    color: #3b006e;
-    margin-bottom: 8px;
+/* ================= SECTION HEADINGS ================= */
+.section h3 {
+    text-align: center;
+    font-size: 2rem;
+    color: #440088;
+    margin: 40px 0 20px;
 }
 
-.card p {
-    color: #5b2a99;
-    font-size: 0.95rem;
-}
-
-/* FOOTER */
-.site-footer,
-.simple-footer {
+/* ================= FOOTER ================= */
+footer, .site-footer, .simple-footer {
     background-color: #7b2fff;
     color: #ffffff;
     text-align: center;
