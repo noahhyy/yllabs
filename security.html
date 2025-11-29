@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Security — YLLABS</title>
+  <meta name="description" content="Learn how YLLABS protects your ER:LC and Discord community with smart guard modes, audits, and evidence-first security." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="index.html">YLLABS</a>
+      <nav class="nav-links">
+        <a href="features.html">Features</a>
+        <a href="security.html">Security</a>
+        <a href="moderation.html">Moderation</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="faq.html">FAQ</a>
+      </nav>
+      <div class="nav-actions">
+        <a class="btn btn-outline" href="https://discord.com/oauth2/authorize?...">Invite</a>
+        <a class="btn btn-solid" href="https://discord.gg/yourserver">Join Discord</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <h1>Security overview</h1>
+        <p class="hero-subtitle">YLLABS keeps your ER:LC server resilient against raids, nukes, floods, and spam—without slowing down trusted members.</p>
+
+        <div class="cards">
+          <article class="card">
+            <h3>Instant guard modes</h3>
+            <p>One-command lockdowns for raids, nukes, and floods. Scopes to risky events and preserves access for trusted roles.</p>
+          </article>
+          <article class="card">
+            <h3>Permission audits</h3>
+            <p>Automatic checks for dangerous role combos, public channels, insecure webhooks, and overbroad bot permissions.</p>
+          </article>
+          <article class="card">
+            <h3>Rate limiting</h3>
+            <p>Adaptive throttles on joins, messages, reactions, and invite creation to neutralize mass spam without harming normal activity.</p>
+          </article>
+          <article class="card">
+            <h3>Webhook shield</h3>
+            <p>Detects and disables compromised webhooks. Optional whitelist mode for known endpoints only.</p>
+          </article>
+          <article class="card">
+            <h3>Anti-nuke controls</h3>
+            <p>Prevents mass channel deletions, role wipes, and permission escalations with automatic rollbacks and alerts.</p>
+          </article>
+          <article class="card">
+            <h3>Join flood defense</h3>
+            <p>Patterns-based join analysis with cooldowns, CAPTCHA/verification prompts, and auto-mute for fresh accounts.</p>
+          </article>
+          <article class="card">
+            <h3>Anomaly detection</h3>
+            <p>Flags unusual spikes in invites, DMs, mentions, or emoji usage. Sends structured alerts with recommended actions.</p>
+          </article>
+          <article class="card">
+            <h3>Evidence-first logging</h3>
+            <p>Immutable logs with timestamps, IDs, and context for every action. Exportable for appeals and staff reviews.</p>
+          </article>
+          <article class="card">
+            <h3>Incident playbooks</h3>
+            <p>Guided steps for mods during raids: quarantine channels, freeze invites, isolate risky roles, and restore safely.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2>Best practices with YLLABS</h2>
+        <ul class="list">
+          <li><strong>Role hygiene:</strong> Limit admin-equivalent permissions; split duties between moderation and operations.</li>
+          <li><strong>Channel visibility:</strong> Avoid public @everyone write access; enforce slow mode in high-traffic areas.</li>
+          <li><strong>Bot scopes:</strong> Grant least-privilege and rotate tokens if any suspicious activity is detected.</li>
+          <li><strong>Verification:</strong> Use staged onboarding with CAPTCHA or manual review for high-risk waves.</li>
+          <li><strong>Backups & exports:</strong> Regularly export configs and logs for quick restore and audit compliance.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2>FAQs</h2>
+        <details class="faq">
+          <summary>Will lockdown disrupt normal members?</summary>
+          <p>Lockdown targets only the attack surface. Trusted roles retain expected access while risky vectors are isolated.</p>
+        </details>
+        <details class="faq">
+          <summary>Do I need verification enabled all the time?</summary>
+          <p>No. Enable it dynamically during join floods or high-risk events to reduce friction for legitimate users.</p>
+        </details>
+        <details class="faq">
+          <summary>Can I export security logs?</summary>
+          <p>Yes. Export structured evidence (timestamps, IDs, actions) for appeals, audits, or external review.</p>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> YLLABS. All rights reserved.</p>
+      <nav class="footer-links">
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="mailto:support@example.com">Support</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

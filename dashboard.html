@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dashboard — YLLABS</title>
+  <meta name="description" content="Live dashboard for YLLABS bot status and moderation activity." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="index.html">YLLABS</a>
+      <nav class="nav-links">
+        <a href="features.html">Features</a>
+        <a href="security.html">Security</a>
+        <a href="moderation.html">Moderation</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="dashboard.html">Dashboard</a>
+      </nav>
+      <div class="nav-actions">
+        <a class="btn btn-outline" href="https://discord.com/oauth2/authorize?...">Invite</a>
+        <a class="btn btn-solid" href="https://discord.gg/yourserver">Join Discord</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <h1>YLLABS Dashboard</h1>
+        <p class="hero-subtitle">Monitor live guard status, moderation activity, and server health.</p>
+
+        <div class="cards">
+          <article class="card">
+            <h3>Live Guard</h3>
+            <p>Status: <span style="color:var(--brand);font-weight:700;">ON</span></p>
+          </article>
+          <article class="card">
+            <h3>Active moderators</h3>
+            <p>5 online, 2 handling cases</p>
+          </article>
+          <article class="card">
+            <h3>Recent actions</h3>
+            <ul class="list">
+              <li>Ban: User123 (spam)</li>
+              <li>Mute: User456 (raid attempt)</li>
+              <li>Kick: User789 (toxicity)</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>Server health</h3>
+            <p>99.9% uptime, 0 incidents in last 24h</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+        <p>© <span id="year"></span> YLLABS. All rights reserved.</p>
+        <nav class="footer-links">
+            <a href="privacy.html">Privacy</a>
+            <a href="terms.html">Terms</a>
+            <a href="mailto:support@example.com">Support</a>
+            
