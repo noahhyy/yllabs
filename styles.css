@@ -5,15 +5,14 @@
     box-sizing: border-box;
 }
 
-/* ================= BODY ================= */
 body {
-    font-family: "Inter", sans-serif;
-    background-color: #ffffff;
+    font-family: 'Inter', sans-serif;
+    background: #fff;
     color: #2d006b;
     line-height: 1.6;
+    scroll-behavior: smooth;
 }
 
-/* ================= LINKS ================= */
 a {
     text-decoration: none;
     color: inherit;
@@ -21,7 +20,7 @@ a {
 }
 
 a:hover {
-    color: #ffffff;
+    color: #fff;
 }
 
 /* ================= HEADER ================= */
@@ -29,129 +28,146 @@ header, .site-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 40px;
-    background-color: #7b2fff;
+    padding: 20px 50px;
+    background: linear-gradient(135deg, #7b2fff, #5e0bd6);
     border-bottom: 3px solid #5e0bd6;
     position: sticky;
     top: 0;
-    z-index: 100;
+    z-index: 1000;
     flex-wrap: wrap;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
 header h1, .site-header h1, header a.logo, .site-header a.logo {
-    color: #ffffff;
-    font-size: 1.8rem;
+    color: #fff;
+    font-size: 2rem;
     font-weight: 800;
 }
 
-/* ================= NAV ================= */
 nav, .site-nav {
     display: flex;
+    gap: 25px;
     flex-wrap: wrap;
-    gap: 20px;
 }
 
 nav a, .site-nav a {
     color: #eedaff;
     font-weight: 500;
-    transition: color 0.2s ease;
+    padding: 5px 10px;
+    border-radius: 5px;
 }
 
-/* ================= PAGE HEADER ================= */
+nav a:hover, .site-nav a:hover {
+    color: #fff;
+    background: rgba(255,255,255,0.1);
+}
+
+/* ================= PAGE HEADERS ================= */
 header h1, .simple-header h1, .page-header h1 {
-    text-align: center;
-    font-size: 2.2rem;
     width: 100%;
-    margin-bottom: 10px;
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
 }
 
-/* ================= MAIN CONTENT ================= */
+/* ================= MAIN / SECTIONS ================= */
 main, section, .section, .content {
-    max-width: 1000px;
+    max-width: 1100px;
     margin: 40px auto;
     padding: 0 20px;
 }
 
-/* ================= SECTIONS / FEATURES ================= */
-section {
-    background-color: #f6f0ff;
+/* ================= FEATURES / GENERIC CARDS ================= */
+section, .feature, .info-box {
+    background: #f6f0ff;
     border: 2px solid #c9a4ff;
-    border-radius: 15px;
-    padding: 25px;
-    margin-bottom: 25px;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border-radius: 20px;
+    padding: 30px;
+    margin-bottom: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-section:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 18px rgba(123, 47, 255, 0.2);
+section:hover, .feature:hover, .info-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(123,47,255,0.2);
 }
 
-h2 {
+h2, h3, h4 {
     color: #440088;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 p {
     color: #5b2a99;
-    line-height: 1.5;
+    line-height: 1.6;
 }
 
-/* ================= GRID / CARDS ================= */
+/* ================= GRID / TEAM CARDS ================= */
 .cards, .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 30px;
     margin: 40px auto;
     padding: 0 20px;
 }
 
-.cards > div, .grid > div, .card, .feature {
-    background-color: #f6f0ff;
+.cards > .card, .grid > .card {
+    background: #f6f0ff;
     border: 2px solid #c9a4ff;
-    border-radius: 18px;
+    border-radius: 20px;
     padding: 25px;
     text-align: center;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.cards > div:hover, .grid > div:hover, .card:hover, .feature:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 25px rgba(123, 47, 255, 0.25);
+.cards > .card:hover, .grid > .card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 20px 40px rgba(123, 47, 255, 0.25);
 }
 
-/* ================= PROFILE PICS ================= */
-img, .profile-pic, img.avatar {
-    max-width: 100%;
-    height: auto;
+/* ================= PROFILE PICS IN CARDS ================= */
+.cards > .card img.profile-pic, .grid > .card img.profile-pic {
+    width: 140px;
+    height: 140px;
     border-radius: 50%;
-    border: 3px solid #7b2fff;
-    margin-bottom: 15px;
     object-fit: cover;
-    transition: border-color 0.2s ease;
+    border: 4px solid #7b2fff;
+    margin-bottom: 15px;
+    transition: border-color 0.3s ease;
 }
 
-.cards > div:hover img, .card:hover img, .profile-pic:hover {
+.cards > .card:hover img.profile-pic, .grid > .card:hover img.profile-pic {
     border-color: #4400ff;
 }
 
+/* ================= CARD HEADINGS / TEXT ================= */
+.cards > .card h4, .grid > .card h4 {
+    font-size: 1.5rem;
+    color: #3b006e;
+    margin-bottom: 10px;
+}
+
+.cards > .card p, .grid > .card p {
+    color: #5b2a99;
+    line-height: 1.5;
+}
+
 /* ================= SECTION HEADINGS ================= */
-h3 {
+.section h3 {
     text-align: center;
-    font-size: 2rem;
+    font-size: 2.2rem;
     color: #440088;
-    margin: 40px 0 20px;
+    margin-bottom: 30px;
 }
 
 /* ================= FOOTER ================= */
 footer, .site-footer, .simple-footer {
-    background-color: #7b2fff;
-    color: #ffffff;
+    background: linear-gradient(135deg, #7b2fff, #5e0bd6);
+    color: #fff;
     text-align: center;
-    padding: 20px 0;
+    padding: 25px 20px;
     border-top: 3px solid #5e0bd6;
-    margin-top: 40px;
-    font-size: 0.9rem;
+    font-size: 0.95rem;
 }
 
 /* ================= RESPONSIVE ================= */
@@ -160,9 +176,14 @@ footer, .site-footer, .simple-footer {
         flex-direction: column;
         align-items: center;
     }
-
+    
     nav, .site-nav {
         justify-content: center;
-        margin-top: 10px;
+        margin-top: 15px;
+    }
+
+    .profile-pic, img.avatar {
+        width: 120px;
+        height: 120px;
     }
 }
