@@ -1,53 +1,286 @@
 <!DOCTYPE html>
+<!--
+ * Ophraxx Moderation - Team Page Redesigned 2025
+ * Modern, Dynamic Team Showcase
+ -->
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Team | YLLABS</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Primary Meta Tags -->
+    <title>Our Team - Ophraxx Moderation</title>
+    <meta name="title" content="Our Team - Ophraxx Moderation" />
+    <meta name="description"
+        content="Meet the talented team behind Ophraxx, the advanced Discord moderation bot trusted by thousands of communities." />
+
+    <!-- Open Graph / Facebook / Discord -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://ophraxx.com/team" />
+    <meta property="og:title" content="Our Team - Ophraxx Moderation" />
+    <meta property="og:description"
+        content="Meet the passionate individuals behind Ophraxx, working together to deliver the best Discord moderation experience." />
+    <meta property="og:image" content="https://ophraxx.com/assets/images/ophraxx-preview.png" />
+    <meta property="og:color" content="#6366f1" />
+
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#6366f1" />
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./assets/images/ophraxx.png" type="image/x-icon" />
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="./assets/css/redesigned-style.css" />
+    <link rel="stylesheet" href="./assets/css/team-style.css" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700&display=swap"
+        rel="stylesheet" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+    <!-- Particles.js for Background -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
 </head>
-<body class="dark">
 
-  <header class="site-header fade-down">
-    <h1><a href="index.html" class="logo glow">Star-Lite</a></h1>
-    <nav class="site-nav">
-      <a class="nav-anim" href="index.html">Home</a>
-      <a class="nav-anim" href="features.html">Features</a>
-      <a class="nav-anim" href="index.html#commands">Commands</a>
-      <a class="nav-anim" href="index.html#invite">Invite</a>
-      <a class="nav-anim" href="team.html">Team</a>
-      <a class="nav-anim" href="index.html#support">Support</a>
-    
+<body>
+    <!-- Animated Background -->
+    <div id="particles-js"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-text">OPHRAXX</span>
+            </a>
+
+            <div class="nav-menu" id="navMenu">
+                <a href="our-impact.html" class="nav-link">Impact</a>
+                <a href="https://discord.gg/EvXc2kX5RC" class="nav-link" target="_blank">Support</a>
+
+                <div class="nav-actions">
+                    <a href="https://discord.com/oauth2/authorize?client_id=1430018266088083496&permissions=8&integration_type=0&scope=bot"
+                        class="btn btn-primary" target="_blank">
+                        <i class="fab fa-discord"></i>
+                        <span>Add to Server</span>
+                    </a>
+                </div>
+            </div>
+
+            <button class="mobile-toggle" id="mobileToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
     </nav>
-  </header>
 
-  <section class="section fade-up">
-    <h3 class="glow">Meet the Yllabs Team</h3>
-    <div class="cards">
-      
-      <div class="card float fade-up-delayed">
-        <img src="images/logan.png" alt="Logan Hewitt" class="profile-pic pulse">
-        <h4>Literally.loganx</h4>
-        <p><strong>Frontend Developer</strong></p>
-        <p>Leads the design and user interface of The Website. Focuses on creating a clean, intuitive experience for Discord users and ensures the bot’s commands are easy to access and visually appealing, He also works on making sure the anyalitcs are correctly organized for users to be able to manage their commands extremely fast.</p>
-      </div>
+    <!-- Team Hero Section -->
+    <section class="team-hero">
+        <div class="container">
+            <div class="team-hero-content">
+                <div class="hero-badge">
+                    <i class="fas fa-users"></i>
+                    <span>15+ Team Members</span>
+                </div>
 
-      <div class="card float fade-up-delayed2">
-        <img src="images/noah.png" alt="Noah" class="profile-pic pulse">
-        <h4>yktixx;</h4>
-        <p><strong>Backend Developer</strong></p>
-        <p>Maintains the backend systems that power Yllabs. Responsible for performance, reliability, and making sure all commands run smoothly across servers. Noah also ensures smooth UI's and he monitors bugs and implemnts pathces.</p>
-      </div>
+                <h1 class="team-hero-title">
+                    Meet the Team Behind
+                    <span class="gradient-text">Ophraxx</span>
+                </h1>
 
-    </div>
-  </section>
+                <p class="team-hero-description">
+                    The passionate individuals working together to deliver the best Discord moderation
+                    experience to over 5,000+ users worldwide.
+                </p>
 
-  <footer class="site-footer fade-up-delayed3">
-    &copy; 2025 Yllabs Bot. All rights reserved.
-  </footer>
+                <div class="team-stats">
+                    <div class="team-stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="stat-content">
+                            <div class="stat-number">5K+</div>
+                            <div class="stat-label">Users</div>
+                        </div>
+                    </div>
+                    <div class="team-stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-user-friends"></i>
+                        </div>
+                        <div class="stat-content">
+                            <div class="stat-number">15+</div>
+                            <div class="stat-label">Team Members</div>
+                        </div>
+                    </div>
+                    <div class="team-stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="stat-content">
+                            <div class="stat-number">24/7</div>
+                            <div class="stat-label">Support</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- Executive Leadership -->
+    <section class="team-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">LEADERSHIP</span>
+                <h2 class="section-title">Executive <span class="gradient-text">Leadership</span></h2>
+                <p class="section-subtitle">The visionaries driving Ophraxx forward</p>
+            </div>
+
+            <div class="team-grid" id="executiveTeam"></div>
+        </div>
+    </section>
+
+    <!-- Operations & Community -->
+    <section class="team-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">OPERATIONS</span>
+                <h2 class="section-title">Operations & <span class="gradient-text">Community</span></h2>
+                <p class="section-subtitle">Managing daily operations and community engagement</p>
+            </div>
+
+            <div class="team-grid" id="operationsTeam"></div>
+        </div>
+    </section>
+
+    <!-- Engineering Team -->
+    <section class="team-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">ENGINEERING</span>
+                <h2 class="section-title">Engineering <span class="gradient-text">Team</span></h2>
+                <p class="section-subtitle">Building the technology that powers Ophraxx</p>
+            </div>
+
+            <div class="team-grid" id="engineeringTeam"></div>
+        </div>
+    </section>
+
+    <!-- Support Team -->
+    <section class="team-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">SUPPORT</span>
+                <h2 class="section-title">Support <span class="gradient-text">Team</span></h2>
+                <p class="section-subtitle">Ensuring exceptional support for our community</p>
+            </div>
+
+            <div class="team-grid" id="supportTeam"></div>
+        </div>
+    </section>
+
+    <!-- Join Our Team -->
+    <section class="join-team-section">
+        <div class="container">
+            <div class="join-team-card">
+                <div class="join-team-content">
+                    <div class="join-badge">
+                        <i class="fas fa-rocket"></i>
+                        <span>We're Hiring!</span>
+                    </div>
+
+                    <h2>Join Our Growing Team</h2>
+                    <p>Help us build the future of Discord moderation and make an impact on thousands of communities</p>
+
+                    <div class="positions-grid">
+                        <div class="position-card">
+                            <i class="fas fa-code"></i>
+                            <span>Backend Developer</span>
+                        </div>
+                        <div class="position-card">
+                            <i class="fas fa-palette"></i>
+                            <span>Frontend Developer</span>
+                        </div>
+                        <div class="position-card">
+                            <i class="fas fa-laptop-code"></i>
+                            <span>Junior Developer</span>
+                        </div>
+                        <div class="position-card">
+                            <i class="fas fa-headset"></i>
+                            <span>Support Agents</span>
+                        </div>
+                    </div>
+
+                    <div class="join-actions">
+                        <a href="mailto:ophraxxservices@gmail.com" class="btn btn-primary btn-large">
+                            <i class="fas fa-envelope"></i>
+                            <span>Apply Now</span>
+                        </a>
+                        <p class="contact-info">
+                            Contact us at <strong>ophraxxservices@gmail.com</strong>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="cta-decoration">
+                    <div class="decoration-circle circle-1"></div>
+                    <div class="decoration-circle circle-2"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <span class="logo-text">OPHRAXX</span>
+                    </div>
+                    <p>Next-generation Discord moderation for safer communities.</p>
+                    <div class="social-links">
+                        <a href="https://discord.gg/rwQ6T4dbCH" target="_blank" aria-label="Discord"><i
+                                class="fab fa-discord"></i></a>
+                        <a href="https://x.com/Ophraxxdc" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Product</h4>
+                    <a href="document.html">Documentation</a>
+                    <a href="faq.html">FAQ</a>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Company</h4>
+                    <a href="about.html">About</a>
+                    <a href="team.html">Team</a>
+                    <a href="our-impact.html">Impact</a>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Legal</h4>
+                    <a href="privacy.html">Privacy</a>
+                    <a href="tos.html">Terms</a>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Ophraxx Moderation. All rights reserved.</p>
+                <p>Made with <i class="fas fa-heart"></i> for Discord communities</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="./assets/js/redesigned-script.js"></script>
+    <script src="./assets/js/team-script.js"></script>
 </body>
-</html>
 
-<script async data-explicit-opt-in="true" data-cookie-opt-in="true" data-deployment-id="dpl_EgoBFpreLhEhP8TAnuVejU1pMwSK" src="https://vercel.live/_next-live/feedback/feedback.js"></script>
+</html>
