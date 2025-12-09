@@ -5,22 +5,32 @@
     box-sizing: border-box;
 }
 
+/* ================= DARK MODE ================= */
 body {
     font-family: 'Inter', sans-serif;
-    background: #fff;
-    color: #2d006b;
+    background: #0b0014;
+    color: #e8d9ff;
     line-height: 1.6;
     scroll-behavior: smooth;
+}
+
+/* Cyber-purple glow */
+:root {
+    --purple: #7b2fff;
+    --purple-dark: #5e0bd6;
+    --purple-neon: #b472ff;
+    --glow: 0 0 15px rgba(165, 85, 255, 0.7);
 }
 
 a {
     text-decoration: none;
     color: inherit;
-    transition: color 0.2s ease;
+    transition: 0.3s ease;
 }
 
 a:hover {
     color: #fff;
+    text-shadow: var(--glow);
 }
 
 /* ================= HEADER ================= */
@@ -29,19 +39,26 @@ header, .site-header {
     justify-content: space-between;
     align-items: center;
     padding: 20px 50px;
-    background: linear-gradient(135deg, #7b2fff, #5e0bd6);
-    border-bottom: 3px solid #5e0bd6;
+    background: linear-gradient(135deg, #200033, #12001f);
+    border-bottom: 3px solid var(--purple-dark);
     position: sticky;
     top: 0;
     z-index: 1000;
     flex-wrap: wrap;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 5px 20px rgba(145, 52, 255, 0.2);
+    animation: fadeDown 1s ease forwards;
 }
 
 header h1, .site-header h1, header a.logo, .site-header a.logo {
-    color: #fff;
+    color: #e9d8ff;
     font-size: 2rem;
     font-weight: 800;
+    text-shadow: var(--glow);
+    transition: 0.3s ease;
+}
+
+header a.logo:hover {
+    transform: scale(1.05);
 }
 
 nav, .site-nav {
@@ -51,15 +68,19 @@ nav, .site-nav {
 }
 
 nav a, .site-nav a {
-    color: #eedaff;
+    color: #d9b7ff;
     font-weight: 500;
-    padding: 5px 10px;
-    border-radius: 5px;
+    padding: 6px 12px;
+    border-radius: 6px;
+    transition: 0.3s ease;
 }
 
+/* animated nav hover */
 nav a:hover, .site-nav a:hover {
+    background: rgba(123, 47, 255, 0.15);
     color: #fff;
-    background: rgba(255,255,255,0.1);
+    transform: translateY(-3px);
+    box-shadow: var(--glow);
 }
 
 /* ================= PAGE HEADERS ================= */
@@ -68,6 +89,8 @@ header h1, .simple-header h1, .page-header h1 {
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 20px;
+    color: #d7baff;
+    text-shadow: var(--glow);
 }
 
 /* ================= MAIN / SECTIONS ================= */
@@ -75,31 +98,33 @@ main, section, .section, .content {
     max-width: 1100px;
     margin: 40px auto;
     padding: 0 20px;
+    animation: fadeUp 1.2s ease forwards;
 }
 
-/* ================= FEATURES / GENERIC CARDS ================= */
+/* ================= FEATURES / CARDS ================= */
 section, .feature, .info-box {
-    background: #f6f0ff;
-    border: 2px solid #c9a4ff;
+    background: rgba(255,255,255,0.04);
+    border: 2px solid rgba(180, 130, 255, 0.22);
     border-radius: 20px;
     padding: 30px;
     margin-bottom: 30px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: 0.4s ease;
+    box-shadow: 0 0 12px rgba(145, 65, 255, 0.2);
 }
 
 section:hover, .feature:hover, .info-box:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(123,47,255,0.2);
+    transform: translateY(-8px);
+    box-shadow: 0 0 25px rgba(165, 85, 255, 0.35);
 }
 
 h2, h3, h4 {
-    color: #440088;
+    color: #d8baff;
+    text-shadow: var(--glow);
     margin-bottom: 15px;
 }
 
 p {
-    color: #5b2a99;
-    line-height: 1.6;
+    color: #caaaff;
 }
 
 /* ================= GRID / TEAM CARDS ================= */
@@ -112,62 +137,87 @@ p {
 }
 
 .cards > .card, .grid > .card {
-    background: #f6f0ff;
-    border: 2px solid #c9a4ff;
+    background: rgba(255,255,255,0.04);
+    border: 2px solid rgba(180, 130, 255, 0.22);
     border-radius: 20px;
     padding: 25px;
     text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: 0.4s ease;
+    animation: floatCard 4s ease-in-out infinite, fadeUp 1.6s ease forwards;
 }
 
 .cards > .card:hover, .grid > .card:hover {
-    transform: translateY(-12px);
-    box-shadow: 0 20px 40px rgba(123, 47, 255, 0.25);
+    transform: translateY(-12px) scale(1.03);
+    box-shadow: 0 0 35px rgba(150, 75, 255, 0.4);
 }
 
-/* ================= PROFILE PICS IN CARDS ================= */
-.cards > .card img.profile-pic, .grid > .card img.profile-pic {
+/* ================= PROFILE PICS ================= */
+.cards > .card img.profile-pic,
+.grid > .card img.profile-pic {
     width: 140px;
     height: 140px;
     border-radius: 50%;
     object-fit: cover;
-    border: 4px solid #7b2fff;
+    border: 4px solid var(--purple);
     margin-bottom: 15px;
-    transition: border-color 0.3s ease;
+    transition: 0.3s ease;
+    animation: pulseGlow 4s infinite ease-in-out;
 }
 
-.cards > .card:hover img.profile-pic, .grid > .card:hover img.profile-pic {
-    border-color: #4400ff;
+.cards > .card:hover img.profile-pic,
+.grid > .card:hover img.profile-pic {
+    border-color: var(--purple-dark);
+    box-shadow: var(--glow);
 }
 
-/* ================= CARD HEADINGS / TEXT ================= */
 .cards > .card h4, .grid > .card h4 {
     font-size: 1.5rem;
-    color: #3b006e;
+    color: #e7d1ff;
     margin-bottom: 10px;
-}
-
-.cards > .card p, .grid > .card p {
-    color: #5b2a99;
-    line-height: 1.5;
 }
 
 /* ================= SECTION HEADINGS ================= */
 .section h3 {
     text-align: center;
-    font-size: 2.2rem;
-    color: #440088;
+    font-size: 2.3rem;
+    color: #e4caff;
+    text-shadow: var(--glow);
     margin-bottom: 30px;
 }
 
 /* ================= FOOTER ================= */
 footer, .site-footer, .simple-footer {
-    background: linear-gradient(135deg, #7b2fff, #5e0bd6);
-    color: #fff;
+    background: linear-gradient(135deg, #280046, #150026);
+    color: #e8d9ff;
     text-align: center;
     padding: 25px 20px;
-    border-top: 3px solid #5e0bd6;
+    border-top: 3px solid var(--purple-dark);
     font-size: 0.95rem;
+    box-shadow: 0 -4px 15px rgba(145, 65, 255, 0.2);
+    animation: fadeUp 2s ease forwards;
+}
+
+/* ================= ANIMATIONS ================= */
+@keyframes fadeDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes floatCard {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+    100% { transform: translateY(0); }
+}
+
+@keyframes pulseGlow {
+    0% { box-shadow: 0 0 10px rgba(165, 85, 255, 0.4); }
+    50% { box-shadow: 0 0 22px rgba(165, 85, 255, 0.7); }
+    100% { box-shadow: 0 0 10px rgba(165, 85, 255, 0.4); }
 }
 
 /* ================= RESPONSIVE ================= */
@@ -175,14 +225,15 @@ footer, .site-footer, .simple-footer {
     header, .site-header {
         flex-direction: column;
         align-items: center;
+        padding: 20px;
     }
     
     nav, .site-nav {
         justify-content: center;
-        margin-top: 15px;
+        margin-top: 12px;
     }
 
-    .profile-pic, img.avatar {
+    .profile-pic {
         width: 120px;
         height: 120px;
     }
