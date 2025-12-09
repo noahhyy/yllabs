@@ -1,8 +1,4 @@
 <!DOCTYPE html>
-<!--
- * Ophraxx Moderation - Team Page Redesigned 2025
- * Modern, Dynamic Team Showcase
- -->
 <html lang="en">
 
 <head>
@@ -10,29 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Primary Meta Tags -->
-    <title>Our Team - Ophraxx Moderation</title>
-    <meta name="title" content="Our Team - Ophraxx Moderation" />
+    <title>Our Team - Star-Lite</title>
+    <meta name="title" content="Our Team - Star-Lite" />
     <meta name="description"
-        content="Meet the talented team behind Ophraxx, the advanced Discord moderation bot trusted by thousands of communities." />
+        content="Meet the talented team behind Star-Lite, the advanced moderation and community management platform." />
 
-    <!-- Open Graph / Facebook / Discord -->
+    <!-- Open Graph / Social -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://ophraxx.com/team" />
-    <meta property="og:title" content="Our Team - Ophraxx Moderation" />
+    <meta property="og:url" content="https://starlite.com/team" />
+    <meta property="og:title" content="Our Team - Star-Lite" />
     <meta property="og:description"
-        content="Meet the passionate individuals behind Ophraxx, working together to deliver the best Discord moderation experience." />
-    <meta property="og:image" content="https://ophraxx.com/assets/images/ophraxx-preview.png" />
-    <meta property="og:color" content="#6366f1" />
+        content="Meet the passionate individuals behind Star-Lite, working together to deliver the best moderation and community experience." />
+    <meta property="og:image" content="https://starlite.com/assets/images/starlite-preview.png" />
 
     <!-- Theme Color -->
-    <meta name="theme-color" content="#6366f1" />
+    <meta name="theme-color" content="#ff70a6" />
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="./assets/images/ophraxx.png" type="image/x-icon" />
+    <link rel="shortcut icon" href="./assets/images/starlite.png" type="image/x-icon" />
 
     <!-- CSS Files -->
-    <link rel="stylesheet" href="./assets/css/redesigned-style.css" />
-    <link rel="stylesheet" href="./assets/css/team-style.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -41,11 +35,11 @@
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700&display=swap"
         rel="stylesheet" />
 
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <!-- Local Font Awesome -->
+    <link rel="stylesheet" href="./assets/css/fontawesome.min.css" />
 
-    <!-- Particles.js for Background -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+    <!-- Local Particles.js -->
+    <script src="./assets/js/particles.min.js"></script>
 </head>
 
 <body>
@@ -56,16 +50,15 @@
     <nav class="navbar">
         <div class="nav-container">
             <a href="index.html" class="logo">
-                <span class="logo-text">OPHRAXX</span>
+                <span class="logo-text">STAR-LITE</span>
             </a>
 
             <div class="nav-menu" id="navMenu">
-                <a href="our-impact.html" class="nav-link">Impact</a>
-                <a href="https://discord.gg/EvXc2kX5RC" class="nav-link" target="_blank">Support</a>
+                <a href="impact.html" class="nav-link">Impact</a>
+                <a href="support.html" class="nav-link">Support</a>
 
                 <div class="nav-actions">
-                    <a href="https://discord.com/oauth2/authorize?client_id=1430018266088083496&permissions=8&integration_type=0&scope=bot"
-                        class="btn btn-primary" target="_blank">
+                    <a href="invite-bot.html" class="btn btn-primary">
                         <i class="fab fa-discord"></i>
                         <span>Add to Server</span>
                     </a>
@@ -91,12 +84,12 @@
 
                 <h1 class="team-hero-title">
                     Meet the Team Behind
-                    <span class="gradient-text">Ophraxx</span>
+                    <span class="gradient-text">Star-Lite</span>
                 </h1>
 
                 <p class="team-hero-description">
-                    The passionate individuals working together to deliver the best Discord moderation
-                    experience to over 5,000+ users worldwide.
+                    Passionate individuals working together to deliver the best moderation and community experience to
+                    thousands of users worldwide.
                 </p>
 
                 <div class="team-stats">
@@ -132,20 +125,18 @@
         </div>
     </section>
 
-    <!-- Executive Leadership -->
+    <!-- Team Sections -->
     <section class="team-section">
         <div class="container">
             <div class="section-header">
                 <span class="section-badge">LEADERSHIP</span>
                 <h2 class="section-title">Executive <span class="gradient-text">Leadership</span></h2>
-                <p class="section-subtitle">The visionaries driving Ophraxx forward</p>
+                <p class="section-subtitle">The visionaries driving Star-Lite forward</p>
             </div>
-
             <div class="team-grid" id="executiveTeam"></div>
         </div>
     </section>
 
-    <!-- Operations & Community -->
     <section class="team-section">
         <div class="container">
             <div class="section-header">
@@ -153,25 +144,21 @@
                 <h2 class="section-title">Operations & <span class="gradient-text">Community</span></h2>
                 <p class="section-subtitle">Managing daily operations and community engagement</p>
             </div>
-
             <div class="team-grid" id="operationsTeam"></div>
         </div>
     </section>
 
-    <!-- Engineering Team -->
     <section class="team-section">
         <div class="container">
             <div class="section-header">
                 <span class="section-badge">ENGINEERING</span>
                 <h2 class="section-title">Engineering <span class="gradient-text">Team</span></h2>
-                <p class="section-subtitle">Building the technology that powers Ophraxx</p>
+                <p class="section-subtitle">Building the technology that powers Star-Lite</p>
             </div>
-
             <div class="team-grid" id="engineeringTeam"></div>
         </div>
     </section>
 
-    <!-- Support Team -->
     <section class="team-section">
         <div class="container">
             <div class="section-header">
@@ -179,12 +166,11 @@
                 <h2 class="section-title">Support <span class="gradient-text">Team</span></h2>
                 <p class="section-subtitle">Ensuring exceptional support for our community</p>
             </div>
-
             <div class="team-grid" id="supportTeam"></div>
         </div>
     </section>
 
-    <!-- Join Our Team -->
+    <!-- Join Section -->
     <section class="join-team-section">
         <div class="container">
             <div class="join-team-card">
@@ -195,7 +181,7 @@
                     </div>
 
                     <h2>Join Our Growing Team</h2>
-                    <p>Help us build the future of Discord moderation and make an impact on thousands of communities</p>
+                    <p>Help us build the future of community moderation and make an impact on thousands of users</p>
 
                     <div class="positions-grid">
                         <div class="position-card">
@@ -217,19 +203,14 @@
                     </div>
 
                     <div class="join-actions">
-                        <a href="mailto:ophraxxservices@gmail.com" class="btn btn-primary btn-large">
+                        <a href="mailto:starlite.services@gmail.com" class="btn btn-primary btn-large">
                             <i class="fas fa-envelope"></i>
                             <span>Apply Now</span>
                         </a>
                         <p class="contact-info">
-                            Contact us at <strong>ophraxxservices@gmail.com</strong>
+                            Contact us at <strong>starlite.services@gmail.com</strong>
                         </p>
                     </div>
-                </div>
-
-                <div class="cta-decoration">
-                    <div class="decoration-circle circle-1"></div>
-                    <div class="decoration-circle circle-2"></div>
                 </div>
             </div>
         </div>
@@ -241,45 +222,23 @@
             <div class="footer-content">
                 <div class="footer-brand">
                     <div class="logo">
-                        <span class="logo-text">OPHRAXX</span>
+                        <span class="logo-text">STAR-LITE</span>
                     </div>
-                    <p>Next-generation Discord moderation for safer communities.</p>
+                    <p>Next-generation moderation for safer communities.</p>
                     <div class="social-links">
-                        <a href="https://discord.gg/rwQ6T4dbCH" target="_blank" aria-label="Discord"><i
-                                class="fab fa-discord"></i></a>
-                        <a href="https://x.com/Ophraxxdc" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="support.html" aria-label="Discord"><i class="fab fa-discord"></i></a>
+                        <a href="https://twitter.com/StarLiteDC" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
                     </div>
-                </div>
-
-                <div class="footer-column">
-                    <h4>Product</h4>
-                    <a href="document.html">Documentation</a>
-                    <a href="faq.html">FAQ</a>
-                </div>
-
-                <div class="footer-column">
-                    <h4>Company</h4>
-                    <a href="about.html">About</a>
-                    <a href="team.html">Team</a>
-                    <a href="our-impact.html">Impact</a>
-                </div>
-
-                <div class="footer-column">
-                    <h4>Legal</h4>
-                    <a href="privacy.html">Privacy</a>
-                    <a href="tos.html">Terms</a>
                 </div>
             </div>
-
             <div class="footer-bottom">
-                <p>&copy; 2025 Ophraxx Moderation. All rights reserved.</p>
-                <p>Made with <i class="fas fa-heart"></i> for Discord communities</p>
+                <p>&copy; 2025 Star-Lite. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <!-- Scripts -->
-    <script src="./assets/js/redesigned-script.js"></script>
+    <script src="./assets/js/script.js"></script>
     <script src="./assets/js/team-script.js"></script>
 </body>
 
