@@ -1,202 +1,294 @@
 <!DOCTYPE html>
+<!-- 
+  * Star-Lite Bot - Redesigned 2025
+  * Modern, Dynamic Discord Bot Interface
+-->
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Star-Lite</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-<style>
-  :root {
-    --bg: #000000;
-    --panel: #0b0b0b;
-    --muted: #9ca3af;
-    --accent: #7b2fff;
-    --accent2: #b472ff;
-    --radius: 10px;
-    --glass: rgba(255,255,255,0.04);
-    --max-width: 1100px;
-    --glow: 0 0 15px rgba(123,47,255,0.7);
-  }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  * { margin:0; padding:0; box-sizing:border-box; font-family:'Inter',sans-serif; }
+  <!-- Primary Meta Tags -->
+  <title>Star-Lite Bot - Next-Gen Discord Security</title>
+  <meta name="title" content="Star-Lite Bot - Next-Gen Discord Security" />
+  <meta name="description"
+        content="Experience the future of Discord moderation with AI-powered protection, real-time analytics, and seamless automation." />
 
-  body { background: var(--bg); color: #e8d9ff; line-height:1.6; scroll-behavior:smooth; }
+  <!-- Open Graph / Facebook / Discord -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://starlitebot.com/" />
+  <meta property="og:title" content="Star-Lite Bot - Next-Gen Discord Security" />
+  <meta property="og:description"
+        content="Transform your Discord server with ERLC moderation, intelligent automation, and 24/7 protection." />
+  <meta property="og:image" content="https://starlitebot.com/assets/images/starlite-preview.png" />
+  <meta property="og:site_name" content="Star-Lite Bot" />
+  <meta property="og:color" content="#22d3ee" />
 
-  a { text-decoration:none; color:inherit; transition:.3s ease; }
-  a:hover { text-shadow: var(--glow); }
+  <!-- Theme Color -->
+  <meta name="theme-color" content="#22d3ee" />
 
-  .wrap { max-width: var(--max-width); margin:0 auto; padding:0 1.25rem; }
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="./assets/images/starlite.png" type="image/x-icon" />
 
-  header {
-    display:flex; justify-content:space-between; align-items:center; padding:1rem 0;
-    border-bottom:3px solid var(--accent2); position:sticky; top:0; z-index:1000;
-    background: linear-gradient(135deg, #0c0015, #10001f);
-    box-shadow: 0 5px 20px rgba(123,47,255,0.2);
-  }
+  <!-- CSS Files -->
+  <link rel="stylesheet" href="./assets/css/redesigned-style.css" />
 
-  .brand { display:flex; align-items:center; gap:0.75rem; }
-  .brand img { width:56px; height:56px; border-radius:12px; object-fit:contain; filter: drop-shadow(var(--glow)); transition: transform .3s ease; }
-  .brand img:hover { transform: translateY(-3px); }
-  .brand h1 { font-size:1.5rem; font-weight:800; color: var(--accent); text-shadow: var(--glow); }
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700&display=swap"
+        rel="stylesheet" />
 
-  nav { display:flex; gap:1rem; }
-  nav a { padding:0.35rem 0.6rem; border-radius:8px; font-weight:600; color: var(--muted); transition:0.2s; }
-  nav a:hover { color:var(--accent); background: rgba(255,255,255,0.02); }
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
-  .showcase-bar { overflow:hidden; background: var(--panel); padding:0.6rem 0; border-bottom:1px solid rgba(255,255,255,0.02); }
-  .showcase-track { display:flex; width:max-content; animation:scroll 28s linear infinite; gap:2rem; padding-left:1.25rem; }
-  .showcase-item { color: var(--muted); font-weight:700; white-space:nowrap; }
-  @keyframes scroll { 0% { transform: translateX(0);} 100% { transform: translateX(-50%);} }
+  <!-- Particles.js for Background -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
 
-  .hero { display:flex; align-items:center; gap:2rem; padding:4.5rem 0; }
-  .hero .left { flex:1; }
-  .hero h2 { font-size:2.8rem; margin-bottom:0.6rem; color:var(--accent); text-shadow: var(--glow); }
-  .hero p { margin-bottom:1.25rem; color:var(--muted); max-width:740px; }
-  .buttons { display:flex; gap:1rem; flex-wrap:wrap; }
-  .btn { display:inline-block; padding:0.9rem 1.6rem; border-radius:var(--radius); font-weight:800; cursor:pointer; border:none; }
-  .btn-primary { background: var(--accent); color:#000; }
-  .btn-secondary { background:transparent; border:1px solid rgba(255,255,255,0.04); color:var(--muted); }
+  <style>
+    /* Coming Soon Badge Styles */
+    .coming-soon-badge {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      padding: 6px 12px;
+      background: linear-gradient(135deg, #22d3ee 0%, #06b6d4 100%);
+      color: white;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      border-radius: 20px;
+      box-shadow: 0 4px 12px rgba(34, 211, 238, 0.3);
+      animation: pulse 2s ease-in-out infinite;
+      z-index: 10;
+    }
 
-  .section { padding:3.5rem 0; }
-  .section h2 { text-align:center; font-size:2rem; margin-bottom:1.25rem; color:var(--accent); text-shadow: var(--glow); }
-  .features { display:grid; grid-template-columns: repeat(auto-fit,minmax(240px,1fr)); gap:1.25rem; }
-  .card { background:var(--panel); padding:1.25rem; border-radius:12px; border:1px solid rgba(255,255,255,0.03); box-shadow:0 6px 20px rgba(123,47,255,0.2); transition:.18s; }
-  .card h3 { margin-bottom:0.5rem; color:var(--accent); text-shadow: var(--glow); }
-  .card p { color:var(--muted); }
+    @keyframes pulse {
+      0%, 100% {
+        transform: scale(1);
+        box-shadow: 0 4px 12px rgba(34, 211, 238, 0.3);
+      }
+      50% {
+        transform: scale(1.05);
+        box-shadow: 0 4px 16px rgba(34, 211, 238, 0.5);
+      }
+    }
 
-  .commands { display:grid; grid-template-columns: repeat(auto-fit,minmax(280px,1fr)); gap:1rem; }
-  .group { background:var(--panel); padding:1.25rem; border-radius:12px; border:1px solid rgba(255,255,255,0.03); }
-  .group h3 { margin-bottom:0.75rem; color:var(--accent); text-shadow: var(--glow); }
-  .group ul { list-style:none; padding-left:0; margin:0; color:var(--muted); font-weight:700; }
-  .group li { margin-bottom:0.45rem; }
+    .feature-highlight {
+      position: relative;
+    }
 
-  .plans { display:grid; grid-template-columns: repeat(auto-fit,minmax(260px,1fr)); gap:1rem; }
-  .plan { background:var(--panel); padding:1.25rem; border-radius:12px; border:1px solid rgba(255,255,255,0.03); }
-  .plan h3 { color:var(--accent); text-shadow: var(--glow); }
-  .plan ul { color: var(--muted); margin-top:0.8rem; }
+    .feature-highlight.coming-soon {
+      opacity: 0.95;
+    }
 
-  .cta { text-align:center; padding:3.5rem 0; background: linear-gradient(180deg, rgba(0,0,0,0.02), transparent); border-top:1px solid rgba(255,255,255,0.02); }
-  .cta h2 { color:var(--accent); text-shadow: var(--glow); }
-  footer { padding:2rem 0; text-align:center; color:var(--muted); border-top:1px solid rgba(255,255,255,0.02); }
+    .feature-highlight.coming-soon::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(34, 211, 238, 0.05) 0%, rgba(6, 182, 212, 0.05) 100%);
+      border-radius: 16px;
+      pointer-events: none;
+    }
 
-  @media(max-width:900px){
-    .hero { flex-direction:column; text-align:center; gap:1rem; }
-    nav { display:none; }
-  }
-</style>
+    .gradient-text {
+      background: linear-gradient(90deg, #22d3ee, #06b6d4);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  </style>
 </head>
+
 <body>
-<div class="wrap">
-  <header>
-    <div class="brand">
-      <img src="starlite_logo.png" alt="Star-Lite Logo">
-      <h1>Star-Lite</h1>
-    </div>
-    <nav>
-      <a href="#features">features</a>
-      <a href="#showcase">showcase</a>
-      <a href="#plans">plans</a>
-      <a href="#contact">contact</a>
-      <a href="#team">team</a>
-    </nav>
-  </header>
+  <!-- Animated Background -->
+  <div id="particles-js"></div>
 
-  <div class="showcase-bar">
-    <div class="showcase-track">
-      <div class="showcase-item">Coastal Side Roleplay </div>
-      <div class="showcase-item">Florida State Roleplay</div>
-      <div class="showcase-item">San Fransisco Roleplay</div>
-      <div class="showcase-item">Georgia State Roleplay</div>
-      <div class="showcase-item">Colorado State Roleplay</div>
-    </div>
-  </div>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <span class="logo-text">STAR-LITE</span>
+      </a>
 
-  <section class="hero" id="home">
-    <div class="left">
-      <h2>keep your community alive</h2>
-      <p>Star-Lite gives you clean tools for tickets, moderation + a social feed that keeps your community active. simple, fast, no clutter.</p>
-      <div class="buttons">
-        <a href="#" class="btn btn-primary">invite</a>
-        <a href="#showcase" class="btn btn-secondary">see commands</a>
+      <div class="nav-menu" id="navMenu">
+        <a href="our-impact.html" class="nav-link">Impact</a>
+        <a href="https://discord.gg/EvXc2kX5RC" class="nav-link" target="_blank">Support</a>
+
+        <div class="nav-actions">
+          <a href="https://discord.com/oauth2/authorize?client_id=1430018266088083496&permissions=8&integration_type=0&scope=bot"
+             class="btn btn-primary" target="_blank">
+            <i class="fab fa-discord"></i>
+            <span>Add to Server</span>
+          </a>
+        </div>
+      </div>
+
+      <button class="mobile-toggle" id="mobileToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-container">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <i class="fas fa-sparkles"></i>
+          <span>Trusted by 5,000+ Users</span>
+        </div>
+
+        <h1 class="hero-title">
+          Discord Moderation,
+          <span class="gradient-text">Reimagined</span>
+        </h1>
+
+        <p class="hero-description">
+          Protect your community with cutting-edge ERLC moderation, real-time threat detection,
+          and powerful automation tools—all in one elegant solution.
+        </p>
+
+        <div class="hero-stats">
+          <div class="stat-pill">
+            <i class="fas fa-bolt"></i>
+            <span>< 30ms Response</span>
+          </div>
+          <div class="stat-pill">
+            <i class="fas fa-shield-check"></i>
+            <span>99.99% Uptime</span>
+          </div>
+          <div class="stat-pill">
+            <i class="fas fa-infinity"></i>
+            <span>Forever Free</span>
+          </div>
+        </div>
+
+        <div class="hero-actions">
+          <a href="https://discord.com/oauth2/authorize?client_id=1430018266088083496&permissions=8&integration_type=0&scope=bot"
+             class="btn btn-primary btn-large" target="_blank">
+            <i class="fab fa-discord"></i>
+            <span>Get Started Free</span>
+            <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="floating-card card-1">
+          <i class="fas fa-user-shield"></i>
+          <span>ERLC Protection</span>
+        </div>
+        <div class="floating-card card-2">
+          <i class="fas fa-brain"></i>
+          <span>AI-Powered</span>
+        </div>
+        <div class="floating-card card-3">
+          <i class="fas fa-chart-line"></i>
+          <span>Real-Time Analytics</span>
+        </div>
+        <div class="hero-mockup">
+          <div class="mockup-glow"></div>
+        </div>
       </div>
     </div>
   </section>
 
-  <section id="features" class="section">
-    <h2>features</h2>
-    <div class="features">
-      <div class="card"><h3>🎟 Tickets</h3><p><S></p>Support system that just works. no spam, no mess, just quick replies + tracking.</p></div>
-      <div class="card"><h3>⚖️ Infractions</h3><p>clear logs + fair actions. keep your space safe without overcomplicating it.</p></div>
-      <div class="card"><h3>💬 YLLABS Feed</h3><p>a timeline for your community. roleplay vibes, casual posts, keeps ppl engaged.</p></div>
+  <!-- Features Section -->
+  <section class="features" id="features">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">FEATURES</span>
+        <h2 class="section-title">Everything You Need, <span class="gradient-text">Nothing You Don't</span></h2>
+        <p class="section-subtitle">Powerful moderation tools designed for modern Discord communities</p>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-card feature-highlight coming-soon">
+          <span class="coming-soon-badge">
+            <i class="fas fa-clock"></i> Coming Soon
+          </span>
+          <div class="feature-icon-large">
+            <i class="fas fa-robot"></i>
+          </div>
+          <h3>ERLC Moderation</h3>
+          <p>Intelligent threat detection and automatic response to keep your server safe 24/7</p>
+          <ul class="feature-list">
+            <li><i class="fas fa-check"></i> Smart spam detection</li>
+            <li><i class="fas fa-check"></i> Toxic language filtering</li>
+            <li><i class="fas fa-check"></i> Auto-escalation system</li>
+          </ul>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-bolt"></i>
+          </div>
+          <h3>Lightning Fast</h3>
+          <p>Sub-30ms response times ensure instant moderation actions when seconds matter</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-chart-line"></i>
+          </div>
+          <h3>Advanced Analytics</h3>
+          <p>Real-time dashboards and insights to understand your community better</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-sliders"></i>
+          </div>
+          <h3>Fully Customizable</h3>
+          <p>Configure every aspect to match your server's unique needs and style</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-shield-halved"></i>
+          </div>
+          <h3>Enterprise Security</h3>
+          <p>Bank-grade encryption and security measures protect your data</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-headset"></i>
+          </div>
+          <h3>24/7 Support</h3>
+          <p>Expert support team ready to help anytime with <10min response time</p>
+        </div>
+      </div>
     </div>
   </section>
 
-  <section id="showcase" class="section">
-    <h2>command showcase</h2>
-    <div class="commands">
-      <div class="group">
-        <h3>🚓 ER:LC Management (Free)</h3>
-        <ul>
-          <li>/startsession — create a new session</li>
-          <li>/endsession — close an active session</li>
-          <li>/sessioninfo — show session info</li>
-          <li>/setsessionrole — configure session role</li>
-        </ul>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <div class="logo">
+            <span class="logo-text">STAR-LITE</span>
+          </div>
+          <p>Next-generation Discord moderation for safer communities.</p>
+          <div class="social-links">
+            <a href="https://discord.gg/rwQ6T4dbCH" target="_blank" aria-label="Discord"><i class="fab fa-discord"></i></a>
+            <a href="https://x.com/StarliteBot" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
       </div>
-      <div class="group">
-        <h3>🛡 Raid Protection (Premium)</h3>
-        <ul>
-          <li>/lockchannel — lock channels instantly</li>
-          <li>/clearspam — purge spam messages fast</li>
-        </ul>
-      </div>
-      <div class="group">
-        <h3>⚙️ Discord Management (Free)</h3>
-        <ul>
-          <li>/ban [user] — ban a member</li>
-          <li>/kick [user] — kick a member</li>
-          <li>/mute [user] — mute temporarily</li>
-          <li>/warn [user] — issue a warning</li>
-          <li>/slowmode [time] — set channel slowmode</li>
-        </ul>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Star-Lite Bot. All rights reserved.</p>
+        <p>Made with <i class="fas fa-heart"></i> for Discord communities</p>
       </div>
     </div>
-  </section>
-
-  <section id="StarLite Plans/Tiers" class="section">
-    <h2>plans</h2>
-    <div class="plans">
-      <div class="plan">
-        <h3>Free Tier <span style="color:var(--muted)">0$</span></h3>
-        <p>core stuff that covers most servers. simple, stable, no paywall drama.</p>
-        <ul>
-          <li>tickets, infractions, basic moderation</li>
-          <li>pulse feed (basic posts)</li>
-        </ul>
-      </div>
-      <div class="plan">
-        <h3>Premium Tier (soon) <span style="color:var(--muted)">$5.00/Month</span></h3>
-        <p>more control + speed. if you run bigger servers or want nicer tools.</p>
-        <ul>
-          <li>priority ticket workflows</li>
-          <li>advanced infractions + appeals</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <section class="cta">
-    <h2>ready to level up?</h2>
-    <a class="btn btn-primary" href="#">get Star-Lite now</a>
-  </section>
-
-  <footer id="contact">
-    <p>© <span id="year">2025</span> Star-Lite. All rights reserved. | Made by Logan  and Noah</p>
   </footer>
-</div>
 
-<script>
-  document.getElementById('year').textContent = new Date().getFullYear();
-</script>
+  <!-- Scripts -->
+  <script src="./assets/js/redesigned-script.js"></script>
 </body>
 </html>
