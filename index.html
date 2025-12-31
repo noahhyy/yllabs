@@ -2,53 +2,24 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <!-- Primary Meta Tags -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>YLLABS – Advanced Discord Tools</title>
-  <meta name="title" content="YLLABS – Advanced Discord Tools" />
-  <meta name="description"
-    content="Experience next-level Discord moderation, automation, and analytics with YLLABS – secure, reliable, and user-friendly." />
-
-  <!-- Open Graph / Social -->
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://yllabs.xyz/" />
-  <meta property="og:title" content="YLLABS – Advanced Discord Tools" />
-  <meta property="og:description"
-    content="Transform your Discord server with enterprise-grade moderation, intelligent automation, and insightful analytics." />
-  <meta property="og:image" content="https://yllabs.xyz/assets/images/yllabs-preview.png" />
-  <meta property="og:site_name" content="YLLABS" />
-  <meta property="og:color" content="#8a4af3" />
-
-  <!-- Theme Color -->
-  <meta name="theme-color" content="#8a4af3" />
-
-  <!-- Favicon -->
-  <link rel="shortcut icon" href="./assets/images/yllabs-logo.png" type="image/x-icon" />
+  <link rel="shortcut icon" href="./assets/images/yllabs-logo.png" type="image/x-icon">
 
   <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
-    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-
-  <!-- Particles.js -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
   <style>
-    /* Body and global styles */
     body {
       margin: 0;
       font-family: 'Inter', sans-serif;
       background: #0a0a0a;
       color: #f5f5f5;
       line-height: 1.6;
-      overflow-x: hidden;
     }
 
     /* Navbar */
@@ -61,20 +32,18 @@
       justify-content: space-between;
       align-items: center;
       z-index: 100;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
     }
 
-    .navbar .logo-text {
+    .logo-text {
       font-weight: 700;
       font-size: 1.8rem;
       color: #8a4af3;
-      letter-spacing: 1px;
     }
 
     .nav-menu {
       display: flex;
-      align-items: center;
       gap: 20px;
+      align-items: center;
     }
 
     .nav-link {
@@ -93,37 +62,23 @@
       align-items: center;
       gap: 6px;
       text-decoration: none;
-      transition: all 0.2s ease-in-out;
     }
 
-    .btn-primary:hover {
-      background: #a26afc;
-    }
-
-    /* Hero Section */
+    /* Hero */
     .hero {
       display: flex;
       align-items: center;
       justify-content: center;
-      min-height: 100vh;
-      position: relative;
+      min-height: 80vh;
       padding-top: 80px;
       background: linear-gradient(135deg, #5e2be8, #8a4af3);
-      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
     }
 
     .hero-container {
       max-width: 1200px;
       margin: auto;
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 40px;
+      text-align: center;
       color: #fff;
-    }
-
-    .hero-content {
-      flex: 1 1 500px;
     }
 
     .hero-title {
@@ -136,6 +91,7 @@
       background: linear-gradient(90deg, #ff6b6b, #f7d794);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
+      background-clip: text;
     }
 
     .hero-description {
@@ -148,10 +104,11 @@
       font-size: 1rem;
     }
 
-    /* Features Section */
+    /* Features */
     .features {
       padding: 100px 20px;
       background: #0a0a0a;
+      text-align: center;
     }
 
     .features-grid {
@@ -166,7 +123,7 @@
       padding: 30px;
       border-radius: 16px;
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-      transition: transform 0.3s ease;
+      transition: transform 0.3s;
     }
 
     .feature-card:hover {
@@ -178,177 +135,242 @@
       margin-bottom: 12px;
     }
 
-    /* Commands Section */
+    /* Commands Terminal */
     .commands-preview {
       padding: 80px 20px;
-    }
-
-    .command-line .command {
-      color: #8a4af3;
-      font-weight: 600;
-    }
-
-    /* CTA Section */
-    .cta-section {
-      padding: 80px 20px;
-      background: #1a0a2c;
+      background: #111;
       text-align: center;
     }
 
-    .cta-section h2 {
+    .section-title {
       font-size: 2.5rem;
       margin-bottom: 20px;
-      color: #ff6b6b;
+      color: #8a4af3;
     }
 
-    .cta-buttons .btn-secondary {
-      background: #333;
+    .terminal {
+      background: #1a1a1a;
+      border-radius: 16px;
+      padding: 20px;
+      font-family: 'Courier New', monospace;
+      margin: 0 auto;
+      max-width: 800px;
+      color: #8a4af3;
+      text-align: left;
+      overflow: hidden;
+    }
+
+    .command-line {
+      display: flex;
+      gap: 5px;
+    }
+
+    .prompt {
+      color: #f7d794;
+    }
+
+    .command-output {
       color: #fff;
-      padding: 12px 24px;
-      border-radius: 8px;
-      margin-left: 10px;
-      text-decoration: none;
-    }
-
-    .cta-buttons .btn-secondary:hover {
-      background: #555;
+      margin-left: 20px;
+      margin-bottom: 10px;
     }
 
     /* Footer */
     .footer {
-      padding: 60px 20px;
       background: #111;
-      color: #ccc;
+      padding: 50px 20px 20px;
     }
 
-    .footer h4 {
-      color: #fff;
-      margin-bottom: 12px;
+    .footer-content {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      justify-content: space-between;
+      max-width: 1200px;
+      margin: 0 auto;
     }
 
-    .footer a {
-      color: #ccc;
+    .footer-brand .logo-text {
+      font-size: 1.5rem;
+    }
+
+    .footer-column h4 {
+      color: #8a4af3;
+      margin-bottom: 10px;
+    }
+
+    .footer-column a {
       display: block;
+      color: #ccc;
       text-decoration: none;
       margin-bottom: 6px;
     }
 
-    .footer a:hover {
-      color: #8a4af3;
+    .footer-bottom {
+      margin-top: 40px;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #aaa;
+    }
+
+    .footer-bottom i {
+      color: #ff6b6b;
     }
   </style>
 </head>
 
 <body>
-  <!-- Particles Background -->
-  <div id="particles-js"></div>
 
   <!-- Navbar -->
   <nav class="navbar">
-    <a href="index.html" class="logo"><span class="logo-text">YLLABS</span></a>
+    <a href="#" class="logo"><span class="logo-text">YLLABS</span></a>
     <div class="nav-menu">
       <a href="#features" class="nav-link">Features</a>
       <a href="#commands" class="nav-link">Commands</a>
-      <a href="https://discord.gg/example" class="nav-link" target="_blank">Support</a>
+      <a href="https://discord.gg/4FVeF7EBVy" class="nav-link" target="_blank">Support</a>
       <a href="https://discord.com/oauth2/authorize?client_id=123456789&permissions=8&scope=bot"
         class="btn-primary" target="_blank"><i class="fab fa-discord"></i> Add to Server</a>
     </div>
   </nav>
 
-  <!-- Hero Section -->
+  <!-- Hero -->
   <section class="hero">
     <div class="hero-container">
-      <div class="hero-content">
-        <h1 class="hero-title">Discord Tools <span class="gradient-text">Reimagined</span></h1>
-        <p class="hero-description">YLLABS provides advanced moderation, automation, and analytics to protect your
-          community effortlessly.</p>
-        <div class="hero-actions">
-          <a href="https://discord.com/oauth2/authorize?client_id=123456789&permissions=8&scope=bot"
-            class="btn-primary btn-large" target="_blank"><i class="fab fa-discord"></i> Get Started</a>
-        </div>
+      <h1 class="hero-title">Discord Tools <span class="gradient-text">Reimagined</span></h1>
+      <p class="hero-description">YLLABS provides advanced moderation, automation, and analytics to protect your
+        community effortlessly.</p>
+      <div class="hero-actions">
+        <a href="https://discord.com/oauth2/authorize?client_id=123456789&permissions=8&scope=bot"
+          class="btn-primary btn-large"><i class="fab fa-discord"></i> Get Started</a>
       </div>
     </div>
   </section>
 
-  <!-- Features Section -->
+  <!-- Features -->
   <section class="features" id="features">
-    <div class="container">
-      <h2 class="section-title gradient-text">Powerful Features</h2>
-      <div class="features-grid">
-        <div class="feature-card">
-          <h3>Automated Moderation</h3>
-          <p>Smart spam detection, toxic language filtering, and automated punishments for a safe community.</p>
-        </div>
-        <div class="feature-card">
-          <h3>Slash Command Support</h3>
-          <p>All commands support Discord slash syntax for simplicity and speed.</p>
-        </div>
-        <div class="feature-card">
-          <h3>Analytics & Insights</h3>
-          <p>Track server activity, user trends, and moderation efficiency in real-time dashboards.</p>
-        </div>
-        <div class="feature-card">
-          <h3>Customizable Settings</h3>
-          <p>Full control over alerts, roles, permissions, and moderation behavior.</p>
-        </div>
+    <h2 class="section-title gradient-text">Powerful Features</h2>
+    <div class="features-grid">
+      <div class="feature-card">
+        <h3>Automated Moderation</h3>
+        <p>Smart spam detection, toxic language filtering, and automated punishments for a safe community.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Slash Command Support</h3>
+        <p>All commands support Discord slash syntax for simplicity and speed.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Analytics & Insights</h3>
+        <p>Track server activity, user trends, and moderation efficiency in real-time dashboards.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Customizable Settings</h3>
+        <p>Full control over alerts, roles, permissions, and moderation behavior.</p>
       </div>
     </div>
   </section>
 
-  <!-- Commands Section -->
+  <!-- Commands Terminal -->
   <section class="commands-preview" id="commands">
-    <div class="container">
-      <h2 class="section-title gradient-text">Commands at Your Fingertips</h2>
-      <p>Quick, powerful, and easy-to-use moderation and utility commands for your server.</p>
-      <ul>
-        <li><strong>/say</strong> – Make the bot send a message in a channel</li>
-        <li><strong>/infract</strong> – Issue infractions with reason and staff notes</li>
-        <li><strong>/ban</strong> – Ban a user</li>
-        <li><strong>/warn</strong> – Warn a user</li>
-        <li><strong>/purge</strong> – Delete messages in bulk</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- CTA Section -->
-  <section class="cta-section">
-    <h2>Start Using YLLABS Today</h2>
-    <p>Empower your server with modern moderation tools and automation.</p>
-    <div class="cta-buttons">
-      <a href="https://discord.com/oauth2/authorize?client_id=123456789&permissions=8&scope=bot"
-        class="btn-primary btn-large" target="_blank"><i class="fab fa-discord"></i> Add to Discord</a>
-      <a href="https://discord.gg/example" class="btn-secondary btn-large" target="_blank"><i
-          class="fas fa-comments"></i> Join Support</a>
-    </div>
+    <h2 class="section-title gradient-text">Interactive Commands</h2>
+    <div class="terminal" id="terminal"></div>
   </section>
 
   <!-- Footer -->
   <footer class="footer">
     <div class="container">
-      <div>
-        <h4>YLLABS</h4>
-        <p>Next-gen Discord moderation and server tools.</p>
+      <div class="footer-content">
+        <div class="footer-brand">
+          <div class="logo">
+            <span class="logo-text">YLLABS</span>
+          </div>
+          <p>Next-generation Discord moderation for safer communities.</p>
+          <div class="social-links">
+            <a href="https://discord.gg/4FVeF7EBVy" target="_blank" aria-label="Discord"><i
+                class="fab fa-discord"></i></a>
+            <a href="https://x.com/YLLABS" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-column">
+          <h4>Support</h4>
+          <a href="https://discord.gg/4FVeF7EBVy" target="_blank">Discord</a>
+        </div>
+
+        <div class="footer-column">
+          <h4>Legal</h4>
+          <a href="https://yllabs.xyz/legal.html" target="_blank">Privacy & Terms</a>
+        </div>
       </div>
-      <div>
-        <h4>Links</h4>
-        <a href="#">Documentation</a>
-        <a href="#">FAQ</a>
-        <a href="#">Support</a>
+
+      <div class="footer-bottom">
+        <p>&copy; 2025 YLLABS. All rights reserved.</p>
+        <p>Made with <i class="fas fa-heart"></i> for Discord communities</p>
       </div>
-      <div>
-        <h4>Legal</h4>
-        <a href="#">Privacy</a>
-        <a href="#">Terms</a>
-      </div>
-      <p style="margin-top:20px;">&copy; 2025 YLLABS. All rights reserved.</p>
     </div>
   </footer>
 
+  <!-- Commands Terminal Script -->
   <script>
-    particlesJS.load('particles-js', 'https://raw.githubusercontent.com/VincentGarreau/particles.js/master/demo/particles.json', function () {
-      console.log('Particles loaded.');
-    });
+    const commands = [
+      { cmd: "/say Hello everyone!", output: "Message sent in #general" },
+      { cmd: "/infract @user Spamming", output: "Infraction issued to @user" },
+      { cmd: "/ban @troublemaker", output: "User banned successfully" },
+      { cmd: "/warn @user Rule violation", output: "Warning issued - Total: 1/3" },
+      { cmd: "/purge 50", output: "Deleted 50 messages" }
+    ];
+
+    const terminal = document.getElementById("terminal");
+    let i = 0;
+
+    function typeCommand(cmd, output, callback) {
+      let j = 0;
+      const line = document.createElement("div");
+      line.className = "command-line";
+      const prompt = document.createElement("span");
+      prompt.className = "prompt";
+      prompt.textContent = "$";
+      const commandText = document.createElement("span");
+      commandText.className = "command";
+      line.appendChild(prompt);
+      line.appendChild(commandText);
+      terminal.appendChild(line);
+
+      function typeChar() {
+        if (j < cmd.length) {
+          commandText.textContent += cmd[j];
+          j++;
+          setTimeout(typeChar, 50);
+        } else {
+          const out = document.createElement("div");
+          out.className = "command-output";
+          out.innerHTML = `<i class="fas fa-check-circle"></i> ${output}`;
+          terminal.appendChild(out);
+          terminal.scrollTop = terminal.scrollHeight;
+          setTimeout(callback, 500);
+        }
+      }
+      typeChar();
+    }
+
+    function runCommands() {
+      if (i < commands.length) {
+        const { cmd, output } = commands[i];
+        typeCommand(cmd, output, () => {
+          i++;
+          runCommands();
+        });
+      } else {
+        setTimeout(() => {
+          terminal.innerHTML = "";
+          i = 0;
+          runCommands();
+        }, 2000);
+      }
+    }
+
+    runCommands();
   </script>
+
 </body>
 
 </html>
