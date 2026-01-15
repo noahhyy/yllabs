@@ -1,376 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>YLLABS – Advanced Discord Tools</title>
-  <link rel="shortcut icon" href="./assets/images/yllabs-logo.png" type="image/x-icon">
+    <meta charset="UTF-8">
+    <title>botara.online | Service Unavailable</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+                         Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", Arial, sans-serif;
+            background-color: #f5f7fa;
+            color: #1f2937;
+        }
 
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        .container {
+            max-width: 900px;
+            margin: 80px auto;
+            padding: 0 20px;
+        }
 
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Inter', sans-serif;
-      background: #0a0a0a;
-      color: #f5f5f5;
-      line-height: 1.6;
-    }
+        .card {
+            background: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+            padding: 40px;
+        }
 
-    /* Navbar */
-    .navbar {
-      position: fixed;
-      width: 100%;
-      background: #111;
-      padding: 15px 30px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      z-index: 100;
-    }
+        .status-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 24px;
+        }
 
-    .logo-text {
-      font-weight: 700;
-      font-size: 1.8rem;
-      color: #8a4af3;
-    }
+        .status-dot {
+            width: 14px;
+            height: 14px;
+            background-color: #f59e0b;
+            border-radius: 50%;
+            margin-right: 12px;
+        }
 
-    .nav-menu {
-      display: flex;
-      gap: 20px;
-      align-items: center;
-    }
+        h1 {
+            font-size: 28px;
+            margin: 0;
+        }
 
-    .nav-link {
-      color: #ccc;
-      text-decoration: none;
-      font-weight: 500;
-    }
+        p {
+            font-size: 16px;
+            line-height: 1.6;
+            margin: 16px 0;
+        }
 
-    .btn-primary {
-      background: #8a4af3;
-      color: white;
-      padding: 8px 18px;
-      border-radius: 8px;
-      font-weight: 600;
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      text-decoration: none;
-    }
+        .info-box {
+            margin-top: 30px;
+            border-top: 1px solid #e5e7eb;
+            padding-top: 20px;
+        }
 
-    /* Hero */
-    .hero {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 80vh;
-      padding-top: 80px;
-      background: linear-gradient(135deg, #5e2be8, #8a4af3);
-    }
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 16px;
+        }
 
-    .hero-container {
-      max-width: 1200px;
-      margin: auto;
-      text-align: center;
-      color: #fff;
-    }
+        .info-item strong {
+            display: block;
+            font-size: 14px;
+            color: #6b7280;
+            margin-bottom: 6px;
+        }
 
-    .hero-title {
-      font-size: 3rem;
-      font-weight: 800;
-      margin-bottom: 20px;
-    }
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 13px;
+            color: #6b7280;
+        }
 
-    .gradient-text {
-      background: linear-gradient(90deg, #ff6b6b, #f7d794);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-
-    .hero-description {
-      font-size: 1.2rem;
-      margin-bottom: 20px;
-    }
-
-    .hero-actions .btn-large {
-      padding: 12px 24px;
-      font-size: 1rem;
-    }
-
-    /* Features */
-    .features {
-      padding: 100px 20px;
-      background: #0a0a0a;
-      text-align: center;
-    }
-
-    .features-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 30px;
-      margin-top: 40px;
-    }
-
-    .feature-card {
-      background: #111;
-      padding: 30px;
-      border-radius: 16px;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-      transition: transform 0.3s;
-    }
-
-    .feature-card:hover {
-      transform: translateY(-8px);
-    }
-
-    .feature-card h3 {
-      color: #8a4af3;
-      margin-bottom: 12px;
-    }
-
-    /* Commands Terminal */
-    .commands-preview {
-      padding: 80px 20px;
-      background: #111;
-      text-align: center;
-    }
-
-    .section-title {
-      font-size: 2.5rem;
-      margin-bottom: 20px;
-      color: #8a4af3;
-    }
-
-    .terminal {
-      background: #1a1a1a;
-      border-radius: 16px;
-      padding: 20px;
-      font-family: 'Courier New', monospace;
-      margin: 0 auto;
-      max-width: 800px;
-      color: #8a4af3;
-      text-align: left;
-      overflow: hidden;
-    }
-
-    .command-line {
-      display: flex;
-      gap: 5px;
-    }
-
-    .prompt {
-      color: #f7d794;
-    }
-
-    .command-output {
-      color: #fff;
-      margin-left: 20px;
-      margin-bottom: 10px;
-    }
-
-    /* Footer */
-    .footer {
-      background: #111;
-      padding: 50px 20px 20px;
-    }
-
-    .footer-content {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 40px;
-      justify-content: space-between;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    .footer-brand .logo-text {
-      font-size: 1.5rem;
-    }
-
-    .footer-column h4 {
-      color: #8a4af3;
-      margin-bottom: 10px;
-    }
-
-    .footer-column a {
-      display: block;
-      color: #ccc;
-      text-decoration: none;
-      margin-bottom: 6px;
-    }
-
-    .footer-bottom {
-      margin-top: 40px;
-      text-align: center;
-      font-size: 0.9rem;
-      color: #aaa;
-    }
-
-    .footer-bottom i {
-      color: #ff6b6b;
-    }
-  </style>
+        .footer span {
+            font-weight: 600;
+        }
+    </style>
 </head>
-
 <body>
 
-  <!-- Navbar -->
-  <nav class="navbar">
-    <a href="#" class="logo"><span class="logo-text">YLLABS</span></a>
-    <div class="nav-menu">
-      <a href="#features" class="nav-link">Features</a>
-      <a href="#commands" class="nav-link">Commands</a>
-      <a href="https://discord.gg/4FVeF7EBVy" class="nav-link" target="_blank">Support</a>
-      <a href="https://discord.com/oauth2/authorize?client_id=123456789&permissions=8&scope=bot"
-        class="btn-primary" target="_blank"><i class="fab fa-discord"></i> Add to Server</a>
-    </div>
-  </nav>
-
-  <!-- Hero -->
-  <section class="hero">
-    <div class="hero-container">
-      <h1 class="hero-title">Discord Tools <span class="gradient-text">Reimagined</span></h1>
-      <p class="hero-description">YLLABS provides advanced moderation, automation, and analytics to protect your
-        community effortlessly.</p>
-      <div class="hero-actions">
-        <a href="https://discord.com/oauth2/authorize?client_id=1447087964499873904&permissions=8&integration_type=0&scope=bot"
-          class="btn-primary btn-large"><i class="fab fa-discord"></i> Get Started With YLLABS!</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Features -->
-  <section class="features" id="features">
-    <h2 class="section-title gradient-text">Powerful Features</h2>
-    <div class="features-grid">
-      <div class="feature-card">
-        <h3>Automated Moderation</h3>
-        <p>Smart spam detection, toxic language filtering, and automated punishments for a safe community.</p>
-      </div>
-      <div class="feature-card">
-        <h3>Slash Command Support</h3>
-        <p>All commands support Discord slash syntax for simplicity and speed.</p>
-      </div>
-      <div class="feature-card">
-        <h3>Analytics & Insights</h3>
-        <p>Track server activity, user trends, and moderation efficiency in real-time dashboards.</p>
-      </div>
-      <div class="feature-card">
-        <h3>Customizable Settings</h3>
-        <p>Full control over alerts, roles, permissions, and moderation behavior.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Commands Terminal -->
-  <section class="commands-preview" id="commands">
-    <h2 class="section-title gradient-text">Interactive Commands</h2>
-    <div class="terminal" id="terminal"></div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-content">
-        <div class="footer-brand">
-          <div class="logo">
-            <span class="logo-text">YLLABS</span>
-          </div>
-          <p>Next-generation Discord moderation for safer communities.</p>
-          <div class="social-links">
-            <a href="https://discord.gg/4FVeF7EBVy" target="_blank" aria-label="Discord"><i
-                class="fab fa-discord"></i></a>
-            <a href="https://x.com/YLLABS" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-          </div>
+<div class="container">
+    <div class="card">
+        <div class="status-header">
+            <div class="status-dot"></div>
+            <h1>Service Temporarily Unavailable</h1>
         </div>
 
-        <div class="footer-column">
-          <h4>Support</h4>
-          <a href="https://discord.gg/4FVeF7EBVy" target="_blank">Discord</a>
-        </div>
+        <p>
+            <strong>botara.online</strong> is currently unreachable due to an
+            unexpected outage with our hosting infrastructure provider.
+        </p>
 
-        <div class="footer-column">
-          <h4>Legal</h4>
-          <a href="https://yllabs.xyz/legal.html" target="_blank">Privacy & Terms</a>
-        </div>
-      </div>
+        <p>
+            Our servers are online, but access is temporarily disrupted while
+            our provider works to restore full connectivity.
+            We are actively monitoring the situation.
+        </p>
 
-      <div class="footer-bottom">
-        <p>&copy; 2025 YLLABS. All rights reserved.</p>
-        <p>Made with <i class="fas fa-heart"></i> for Discord communities</p>
-      </div>
+        <div class="info-box">
+            <div class="info-grid">
+                <div class="info-item">
+                    <strong>Website</strong>
+                    botara.online
+                </div>
+                <div class="info-item">
+                    <strong>Status</strong>
+                    Hosting Provider Outage
+                </div>
+                <div class="info-item">
+                    <strong>Impact</strong>
+                    Partial / Full Downtime
+                </div>
+                <div class="info-item">
+                    <strong>Resolution</strong>
+                    In Progress
+                </div>
+            </div>
+        </div>
     </div>
-  </footer>
 
-  <!-- Commands Terminal Script -->
-  <script>
-    const commands = [
-      { cmd: "/say Hello everyone!", output: "Message sent in #general" },
-      { cmd: "/infract @user Spamming", output: "Infraction issued to @user" },
-      { cmd: "/ban @troublemaker", output: "User banned successfully" },
-      { cmd: "/warn @user Rule violation", output: "Warning issued - Total: 1/3" },
-      { cmd: "/purge 50", output: "Deleted 50 messages" }
-    ];
-
-    const terminal = document.getElementById("terminal");
-    let i = 0;
-
-    function typeCommand(cmd, output, callback) {
-      let j = 0;
-      const line = document.createElement("div");
-      line.className = "command-line";
-      const prompt = document.createElement("span");
-      prompt.className = "prompt";
-      prompt.textContent = "$";
-      const commandText = document.createElement("span");
-      commandText.className = "command";
-      line.appendChild(prompt);
-      line.appendChild(commandText);
-      terminal.appendChild(line);
-
-      function typeChar() {
-        if (j < cmd.length) {
-          commandText.textContent += cmd[j];
-          j++;
-          setTimeout(typeChar, 50);
-        } else {
-          const out = document.createElement("div");
-          out.className = "command-output";
-          out.innerHTML = `<i class="fas fa-check-circle"></i> ${output}`;
-          terminal.appendChild(out);
-          terminal.scrollTop = terminal.scrollHeight;
-          setTimeout(callback, 500);
-        }
-      }
-      typeChar();
-    }
-
-    function runCommands() {
-      if (i < commands.length) {
-        const { cmd, output } = commands[i];
-        typeCommand(cmd, output, () => {
-          i++;
-          runCommands();
-        });
-      } else {
-        setTimeout(() => {
-          terminal.innerHTML = "";
-          i = 0;
-          runCommands();
-        }, 2000);
-      }
-    }
-
-    runCommands();
-  </script>
+    <div class="footer">
+        © <span>botara.online</span> — Network protected & monitored
+    </div>
+</div>
 
 </body>
-
 </html>
