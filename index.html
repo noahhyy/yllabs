@@ -1,62 +1,261 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF8">
-    <meta name="viewport" content="width=devicewidth initialscale=1.0">
-    <title>Botara Discord Moderation</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Botara</title>
 
-<header class="navbar">
-    <div class="logo">
-        <img src="logo.png">
-        <span>Botara</span>
-    </div>
-    <nav>
-        <a href="#features">Features</a>
-        <a href="https://discord.gg/YBs9cE2cas" target="_blank">Support</a>
-    </nav>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --bg:#000000;
+  --panel:#0b0b0b;
+  --muted:#9ca3af;
+  --accent:#5865f2;
+  --accent2:#8ea2ff;
+  --radius:12px;
+  --glass:rgba(255,255,255,0.04);
+  --max:1100px;
+  --glow:0 0 18px rgba(88,101,242,0.7);
+}
+
+* { margin:0; padding:0; box-sizing:border-box; font-family:Inter,sans-serif; }
+body { background:var(--bg); color:#e6e9ff; line-height:1.6; scroll-behavior:smooth; }
+a { text-decoration:none; color:inherit; transition:.25s; }
+
+.wrap { max-width:var(--max); margin:auto; padding:0 1.25rem; }
+
+header {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:1rem 0;
+  position:sticky;
+  top:0;
+  z-index:50;
+  background:linear-gradient(135deg,#0c0f2a,#080a18);
+  border-bottom:2px solid var(--accent2);
+  box-shadow:0 8px 25px rgba(88,101,242,0.25);
+}
+
+.brand {
+  display:flex;
+  align-items:center;
+  gap:.75rem;
+}
+
+.brand img {
+  width:52px;
+  height:52px;
+  border-radius:10px;
+  filter:drop-shadow(var(--glow));
+}
+
+.brand h1 {
+  font-size:1.5rem;
+  font-weight:800;
+  color:var(--accent);
+  text-shadow:var(--glow);
+}
+
+nav {
+  display:flex;
+  gap:1rem;
+}
+
+nav a {
+  color:var(--muted);
+  font-weight:600;
+  padding:.35rem .6rem;
+  border-radius:8px;
+}
+
+nav a:hover {
+  color:var(--accent);
+  background:rgba(255,255,255,0.04);
+}
+
+.hero {
+  padding:5rem 0;
+  display:flex;
+  align-items:center;
+}
+
+.hero h2 {
+  font-size:2.8rem;
+  margin-bottom:.75rem;
+  color:var(--accent);
+  text-shadow:var(--glow);
+}
+
+.hero p {
+  max-width:720px;
+  color:var(--muted);
+  margin-bottom:1.5rem;
+}
+
+.buttons {
+  display:flex;
+  gap:1rem;
+  flex-wrap:wrap;
+}
+
+.btn {
+  padding:.9rem 1.6rem;
+  border-radius:var(--radius);
+  font-weight:800;
+}
+
+.primary {
+  background:var(--accent);
+  color:#000;
+}
+
+.primary:hover {
+  box-shadow:var(--glow);
+}
+
+.secondary {
+  border:1px solid rgba(255,255,255,0.08);
+  color:var(--muted);
+}
+
+.section {
+  padding:4rem 0;
+}
+
+.section h2 {
+  text-align:center;
+  font-size:2.1rem;
+  margin-bottom:1.75rem;
+  color:var(--accent);
+  text-shadow:var(--glow);
+}
+
+.grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:1.25rem;
+}
+
+.card {
+  background:var(--panel);
+  padding:1.4rem;
+  border-radius:14px;
+  border:1px solid rgba(255,255,255,0.04);
+  box-shadow:0 6px 22px rgba(88,101,242,0.25);
+}
+
+.card h3 {
+  margin-bottom:.4rem;
+  color:var(--accent2);
+}
+
+.card p {
+  color:var(--muted);
+}
+
+.cta {
+  text-align:center;
+  padding:4rem 0;
+  border-top:1px solid rgba(255,255,255,0.05);
+}
+
+footer {
+  text-align:center;
+  padding:2rem 0;
+  color:var(--muted);
+  border-top:1px solid rgba(255,255,255,0.05);
+}
+
+@media(max-width:900px){
+  nav { display:none; }
+  .hero { text-align:center; }
+}
+</style>
+</head>
+
+<body>
+<div class="wrap">
+
+<header>
+  <div class="brand">
+    <img src="logo.png">
+    <h1>Botara</h1>
+  </div>
+  <nav>
+    <a href="#features">features</a>
+    <a href="#commands">commands</a>
+    <a href="https://discord.gg/YBs9cE2cas" target="_blank">support</a>
+  </nav>
 </header>
 
 <section class="hero">
-    <h1>Secure Your Discord Server</h1>
-    <p>Botara is a powerful moderation bot built to protect and manage your community</p>
+  <div>
+    <h2>serious moderation done right</h2>
+    <p>Botara protects your Discord with fast moderation tools automated systems and clean command design built for real servers</p>
+
     <div class="buttons">
-        <a class="button main"
-           href="https://discord.com/oauth2/authorize?client_id=1447087964499873904&permissions=8&integration_type=0&scope=bot">
-           Add Bot
-        </a>
-        <a class="button outline" href="https://discord.gg/YBs9cE2cas" target="_blank">
-           Join Support
-        </a>
+      <a class="btn primary"
+         href="https://discord.com/oauth2/authorize?client_id=1447087964499873904&permissions=8&integration_type=0&scope=bot">
+         invite bot
+      </a>
+      <a class="btn secondary" href="https://discord.gg/YBs9cE2cas" target="_blank">
+         join support
+      </a>
     </div>
+  </div>
 </section>
 
-<section id="features" class="features">
-    <h2>What Botara Offers</h2>
-
-    <div class="cards">
-        <div class="card">
-            <h3>Smart Moderation</h3>
-            <p>Automatic filtering against spam scams and abuse</p>
-        </div>
-
-        <div class="card">
-            <h3>Easy Commands</h3>
-            <p>Clean commands for bans kicks and timeouts</p>
-        </div>
-
-        <div class="card">
-            <h3>Always Online</h3>
-            <p>Reliable uptime so your server stays protected</p>
-        </div>
+<section id="features" class="section">
+  <h2>features</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>auto moderation</h3>
+      <p>detect spam scams and abuse before it becomes a problem</p>
     </div>
+    <div class="card">
+      <h3>powerful commands</h3>
+      <p>ban kick timeout and manage members instantly</p>
+    </div>
+    <div class="card">
+      <h3>reliable uptime</h3>
+      <p>always online always watching your server</p>
+    </div>
+  </div>
+</section>
+
+<section id="commands" class="section">
+  <h2>command preview</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>moderation</h3>
+      <p>/ban /kick /timeout /warn</p>
+    </div>
+    <div class="card">
+      <h3>automation</h3>
+      <p>spam detection raid protection filters</p>
+    </div>
+    <div class="card">
+      <h3>management</h3>
+      <p>role control logging slowmode</p>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <h2>ready to secure your server</h2>
+  <a class="btn primary"
+     href="https://discord.com/oauth2/authorize?client_id=1447087964499873904&permissions=8&integration_type=0&scope=bot">
+     add Botara
+  </a>
 </section>
 
 <footer>
-    <p>Botara © 2026</p>
+  <p>© 2026 Botara All rights reserved</p>
 </footer>
 
+</div>
 </body>
 </html>
