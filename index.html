@@ -15,7 +15,6 @@
   --accent:#5865f2;
   --accent2:#8ea2ff;
   --radius:12px;
-  --glass:rgba(255,255,255,0.04);
   --max:1100px;
   --glow:0 0 18px rgba(88,101,242,0.7);
 }
@@ -112,9 +111,7 @@ nav a:hover {
   color:#000;
 }
 
-.primary:hover {
-  box-shadow:var(--glow);
-}
+.primary:hover { box-shadow:var(--glow); }
 
 .secondary {
   border:1px solid rgba(255,255,255,0.08);
@@ -152,13 +149,67 @@ nav a:hover {
   color:var(--accent2);
 }
 
-.card p {
+.card p { color:var(--muted); }
+
+/* TERMINAL */
+.terminal {
+  max-width:780px;
+  margin:auto;
+  background:#05060a;
+  border-radius:14px;
+  border:1px solid rgba(255,255,255,0.06);
+  box-shadow:0 10px 30px rgba(88,101,242,0.35);
+  overflow:hidden;
+}
+
+.terminalbar {
+  display:flex;
+  align-items:center;
+  gap:8px;
+  padding:10px 14px;
+  background:#0b0e18;
+  border-bottom:1px solid rgba(255,255,255,0.06);
+}
+
+.dot { width:10px; height:10px; border-radius:50%; }
+.red { background:#ff5f56; }
+.yellow { background:#ffbd2e; }
+.green { background:#27c93f; }
+
+.terminalbar .title {
+  margin-left:auto;
+  font-size:.85rem;
   color:var(--muted);
 }
 
+.terminalbody {
+  padding:18px;
+  font-family:monospace;
+  font-size:.95rem;
+}
+
+.line { display:flex; gap:10px; margin-bottom:6px; }
+.prompt { color:var(--accent); }
+.cmd { color:#e6e9ff; }
+
+.output {
+  margin-left:22px;
+  margin-bottom:14px;
+  color:var(--muted);
+}
+
+.typing::after {
+  content:"▋";
+  animation:blink 1s infinite;
+}
+
+@keyframes blink { 50% { opacity:0; } }
+
+/* CTA FIX */
 .cta {
   text-align:center;
-  padding:4rem 0;
+  padding:3rem 0 2.5rem;
+  margin-top:-1.5rem;
   border-top:1px solid rgba(255,255,255,0.05);
 }
 
@@ -186,7 +237,7 @@ footer {
   </div>
   <nav>
     <a href="#features">features</a>
-    <a href="#commands">commands</a>
+    <a href="#terminal">commands</a>
     <a href="https://discord.gg/YBs9cE2cas" target="_blank">support</a>
   </nav>
 </header>
@@ -195,15 +246,9 @@ footer {
   <div>
     <h2>serious moderation done right</h2>
     <p>Botara protects your Discord with fast moderation tools automated systems and clean command design built for real servers</p>
-
     <div class="buttons">
-      <a class="btn primary"
-         href="https://discord.com/oauth2/authorize?client_id=1447087964499873904&permissions=8&integration_type=0&scope=bot">
-         invite bot
-      </a>
-      <a class="btn secondary" href="https://discord.gg/YBs9cE2cas" target="_blank">
-         join support
-      </a>
+      <a class="btn primary" href="https://discord.com/oauth2/authorize?client_id=1447087964499873904&permissions=8&integration_type=0&scope=bot">invite bot</a>
+      <a class="btn secondary" href="https://discord.gg/YBs9cE2cas" target="_blank">join support</a>
     </div>
   </div>
 </section>
@@ -211,45 +256,34 @@ footer {
 <section id="features" class="section">
   <h2>features</h2>
   <div class="grid">
-    <div class="card">
-      <h3>auto moderation</h3>
-      <p>detect spam scams and abuse before it becomes a problem</p>
-    </div>
-    <div class="card">
-      <h3>powerful commands</h3>
-      <p>ban kick timeout and manage members instantly</p>
-    </div>
-    <div class="card">
-      <h3>reliable uptime</h3>
-      <p>always online always watching your server</p>
-    </div>
+    <div class="card"><h3>auto moderation</h3><p>detect spam scams and abuse instantly</p></div>
+    <div class="card"><h3>powerful commands</h3><p>ban kick timeout warn and manage users</p></div>
+    <div class="card"><h3>reliable uptime</h3><p>always online always protecting</p></div>
   </div>
 </section>
 
-<section id="commands" class="section">
-  <h2>command preview</h2>
-  <div class="grid">
-    <div class="card">
-      <h3>moderation</h3>
-      <p>/ban /kick /timeout /warn</p>
+<section id="terminal" class="section">
+  <h2>live command preview</h2>
+  <div class="terminal">
+    <div class="terminalbar">
+      <span class="dot red"></span>
+      <span class="dot yellow"></span>
+      <span class="dot green"></span>
+      <span class="title">Botara Terminal</span>
     </div>
-    <div class="card">
-      <h3>automation</h3>
-      <p>spam detection raid protection filters</p>
-    </div>
-    <div class="card">
-      <h3>management</h3>
-      <p>role control logging slowmode</p>
+    <div class="terminalbody">
+      <div class="line"><span class="prompt">$</span><span class="cmd">/serverinfo</span></div>
+      <div class="output">Server Botara Community | Members 12340</div>
+      <div class="line"><span class="prompt">$</span><span class="cmd">/userinfo @member</span></div>
+      <div class="output">User data retrieved successfully</div>
+      <div class="line"><span class="prompt">$</span><span class="cmd typing"></span></div>
     </div>
   </div>
 </section>
 
 <section class="cta">
   <h2>ready to secure your server</h2>
-  <a class="btn primary"
-     href="https://discord.com/oauth2/authorize?client_id=1447087964499873904&permissions=8&integration_type=0&scope=bot">
-     add Botara
-  </a>
+  <a class="btn primary" href="https://discord.com/oauth2/authorize?client_id=1447087964499873904&permissions=8&integration_type=0&scope=bot">add Botara</a>
 </section>
 
 <footer>
