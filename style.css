@@ -1,29 +1,31 @@
+
 * {
     margin: 0;
     padding: 0;
-    boxsizing: borderbox;
-    fontfamily: Arial sansserif;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
 body {
-    backgroundcolor: #0b0e14;
+    background-color: #0b0e14;
     color: white;
 }
 
+
 .navbar {
     display: flex;
-    justifycontent: spacebetween;
-    alignitems: center;
+    justify-content: space-between;
+    align-items: center;
     padding: 25px 60px;
-    backgroundcolor: #070a10;
+    background-color: #070a10;
 }
 
 .logo {
     display: flex;
-    alignitems: center;
+    align-items: center;
     gap: 12px;
-    fontsize: 24px;
-    fontweight: bold;
+    font-size: 24px;
+    font-weight: bold;
 }
 
 .logo img {
@@ -32,51 +34,52 @@ body {
 
 nav a {
     color: #b5b8ff;
-    marginleft: 25px;
-    textdecoration: none;
-    fontweight: bold;
+    margin-left: 25px;
+    text-decoration: none;
+    font-weight: bold;
 }
+
 
 .hero {
     padding: 140px 20px;
-    textalign: center;
-    background: lineargradient(#12162a #0b0e14);
+    text-align: center;
+    background: linear-gradient(#12162a, #0b0e14);
 }
 
 .hero h1 {
-    fontsize: 52px;
-    marginbottom: 20px;
+    font-size: 52px;
+    margin-bottom: 20px;
 }
 
 .hero p {
-    fontsize: 18px;
+    font-size: 18px;
     color: #c7c9ff;
-    maxwidth: 600px;
+    max-width: 600px;
     margin: auto;
 }
 
 .buttons {
-    margin top: 40px;
+    margin-top: 40px;
     display: flex;
-    justifycontent: center;
+    justify-content: center;
     gap: 20px;
 }
 
 .button {
     padding: 15px 34px;
-    fontsize: 16px;
-    fontweight: bold;
-    borderradius: 8px;
-    textdecoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    text-decoration: none;
 }
 
 .main {
-    backgroundcolor: #5865f2;
+    background-color: #5865f2;
     color: white;
 }
 
 .main:hover {
-    backgroundcolor: #4752c4;
+    background-color: #4752c4;
 }
 
 .outline {
@@ -85,40 +88,101 @@ nav a {
 }
 
 .outline:hover {
-    backgroundcolor: #5865f2;
+    background-color: #5865f2;
     color: white;
 }
 
+
 .features {
     padding: 100px 60px;
-    textalign: center;
+    text-align: center;
 }
 
 .features h2 {
-    fontsize: 38px;
-    marginbottom: 50px;
+    font-size: 38px;
+    margin-bottom: 50px;
 }
 
 .cards {
     display: grid;
-    gridtemplatecolumns: repeat(auto fit minmax(260px 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 30px;
 }
 
 .card {
-    backgroundcolor: #12162a;
+    background-color: #12162a;
     padding: 35px;
-    borderradius: 14px;
+    border-radius: 14px;
 }
 
 .card h3 {
     color: #9aa4ff;
-    marginbottom: 12px;
+    margin-bottom: 12px;
 }
+
 
 footer {
     padding: 25px;
-    textalign: center;
-    backgroundcolor: #070a10;
+    text-align: center;
+    background-color: #070a10;
     color: #888;
+}
+
+
+
+.disclaimer-section {
+    background-color: #0d0d0d;
+    padding: 60px 20px;
+    color: #ccc;
+}
+
+.disclaimer-box {
+    max-width: 800px;
+    margin: auto;
+    background-color: #1a1a1a;
+    border-left: 4px solid #ff4d4d;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 12px #8f5fff;
+}
+
+.disclaimer-title {
+    color: #ff4d4d;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.disclaimer-content p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.safe-note {
+    color: #4dd2ff;
+}
+
+.quote {
+    font-style: italic;
+    color: #8f5fff;
+    margin-top: 10px;
+}
+
+.btn-disclaimer {
+    display: inline-block;
+    margin-right: 15px;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #111;
+    color: #ccc;
+    border: 1px solid #333;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: 0.2s ease;
+}
+
+.btn-disclaimer:hover {
+    background-color: #8f5fff;
+    color: white;
+    border-color: #8f5fff;
 }
