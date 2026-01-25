@@ -81,13 +81,6 @@
       justify-content: flex-end;
       gap: 10px;
     }
-    .admin-btn {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: #444;
-      color: white;
-    }
   </style>
 </head>
 <body>
@@ -105,7 +98,6 @@
   </div>
 </div>
 
-<!-- APPLICATION MODAL -->
 <div class="modal" id="applyModal">
   <div class="modal-content">
     <h3>Support Application</h3>
@@ -135,32 +127,7 @@
   </div>
 </div>
 
-<!-- ADMIN LOGIN -->
-<div class="modal" id="adminLogin">
-  <div class="modal-content">
-    <h3>Admin Login</h3>
-    <label>Username</label>
-    <input id="adminUser" />
-    <label>Private Key</label>
-    <input id="adminKey" type="password" />
-    <div class="actions">
-      <button class="apply" onclick="adminLogin()">Login</button>
-    </div>
-  </div>
-</div>
-
-<!-- ADMIN PANEL -->
-<div class="container" id="adminPanel" style="display:none">
-  <h2>Applications</h2>
-  <div id="apps"></div>
-</div>
-
-<button class="admin-btn" onclick="openAdmin()">Admin</button>
-
 <script>
-  /* =============================
-     JOB TOGGLE
-  ============================= */
   const SUPPORT_OPEN = true;
   const supportBtn = document.getElementById('supportBtn');
 
@@ -177,70 +144,29 @@
     document.getElementById('applyModal').style.display = 'none';
   }
 
-  function submitApp() {
-    const app = {
-      discord: discord.value,
-      roblox: roblox.value,
-      why: why.value,
-      role: role.value,
-      rude: rude.value,
-      ownership: ownership.value,
-      status: 'Pending',
-      date: new Date().toLocaleString()
+  async function submitApp() {
+    const webhookURL = 'https://discord.com/api/webhooks/1465019221657260225/13ku7O5Xfi43HoGAqbr-W54N8gyfsuql8ZhnME5rApz4LnbacoMPiKjtDZnidYKcC67o';
+
+    const payload = {
+      content: `**New Support Application Submitted**\n\nDiscord: ${discord.value}\nRoblox: ${roblox.value}\nWhy: ${why.value}\nRole: ${role.value}\nHandling rude users: ${rude.value}\nOwnership emails: ${ownership.value}`
     };
 
-    const list = JSON.parse(localStorage.getItem('applications') || '[]');
-    list.push(app);
-    localStorage.setItem('applications', JSON.stringify(list));
-
-    alert('Application submitted');
-    closeApply();
-  }
-
-  /* =============================
-     PRIVATE ADMIN LOGIN
-  ============================= */
-  const ADMIN_USER = 'botara-admin';
-  const ADMIN_KEY = 'botaraadmin';
-
-  function openAdmin() {
-    document.getElementById('adminLogin').style.display = 'flex';
-  }
-
-  function adminLogin() {
-    if (adminUser.value === ADMIN_USER && adminKey.value === ADMIN_KEY) {
-      localStorage.setItem('adminSession', 'true');
-      document.getElementById('adminLogin').style.display = 'none';
-      document.getElementById('adminPanel').style.display = 'block';
-      loadApps();
-    } else {
-      alert('Invalid login');
-    }
-  }
-
-  function loadApps() {
-    const apps = JSON.parse(localStorage.getItem('applications') || '[]');
-    const box = document.getElementById('apps');
-    box.innerHTML = '';
-
-    apps.forEach((a, i) => {
-      const div = document.createElement('div');
-      div.className = 'job';
-      div.innerHTML = `<strong>${a.discord}</strong><br>Status: ${a.status}<br><br><button onclick="approve(${i})">Approve</button>`;
-      box.appendChild(div);
+    await fetch(webhookURL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
     });
-  }
 
-  function approve(i) {
-    const apps = JSON.parse(localStorage.getItem('applications'));
-    apps[i].status = 'Approved';
-    localStorage.setItem('applications', JSON.stringify(apps));
-    loadApps();
-  }
+    alert('Application submitted successfully.');
+    closeApply();
 
-  if (localStorage.getItem('adminSession') === 'true') {
-    document.getElementById('adminPanel').style.display = 'block';
-    loadApps();
+    // Optional: clear inputs
+    discord.value = '';
+    roblox.value = '';
+    why.value = '';
+    role.value = '';
+    rude.value = '';
+    ownership.value = '';
   }
 </script>
 
