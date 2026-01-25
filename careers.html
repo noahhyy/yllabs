@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Botara Careers</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0a0a0a;
+      color: #eaeaea;
+    }
+    header {
+      background: #5b2d8b;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    .job {
+      background: #121212;
+      border: 1px solid #222;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+    button {
+      padding: 10px 18px;
+      border-radius: 6px;
+      border: none;
+      cursor: pointer;
+      font-size: 1em;
+    }
+    .apply {
+      background: #7a3fc4;
+      color: white;
+    }
+    button:disabled {
+      background: #333;
+      cursor: not-allowed;
+    }
+    .modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,.7);
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+    .modal-content {
+      background: #121212;
+      padding: 25px;
+      max-width: 600px;
+      width: 100%;
+      border-radius: 8px;
+      border: 1px solid #222;
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+    input, textarea {
+      width: 100%;
+      margin-top: 6px;
+      padding: 10px;
+      background: #1b1b1b;
+      border: 1px solid #333;
+      border-radius: 6px;
+      color: white;
+    }
+    textarea { min-height: 80px; }
+    .actions {
+      margin-top: 20px;
+      display: flex;
+      justify-content: flex-end;
+      gap: 10px;
+    }
+    .admin-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #444;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Careers at Botara</h1>
+  <p>Help support and grow the Botara community</p>
+</header>
+
+<div class="container">
+  <div class="job">
+    <h2>Support Team Member</h2>
+    <p>Assist users, handle issues, and represent Botara professionally.</p>
+    <button id="supportBtn" class="apply">Apply</button>
+  </div>
+</div>
+
+<!-- APPLICATION MODAL -->
+<div class="modal" id="applyModal">
+  <div class="modal-content">
+    <h3>Support Application</h3>
+
+    <label>Discord username & ID</label>
+    <input id="discord" />
+
+    <label>Roblox username</label>
+    <input id="roblox" />
+
+    <label>Why do you want to be Support? (2+ sentences)</label>
+    <textarea id="why"></textarea>
+
+    <label>What is the role of Support? (2+ sentences)</label>
+    <textarea id="role"></textarea>
+
+    <label>What if someone is rude toward another support member?</label>
+    <textarea id="rude"></textarea>
+
+    <label>What if someone emails asking for ownership?</label>
+    <textarea id="ownership"></textarea>
+
+    <div class="actions">
+      <button onclick="closeApply()">Cancel</button>
+      <button class="apply" onclick="submitApp()">Submit</button>
+    </div>
+  </div>
+</div>
+
+<!-- ADMIN LOGIN -->
+<div class="modal" id="adminLogin">
+  <div class="modal-content">
+    <h3>Admin Login</h3>
+    <label>Username</label>
+    <input id="adminUser" />
+    <label>Private Key</label>
+    <input id="adminKey" type="password" />
+    <div class="actions">
+      <button class="apply" onclick="adminLogin()">Login</button>
+    </div>
+  </div>
+</div>
+
+<!-- ADMIN PANEL -->
+<div class="container" id="adminPanel" style="display:none">
+  <h2>Applications</h2>
+  <div id="apps"></div>
+</div>
+
+<button class="admin-btn" onclick="openAdmin()">Admin</button>
+
+<script>
+  /* =============================
+     JOB TOGGLE
+  ============================= */
+  const SUPPORT_OPEN = true;
+  const supportBtn = document.getElementById('supportBtn');
+
+  if (!SUPPORT_OPEN) {
+    supportBtn.disabled = true;
+    supportBtn.title = 'Sorry, we are not hiring this role';
+  }
+
+  supportBtn.onclick = () => {
+    if (SUPPORT_OPEN) document.getElementById('applyModal').style.display = 'flex';
+  };
+
+  function closeApply() {
+    document.getElementById('applyModal').style.display = 'none';
+  }
+
+  function submitApp() {
+    const app = {
+      discord: discord.value,
+      roblox: roblox.value,
+      why: why.value,
+      role: role.value,
+      rude: rude.value,
+      ownership: ownership.value,
+      status: 'Pending',
+      date: new Date().toLocaleString()
+    };
+
+    const list = JSON.parse(localStorage.getItem('applications') || '[]');
+    list.push(app);
+    localStorage.setItem('applications', JSON.stringify(list));
+
+    alert('Application submitted');
+    closeApply();
+  }
+
+  /* =============================
+     PRIVATE ADMIN LOGIN
+  ============================= */
+  const ADMIN_USER = 'botara-admin';
+  const ADMIN_KEY = 'CHANGE_THIS_KEY';
+
+  function openAdmin() {
+    document.getElementById('adminLogin').style.display = 'flex';
+  }
+
+  function adminLogin() {
+    if (adminUser.value === ADMIN_USER && adminKey.value === ADMIN_KEY) {
+      localStorage.setItem('adminSession', 'true');
+      document.getElementById('adminLogin').style.display = 'none';
+      document.getElementById('adminPanel').style.display = 'block';
+      loadApps();
+    } else {
+      alert('Invalid login');
+    }
+  }
+
+  function loadApps() {
+    const apps = JSON.parse(localStorage.getItem('applications') || '[]');
+    const box = document.getElementById('apps');
+    box.innerHTML = '';
+
+    apps.forEach((a, i) => {
+      const div = document.createElement('div');
+      div.className = 'job';
+      div.innerHTML = `<strong>${a.discord}</strong><br>Status: ${a.status}<br><br><button onclick="approve(${i})">Approve</button>`;
+      box.appendChild(div);
+    });
+  }
+
+  function approve(i) {
+    const apps = JSON.parse(localStorage.getItem('applications'));
+    apps[i].status = 'Approved';
+    localStorage.setItem('applications', JSON.stringify(apps));
+    loadApps();
+  }
+
+  if (localStorage.getItem('adminSession') === 'true') {
+    document.getElementById('adminPanel').style.display = 'block';
+    loadApps();
+  }
+</script>
+
+</body>
+</html>
