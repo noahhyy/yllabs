@@ -6,11 +6,11 @@
 <title>404 - Page Not Found | Botara</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
-    /* Reset & Base */
+    /* Base styles */
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
         font-family: 'Inter', sans-serif;
-        background: linear-gradient(135deg, #0a0a0a, #1a1a1a);
+        background-color: #0a0a0a;
         color: #f5f5f5;
         display: flex;
         flex-direction: column;
@@ -18,7 +18,6 @@
         justify-content: center;
         height: 100vh;
         text-align: center;
-        overflow: hidden;
     }
 
     /* Logo */
@@ -26,84 +25,43 @@
         width: 120px;
         height: auto;
         margin-bottom: 30px;
-        animation: float 3s ease-in-out infinite;
-    }
-    @keyframes float {
-        0%, 100% { transform: translateY(0); }
-        50% { transform: translateY(-15px); }
     }
 
     /* 404 Text */
     h1 {
-        font-size: 8rem;
+        font-size: 6rem;
         font-weight: 700;
-        color: #e63946;
-        position: relative;
-        display: inline-block;
-        animation: glitch 1s infinite;
+        margin-bottom: 20px;
     }
 
-    @keyframes glitch {
-        0% { text-shadow: 2px 0 #f5f5f5, -2px 0 #f5f5f5; }
-        20% { text-shadow: -2px -2px #ffbe0b, 2px 2px #00f5d4; }
-        40% { text-shadow: 2px 2px #ff006e, -2px -2px #8338ec; }
-        60% { text-shadow: -2px 2px #3a86ff, 2px -2px #ffbe0b; }
-        80% { text-shadow: 2px 0 #f5f5f5, -2px 0 #f5f5f5; }
-        100% { text-shadow: 0 0 #f5f5f5; }
-    }
-
+    /* Description */
     p {
-        font-size: 1.3rem;
-        margin: 20px 0;
+        font-size: 1.2rem;
         color: #ccc;
+        margin-bottom: 30px;
     }
 
     /* Button */
     .btn {
         display: inline-block;
         padding: 12px 30px;
-        margin-top: 20px;
-        background: #e63946;
-        color: #fff;
+        background-color: #1a1a1a;
+        color: #f5f5f5;
         font-weight: 600;
         text-decoration: none;
-        border-radius: 10px;
-        transition: all 0.3s ease;
-        box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        border: 1px solid #333;
+        border-radius: 8px;
+        transition: all 0.2s ease;
     }
     .btn:hover {
-        background: #ff4c6a;
-        transform: translateY(-3px) scale(1.05);
-        box-shadow: 0 8px 20px rgba(0,0,0,0.4);
-    }
-
-    /* Floating background shapes */
-    .shape {
-        position: absolute;
-        border-radius: 50%;
-        opacity: 0.15;
-        animation: floatShape linear infinite;
-    }
-    .shape1 { width: 150px; height: 150px; background: #ff006e; top: 10%; left: 15%; animation-duration: 20s; }
-    .shape2 { width: 200px; height: 200px; background: #3a86ff; top: 70%; left: 70%; animation-duration: 25s; }
-    .shape3 { width: 100px; height: 100px; background: #ffbe0b; top: 50%; left: 40%; animation-duration: 30s; }
-
-    @keyframes floatShape {
-        0% { transform: translateY(0) translateX(0) rotate(0deg); }
-        50% { transform: translateY(-50px) translateX(30px) rotate(180deg); }
-        100% { transform: translateY(0) translateX(0) rotate(360deg); }
+        background-color: #333;
     }
 </style>
 </head>
 <body>
     <img src="images/logo.png" alt="Botara Logo" class="logo">
     <h1>404</h1>
-    <p>Oops! The page you're looking for doesn't exist.</p>
+    <p>The page you are looking for cannot be found.</p>
     <a href="/" class="btn">Go Back Home</a>
-
-    <!-- Background shapes -->
-    <div class="shape shape1"></div>
-    <div class="shape shape2"></div>
-    <div class="shape shape3"></div>
 </body>
 </html>
