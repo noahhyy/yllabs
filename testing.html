@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Botara — Discord Moderation</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+:root{
+  --bg:#0a0f1c;
+  --panel:#12182b;
+  --border:#1d2540;
+  --accent:#5865F2;
+  --text:#e6e9f5;
+  --muted:#8c93b8;
+  --radius:14px;
+}
+
+*{margin:0;padding:0;box-sizing:border-box;font-family:Inter,sans-serif}
+body{
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.6;
+}
+
+.container{max-width:1150px;margin:auto;padding:0 1.5rem}
+a{text-decoration:none;color:inherit}
+
+/* NAV */
+nav{
+  position:sticky;
+  top:0;
+  background:rgba(10,15,28,.95);
+  border-bottom:1px solid var(--border);
+  z-index:50;
+}
+.nav-inner{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:1rem 0;
+}
+.logo{
+  font-weight:800;
+  font-size:1.3rem;
+  letter-spacing:.5px;
+}
+.nav-links{
+  display:flex;
+  gap:2rem;
+}
+.nav-links a{
+  color:var(--muted);
+  font-weight:600;
+  font-size:.95rem;
+}
+.nav-links a:hover{
+  color:var(--text);
+}
+
+.btn{
+  padding:.75rem 1.4rem;
+  border-radius:10px;
+  font-weight:700;
+  display:inline-flex;
+  align-items:center;
+  gap:.5rem;
+  font-size:.9rem;
+  transition:.2s ease;
+}
+.btn-primary{
+  background:var(--accent);
+  color:#fff;
+}
+.btn-primary:hover{
+  background:#4752c4;
+}
+
+/* HERO */
+.hero{
+  padding:6rem 0 5rem 0;
+}
+.hero-grid{
+  display:grid;
+  grid-template-columns:1.2fr .8fr;
+  gap:4rem;
+  align-items:center;
+}
+.hero h1{
+  font-size:3rem;
+  line-height:1.15;
+  margin-bottom:1.2rem;
+  font-weight:800;
+}
+.hero p{
+  color:var(--muted);
+  max-width:520px;
+  margin-bottom:2rem;
+  font-size:1rem;
+}
+.stats{
+  display:flex;
+  gap:.8rem;
+  flex-wrap:wrap;
+  margin-bottom:2rem;
+}
+.stat{
+  padding:.55rem 1rem;
+  background:var(--panel);
+  border:1px solid var(--border);
+  border-radius:999px;
+  font-size:.85rem;
+  color:var(--muted);
+}
+
+/* TERMINAL */
+.terminal{
+  background:#0f1424;
+  border-radius:var(--radius);
+  border:1px solid var(--border);
+  overflow:hidden;
+}
+.terminal-header{
+  display:flex;
+  gap:6px;
+  padding:10px;
+  background:#151b32;
+}
+.dot{
+  width:9px;
+  height:9px;
+  border-radius:50%;
+  background:#2c3456;
+}
+.terminal-body{
+  padding:1.4rem;
+  font-family:monospace;
+  font-size:.9rem;
+}
+.line{margin-bottom:.5rem}
+.prompt{color:var(--accent)}
+.cmd{color:#ffffff}
+.output{color:var(--muted);margin-left:1.2rem}
+
+/* SECTION */
+.section{
+  padding:5rem 0;
+}
+.section h2{
+  text-align:center;
+  font-size:2rem;
+  margin-bottom:1rem;
+}
+.section p{
+  text-align:center;
+  color:var(--muted);
+  max-width:650px;
+  margin:0 auto 3rem;
+  font-size:.95rem;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:1.5rem;
+}
+.card{
+  padding:2rem;
+  border-radius:var(--radius);
+  background:var(--panel);
+  border:1px solid var(--border);
+  transition:.2s ease;
+}
+.card:hover{
+  border-color:#2b3563;
+}
+.card i{
+  font-size:1.3rem;
+  color:var(--accent);
+  margin-bottom:1rem;
+}
+.card h3{
+  margin-bottom:.6rem;
+  font-size:1.1rem;
+}
+.card p{
+  color:var(--muted);
+  font-size:.9rem;
+}
+
+/* CTA */
+.cta{
+  padding:4.5rem 0;
+  text-align:center;
+  border-top:1px solid var(--border);
+}
+.cta h2{
+  font-size:1.8rem;
+  margin-bottom:1rem;
+}
+.cta p{
+  color:var(--muted);
+  margin-bottom:1.8rem;
+  font-size:.95rem;
+}
+
+/* FOOTER */
+footer{
+  padding:2.5rem 0;
+  text-align:center;
+  color:var(--muted);
+  border-top:1px solid var(--border);
+  font-size:.85rem;
+}
+
+@media(max-width:900px){
+  .hero-grid{
+    grid-template-columns:1fr;
+    text-align:center;
+  }
+  .stats{
+    justify-content:center;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <div class="container nav-inner">
+    <div class="logo">BOTARA</div>
+    <div class="nav-links">
+      <a href="#features">Features</a>
+      <a href="https://discord.gg/YBs9cE2cas" target="_blank">Support</a>
+    </div>
+    <a class="btn btn-primary" href="https://discord.com/oauth2/authorize?client_id=1447087964499873904&permissions=8&scope=bot">
+      <i class="fab fa-discord"></i> Add Bot
+    </a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <h1>Reliable Discord moderation for growing communities.</h1>
+      <p>Botara provides structured moderation tools, automated filtering, and dependable uptime so your server stays organized and protected.</p>
+
+      <div class="stats">
+        <div class="stat">Slash command support</div>
+        <div class="stat">Automated filtering</div>
+        <div class="stat">Consistent uptime</div>
+      </div>
+
+      <a class="btn btn-primary" href="https://discord.com/oauth2/authorize?client_id=1447087964499873904&permissions=8&scope=bot">
+        Add Botara
+      </a>
+    </div>
+
+    <div class="terminal">
+      <div class="terminal-header">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+      </div>
+      <div class="terminal-body">
+        <div class="line"><span class="prompt">$</span> <span class="cmd">/ban @user spam</span></div>
+        <div class="output">User banned successfully</div>
+        <div class="line"><span class="prompt">$</span> <span class="cmd">/timeout @user 10m</span></div>
+        <div class="output">User timed out for 10 minutes</div>
+        <div class="line"><span class="prompt">$</span> <span class="cmd">/warn @user</span></div>
+        <div class="output">Warning issued (2/3)</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="features" class="section">
+  <h2>Core Features</h2>
+  <p>Built to handle moderation without unnecessary complexity.</p>
+
+  <div class="container grid">
+    <div class="card">
+      <i class="fas fa-robot"></i>
+      <h3>Automatic Moderation</h3>
+      <p>Detect and manage spam or unwanted content automatically.</p>
+    </div>
+    <div class="card">
+      <i class="fas fa-gavel"></i>
+      <h3>Structured Commands</h3>
+      <p>Ban, kick, warn and timeout members using clean slash commands.</p>
+    </div>
+    <div class="card">
+      <i class="fas fa-shield-halved"></i>
+      <h3>Stable Infrastructure</h3>
+      <p>Designed for consistent performance across active servers.</p>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="container">
+    <h2>Keep your server under control.</h2>
+    <p>Add Botara and manage your community with confidence.</p>
+    <a class="btn btn-primary" href="https://discord.com/oauth2/authorize?client_id=1447087964499873904&permissions=8&scope=bot">
+      Add to Discord
+    </a>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Botara. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
