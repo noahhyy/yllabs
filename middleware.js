@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 
 export function middleware(request) {
-  const blockedIPs = ["123.45.67.89"];
+  const blockedIPs = ["192.168.1.216"];
 
   const ip =
     request.headers.get("x-forwarded-for")?.split(",")[0] ||
