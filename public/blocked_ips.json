@@ -1,3 +1,4 @@
-{
-  "ips": []
-}
+[
+  { "ip": "123.123.123.123", "reason": "Spamming the site" },
+  { "ip": "111.222.333.444", "reason": "Abuse detected" }
+]
