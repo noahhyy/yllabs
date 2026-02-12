@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 
 export function middleware(request) {
-  const blockedIPs = ["123.45.67.89"]; // put IPs here
+  const blockedIPs = ["192.168.1.216"]; // put IPs here
 
   // Only use x-forwarded-for (Vercel supports this)
   const ipHeader = request.headers.get("x-forwarded-for") || "";
