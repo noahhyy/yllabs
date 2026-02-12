@@ -1,10 +1,11 @@
 import { NextResponse } from "next/server";
 
 export function middleware(request) {
-  const blockedIPs = ["123.45.67.89"]; // add IPs to block
+  const blockedIPs = ["123.45.67.89"]; // put IPs here
 
-  const ip =
-    request.headers.get("x-forwarded-for")?.split(",")[0] || request.ip || "";
+  // Only use x-forwarded-for (Vercel supports this)
+  const ipHeader = request.headers.get("x-forwarded-for") || "";
+  const ip = ipHeader.split(",")[0].trim();
 
   if (blockedIPs.includes(ip)) {
     return new NextResponse("Access Denied", { status: 403 });
@@ -13,6 +14,7 @@ export function middleware(request) {
   return NextResponse.next();
 }
 
+// Apply middleware to all routes
 export const config = {
   matcher: "/:path*",
 };
