@@ -1,41 +1,54 @@
 import { NextResponse } from "next/server";
+import fs from "fs";
+import path from "path";
 
-export async function middleware(request) {
+// Path to your blocked IPs JSON
+const blockedIpsPath = path.join(process.cwd(), "public/blocked_ips.json");
+
+// Load blocked IPs
+function getBlockedIps() {
   try {
-    // Get visitor IP
-    const ipHeader = request.headers.get("x-forwarded-for") || "";
-    const ip = ipHeader.split(",")[0].trim();
-
-    // Fetch the naughty list from public folder
-    const res = await fetch(`${request.nextUrl.origin}/blocked_ips.json`);
-    if (!res.ok) return NextResponse.next(); // if JSON not found, let them in
-    const data = await res.json();
-    const blockedIPs = data.ips || [];
-
-    // If the visitor is naughty
-    if (blockedIPs.includes(ip)) {
-      const html = `
-        <html>
-        <head><title>Uh-oh!</title></head>
-        <body style="background:#000;color:#f00;font-family:Comic Sans MS,sans-serif;text-align:center;padding-top:100px;">
-          <h1>You've Been Banned!!</h1>
-          <p>Hey! Your IP (${ip}) is on our ban list.</p>
-          <p>If you think this is a mistake, Contact us.!</p>
-        </body>
-        </html>
-      `;
-      return new NextResponse(html, { status: 403, headers: { "Content-Type": "text/html" } });
-    }
-
-    // Otherwise, let them in
-    return NextResponse.next();
-
+    const data = fs.readFileSync(blockedIpsPath, "utf-8");
+    return JSON.parse(data); // Example: [{ "ip": "1.2.3.4", "reason": "spamming" }]
   } catch (err) {
-    // If something breaks, don’t block anyone
-    console.error("Middleware error:", err);
-    return NextResponse.next();
+    console.error("Error reading blocked_ips.json:", err);
+    return [];
   }
 }
 
-// Run middleware on all paths
-export const config = { matcher: "/:path*" };
+export function middleware(req) {
+  const blockedIps = getBlockedIps();
+
+  // Get visitor IP
+  const ip = req.ip || req.headers.get("x-forwarded-for") || "";
+
+  // Find if IP is blocked
+  const blockedEntry = blockedIps.find(entry => entry.ip === ip);
+
+  if (blockedEntry) {
+    // Show a friendly message explaining why they are blocked
+    const reason = blockedEntry.reason || "You are blocked from this site.";
+    return new NextResponse(
+      `<html>
+        <head>
+          <title>Blocked</title>
+          <style>
+            body { background: #000; color: #fff; display: flex; justify-content: center; align-items: center; height: 100vh; font-family: sans-serif; text-align: center; }
+            h1 { color: red; font-size: 3rem; margin-bottom: 1rem; }
+            p { font-size: 1.2rem; }
+          </style>
+        </head>
+        <body>
+          <div>
+            <h1>Access Denied</h1>
+            <p>${reason}</p>
+          </div>
+        </body>
+      </html>`,
+      { status: 403, headers: { "content-type": "text/html" } }
+    );
+  }
+
+  // Otherwise continue normally
+  return NextResponse.next();
+}
