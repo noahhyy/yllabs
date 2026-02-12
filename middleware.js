@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 
 export function middleware(request) {
-  const blockedIPs = ["123.45.67.89"]; // put blocked IP here
+  const blockedIPs = ["123.45.67.89"];
 
   const ip =
     request.headers.get("x-forwarded-for")?.split(",")[0] ||
@@ -14,3 +14,7 @@ export function middleware(request) {
 
   return NextResponse.next();
 }
+
+export const config = {
+  matcher: "/:path*",
+};
