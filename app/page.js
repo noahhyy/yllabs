@@ -24,7 +24,7 @@ export default function Home() {
         </p>
 
         <p>
-          This is not necessarily permanent — it’s a pause until I am ready to return stronger.
+          This is not necessarily permanent it’s a pause until I am ready to return stronger.
         </p>
 
         <footer>
