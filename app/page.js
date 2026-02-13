@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <div className="container">
       <div className="card">
-        <img src="/logo.png" className="logo" />
+        <img src="images/logo.png" className="logo" />
         <h1>Botara</h1>
 
         <h2>Service Paused</h2>
