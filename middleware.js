@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 
 const blockedIPs = {
-  "123.123.123.123": "Spamming detected"
+  "97.101.137.47": "Spamming detected"
 };
 
 export function middleware(req) {
