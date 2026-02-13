@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 
 const blockedIPs = {
-  "111.1.1.1.1": "Spamming detected",
+  "97.101.137.47": "test detected",
   "185.182.194.240": "GETOUT",
   "98.76.54.32": "Repeated violations of site rules"
 };
