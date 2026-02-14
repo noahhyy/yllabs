@@ -1,9 +1,9 @@
 import { NextResponse } from "next/server";
 
 const blockedIPs = {
-  "1.1.1.1": "Test detected",
+  "100.48.81.237": "Being a bum",
   "185.182.194.240": "GETOUT",
-  "98.76.54.32": "Repeated violations of site rules"
+  "97.101.137.47": "Repeated violations of site rules"
 };
 
 export function middleware(req) {
